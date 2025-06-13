@@ -1,0 +1,29 @@
+{
+  "name": "harrisj-new-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "esbuild": "node esbuild.config.js --minify",
+    "esbuild-dev": "node esbuild.config.js --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "daisyui": "^5.0.43",
+    "esbuild": "^0.19.2",
+    "glob": "^10.3.3",
+    "postcss": "^8.4.29",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^15.1.0",
+    "postcss-load-config": "^4.0.1",
+    "postcss-preset-env": "^9.1.2",
+    "read-cache": "^1.0.0"
+  },
+  "dependencies": {
+    "@hotwired/turbo": "^8.0.13",
+    "@tailwindcss/postcss": "^4.1.8",
+    "bridgetown-quick-search": "3.0.3",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^4.1.8",
+    "turbo-shadow": "^1.2.0"
+  }
+}

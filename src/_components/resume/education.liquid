@@ -1,0 +1,22 @@
+<section id="education">
+  <h2 class="h2">Education</h2>
+
+  <dl class="my-2col-grid">
+    {% for school in cv.education %}
+      <dt class="hidden sm:block my-2col-l">
+        <date class="text-secondary">{{ school.start }}–{{ school.end }}</date>
+      </dt>
+
+      <dd class="my-2col-r">
+        <header>
+          <strong>{{ school.degree }}</strong>, <a href="{{ school.link }}">{{ school.name }}</a>
+          <span class="sm:hidden">
+            (<date class="text-secondary">{{ school.start }}–{{ school.end }}</date>)</span
+          >
+        </header>
+
+        <div class="prose max-w-none">{{ school.description | markdownify }}</div>
+      </dd>
+    {% endfor %}
+  </dl>
+</section>

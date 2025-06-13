@@ -1,0 +1,38 @@
+<section id="employment">
+  <h2 class="h2">Employment</h2>
+
+  <dl class="my-2col-grid">
+    {% for job in cv.career %}
+      <dt class="hidden sm:block my-2col-l">
+        <date class="text-secondary">{{ job.start }}–{{ job.end }}</date>
+      </dt>
+      <dd class="my-2col-r pb-6">
+        <h3 class="h3">
+          <span class="font-bold">{{ job.title }}</span>,
+          <a class="link-hover" href="{{ job.link }}"
+            ><span>{{ job.company }}</span></a
+          >
+          <span class="sm:hidden">
+            (<date class="text-secondary">{{ job.start }}–{{ job.end }}</date>)</span
+          >
+        </h3>
+
+        <div class="job-description">{{ job.description }}</div>
+        {% if job.projects.size > 0 %}
+          <ul class="job-projects">
+            {% for project in job.projects %}
+              <li>
+                <div class="h4">
+                  <a class="link-hover" href="{{ project.link }}">{{ project.title }}</a></span
+                >
+                <div class="prose max-w-none">
+                {{ project.description | markdownify }}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </dd>
+    {% endfor %}
+  </dl>
+</section>
