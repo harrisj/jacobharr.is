@@ -1,5 +1,5 @@
 ---
-layout: project_layout
+layout: page
 title: Trump Data
 published: true
 start_year: 2025
@@ -151,4 +151,4 @@ My daily routine now is to run a few searches on Google News when I have some sp
 
 Clearly, there are things that could be done to improve how the data is presented. I might potentially create more simplified representations of important details like what systems DOGE has accessed and who was given access or how OPM and GSA were used as bases for DOGE staff to be detailed into multiple agencies. I could probably consider generating better graphics using [Observable](https://observablehq.com/) or even write dispatches on new things that have been uncovered (for instance, I have figured out who most of the unidentified staff at Social Security are or reminding people that DOGE already had infiltrated the email systems at CISA well before [a whistleblower at the NLRB had emailed them about DOGE's IT modernization activities there](https://www.npr.org/2025/04/15/nx-s1-5355896/doge-nlrb-elon-musk-spacex-security)). But I also am not a journalist. I am making my best efforts to be correct, but mistakes are possible. So, I will probably just keep to perfecting the data, in the hopes that it's useful to others.
 
-There is no license or attribution requirement for using this data beyond that you must accept any risks. But, if you make anything interesting with this data – or, if there is information I am missing or an error in my data – please [let me know!](https://github.com/harrisj/trump_data/issues)
+There is no license or attribution requirement for using this data beyond that you must accept any risks. But, if you make anything interesting with this data - or, if there is information I am missing or an error in my data - please [let me know!](https://github.com/harrisj/trump_data/issues)

@@ -1,5 +1,5 @@
 ---
-layout: writing_layout
+layout: post
 title: Connecting with the Dots
 tagline: Jake Harris on data visualization, empathy, and representing people with dots
 description: >

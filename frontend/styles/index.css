@@ -2,9 +2,6 @@
 
 @import "jit-refresh.css"; /* triggers frontend rebuilds */
 
-/* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet') layer(base);
-
 @import 'tailwindcss';
 @plugin "daisyui";
 
@@ -22,14 +19,22 @@
     --spacing-md: clamp(1.5rem, 6%, 3rem);
     --spacing-lg: clamp(3rem, 12%, 6rem);
     --spacing-xl: clamp(6rem, 24%, 12rem);
+
+    --font-geometric-humanist: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+    --font-humanist: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    --font-mono-slab-serif: 'Nimbus Mono PS', 'Courier New', monospace;
+    --font-mono-code: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    --font-rounded-sans: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    --font-industrial: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    --font-didone: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
   }
 
   html, body {
     /* overflow-x: none; */
   }
 
-  h1 {
-    font-family: "Oswald", serif;
+  h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-geometric-humanist);
   }
 
   date {
@@ -136,8 +141,8 @@
 }
 
 @theme {
-  --font-sans: "Raleway", system-ui, sans-serif;
-  --font-mono: "Azeret Mono", "Roboto Mono", "ui-monospace";
+  --font-sans: var(--font-rounded-sans);
+  --font-mono: var(--font-mono-slab-serif);
 }
 
 /* Set up Tailwind imports */

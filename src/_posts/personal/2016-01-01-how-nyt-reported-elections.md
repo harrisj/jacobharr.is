@@ -1,5 +1,5 @@
 ---
-layout: writing_layout
+layout: post
 title: How the _Times_ Did Election Results 100 Years Ago
 display_description: This was originally a series of tweets, but I decided to capture them here to preserve them. I also expanded the thread with some supplementary new material.
 description: How did the New York Times report election result in the early 1900s? It involved spotlights!

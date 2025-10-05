@@ -1,5 +1,5 @@
 ---
-layout: writing_layout
+layout: post
 title: The New York Times' Election Loader
 tagline: Jacob Harris explains how it was made, tuned and tested
 display_description: A deep dive in to some of the internal workings of the backend system that powered election results at the New York Times from 2008 - 2015.

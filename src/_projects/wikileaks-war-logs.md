@@ -1,5 +1,5 @@
 ---
-layout: project_layout
+layout: page
 title: Wikileaks War Logs
 description: A technical exploration in the data viewer I helped create for New York Times reporters to work on the Wikileaks War Logs.
 date: 20101024
@@ -14,20 +14,23 @@ After a few months of reporting, all three organizations released their stories 
 ## Working with the Data
 The War Logs were a collection of dispatches filed by American and allied forces all throughout Afghanistan and Iraq. Although they contained some metadata, the bulk of the contents were the messages, which could often be very dense with technical military jargon. The NYT published several redacted examples of these dispatches from both [Afganistan](https://archive.nytimes.com/www.nytimes.com/interactive/world/26warlogs.html) and [Iraq](https://archive.nytimes.com/www.nytimes.com/interactive/world/iraq-war-logs.html) if you want to get a taste for them, but many of them were like this report of an interpreter being attacked and killed by allied forces:
 
-```
+<pre class="not-prose font-mono text-xs overflow-auto">
 BLUE ON WHITE BY 1ST RECON S OF NASSER WA AL SALEM: 1 CIV KILLED, 0 CF INJ/DAMA
-AT 200100C FEB 06, A 1ST RECON SNIPER TEAM WHILE CONDUCTING CLANDESTINE SNIPER OPERATIONS IVO HAJI RD IN THE ZAIDON
-ENGAGED (1) MAM WITH (4) 5.56MM ROUNDS IVO (38S MB 09971 79804) 4KM S OF NASSER WA AL SALEM. THE MAM WAS PID W/
-AK-47 CREEPING UP BEHIND THEIR SNIPER POSITION AND WAS SHOT IN THE CHEST W/ (2) 5.56MM ROUNDS AT 15M. QRF WAS 
-LAUNCHED TO EXTRACT THE SNIPER TEAM. THE MAM WAS SEARCHED BY TEAM AND RECOVERED (1) AK-47, (2) MAGAZINES OF
-7.62MM, DOUBLE TAPED, (1) LARGE KNIFE, (1) ID CARD WITH "----- -----" WRITTEN ON CARD. MAM WAS ALSO NOTED TO BE
-WEARING A TRACKSUIT AND SEVERAL WARMING LAYERS TO INCLUDE (2) PAIRS OF SOCKS. THE BODY WAS LEFT BEHIND AT
-(38S MB 09971 79804) UPON EXTRACT OF THE SST. PIONEER OBSERVING ON SITE W/ NSTR.
+AT 200100C FEB 06, A 1ST RECON SNIPER TEAM WHILE CONDUCTING CLANDESTINE SNIPER OPERATIONS
+IVO HAJI RD IN THE ZAIDON ENGAGED (1) MAM WITH (4) 5.56MM ROUNDS IVO (38S MB 09971 79804)
+4KM S OF NASSER WA AL SALEM. THE MAM WAS PID W/ AK-47 CREEPING UP BEHIND THEIR SNIPER
+POSITION AND WAS SHOT IN THE CHEST W/ (2) 5.56MM ROUNDS AT 15M. QRF WAS LAUNCHED TO EXTRACT
+THE SNIPER TEAM. THE MAM WAS SEARCHED BY TEAM AND RECOVERED (1) AK-47, (2) MAGAZINES OF
+7.62MM, DOUBLE TAPED, (1) LARGE KNIFE, (1) ID CARD WITH "----- -----" WRITTEN ON CARD.
+MAM WAS ALSO NOTED TO BE WEARING A TRACKSUIT AND SEVERAL WARMING LAYERS TO INCLUDE
+(2) PAIRS OF SOCKS. THE BODY WAS LEFT BEHIND AT (38S MB 09971 79804) UPON EXTRACT OF
+THE SST. PIONEER OBSERVING ON SITE W/ NSTR.
 
-UPDATE: UPON FURTHER INVESTIGATION THE KIA TURNED OUT TO BE THE PLATOON'S INTERPRETER THAT WAS SEPARATED FROM UNIT.
-THE BODY WAS RECOVERED AND IS CURRENTLY LOCATED AT FALLUJAH SURGICAL. THIS ACTION IS NOW CONSIDERED A BLUE ON GREEN.
-IT RESULTED IN (1) IZ KIA (IRAQI INTERPRETER EMPLOYED BY TITAN.
-```
+UPDATE: UPON FURTHER INVESTIGATION THE KIA TURNED OUT TO BE THE PLATOON'S INTERPRETER THAT
+WAS SEPARATED FROM UNIT. THE BODY WAS RECOVERED AND IS CURRENTLY LOCATED AT FALLUJAH SURGICAL.
+THIS ACTION IS NOW CONSIDERED A BLUE ON GREEN. IT RESULTED IN (1) IZ KIA (IRAQI INTERPRETER
+EMPLOYED BY TITAN.
+</pre>
 
 There was some metadata attached to each of these dispatches, but a fair amount of it (beyond the date and time) was hand-entered and often unreliable. Much of my work was looking for metadata and details within the content of the messages themselves. This involved a few different threads of implementation:
 - Building an API to support an web admin that was provided to journalists for searching the dispatches and making sense of their contents to relate it to their reporting and lines of investigation.
@@ -39,7 +42,7 @@ This data also helped me to pitch an interactive graphic that would illustrate t
 ## A Deadly Day in Baghdad
 Among the dispatches in the Iraq War Logs there were many that were just American troops documenting the aftermath of a city gripped by sectarian violence:
 
-```
+<pre class="not-prose font-mono text-xs overflow-auto">
 (CRIMINAL EVENT) MURDER RPT BY NOT PROVIDED IVO BAGHDAD (ZONE 1)
 (ROUTE UNKNOWN): 1 ISF KIA 27 CIV KIA
 28X CORPSES WERE FOUND THROUGHOUT BAGHDAD:
@@ -49,7 +52,7 @@ Among the dispatches in the Iraq War Logs there were many that were just America
 1X SHOT IN THE HEAD IN AL JIHAD (MB332816, MAHALAH #895, 1245 HRS, HY ALAMIL PS)
 1X SHOT IN THE HEAD IN SADR CITY (MB502242, 1500 HRS, AL RAFIDIAN PS)
 6X SHOT IN THE HEAD IN SHEIKH MAARUF (MB425880, MAHALAH #212, 1620 HRS, AL JAAIFER PS)
-```
+</pre>
 
 This is completely horrifying to read, but it felt vitally important to document. This violence wasn't directly inflicted by American forces, but it was a direct result of the American invasion and subsequent destabilization of the country. This blood was also on our hands. With the help of graphics editors and a reporter providing local context, I was able to present this data in an interactive graphic:
 

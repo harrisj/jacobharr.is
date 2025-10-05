@@ -1,5 +1,5 @@
 ---
-layout: project_layout
+layout: page
 title: Times Haiku
 description: The history and inspiration behind the Times Haiku project which ran from 2012 - 2017
 start_year: 2012

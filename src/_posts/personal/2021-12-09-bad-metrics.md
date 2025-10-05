@@ -1,5 +1,5 @@
 ---
-layout: writing_layout
+layout: post
 title: Bad Metrics For Agile Development
 subtitle: How to Make Things Worse With Measurements
 date: 2021-12-09

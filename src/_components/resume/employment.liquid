@@ -1,7 +1,7 @@
 <section id="employment">
   <h2 class="h2">Employment</h2>
 
-  <dl class="my-2col-grid">
+  <dl class="my-2col-grid gap-y-4">
     {% for job in cv.career %}
       <dt class="hidden sm:block my-2col-l">
         <date class="text-secondary">{{ job.start }}–{{ job.end }}</date>
@@ -17,15 +17,15 @@
           >
         </h3>
 
-        <div class="job-description">{{ job.description }}</div>
+        <div class="prose prose-base leading-tight max-w-none">{{ job.description }}</div>
         {% if job.projects.size > 0 %}
-          <ul class="job-projects">
+          <ul>
             {% for project in job.projects %}
-              <li>
+              <li class="pt-4">
                 <div class="h4">
                   <a class="link-hover" href="{{ project.link }}">{{ project.title }}</a></span
                 >
-                <div class="prose max-w-none">
+                <div class="prose prose-sm leading-tight max-w-none">
                 {{ project.description | markdownify }}
                 </div>
               </li>

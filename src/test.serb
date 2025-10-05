@@ -1,0 +1,15 @@
+---
+title: Testing
+layout: default
+---
+<div class="flex flex-col gap-3">
+{%= render DividedSection.new(title: "1993-2010") do %}
+<p>This is a test of how it all works</p>
+{% end %}
+
+{%= render DividedSection.new(title: "2010-2012") do %}
+<div><p>A bit of content and then other content</p>
+     <p>You dig?</p>
+</div>
+{% end %}
+</div>

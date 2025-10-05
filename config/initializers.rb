@@ -63,4 +63,5 @@ Bridgetown.configure do |config|
   init :"bridgetown-sitemap"
   init :"bridgetown-seo-tag"
   init :"bridgetown-quick-search"
+  init :"bridgetown-lit-renderer" 
 end

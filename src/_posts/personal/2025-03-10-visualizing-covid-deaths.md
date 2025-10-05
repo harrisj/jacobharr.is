@@ -1,5 +1,5 @@
 ---
-layout: writing_layout
+layout: post
 title: Visualizing the Human Toll of COVID-19
 date: 2025-03-10
 year: 2025

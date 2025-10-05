@@ -1,16 +1,21 @@
-const build = require("./config/esbuild.defaults.js")
+import ruby2js from "@ruby2js/esbuild-plugin";
+import build from "./config/esbuild.defaults.js"
+import { plugins } from "./config/esbuild-plugins.js"
+
+
 
 // You can customize this as you wish, perhaps to add new esbuild plugins.
 //
 // ```
-// const path = require("path")
-// const esbuildCopy = require('esbuild-plugin-copy').default
+// import { copy } from 'esbuild-plugin-copy'
+// 
 // const esbuildOptions = {
 //   plugins: [
-//     esbuildCopy({
+//     copy({
+//       resolveFrom: 'cwd',
 //       assets: {
-//         from: [path.resolve(__dirname, 'node_modules/somepackage/files/*')],
-//         to: [path.resolve(__dirname, 'output/_bridgetown/somepackage/files')],
+//         from: ['./node_modules/somepackage/files/*')],
+//         to: ['./output/_bridgetown/somepackage/files')],
 //       },
 //       verbose: false
 //     }),
@@ -33,6 +38,8 @@ const build = require("./config/esbuild.defaults.js")
  */
 const esbuildOptions = {
   plugins: [
+    ...plugins,
+    ruby2js()
     // add new plugins here...
   ],
   globOptions: {

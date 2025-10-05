@@ -1,5 +1,5 @@
 ---
-layout: writing_layout
+layout: post
 title: Thank You, Electionbot
 tagline: A friendly bot that will shoulder the burden of monitoring offers peace of mind as well as efficient notifications.
 description: >

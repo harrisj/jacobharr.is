@@ -1,6 +1,6 @@
 ---
 category: project
-layout: project_layout
+layout: page
 title: Old NYT Advertisements
 description: A history of a project I built to look at old NYT ads and why they are so appealing
 image: /images/projects/old-nyt-ads/1927-spread.jpg

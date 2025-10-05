@@ -1,5 +1,5 @@
 ---
-layout: writing_layout
+layout: post
 title: Using Varnish So News Doesn't Break Your Server
 image: /images/writing/varnish/big-board-screenshot.png
 date: 2010095

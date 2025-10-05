@@ -1,5 +1,5 @@
 ---
-layout: project_layout
+layout: page
 category: project
 title: Civic Technology
 start_year: 2015

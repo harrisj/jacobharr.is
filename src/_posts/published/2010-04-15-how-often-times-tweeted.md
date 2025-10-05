@@ -1,5 +1,5 @@
 ---
-layout: writing_layout
+layout: post
 title: How Often Is the Times Tweeted?
 date: 20100415
 year: 2010

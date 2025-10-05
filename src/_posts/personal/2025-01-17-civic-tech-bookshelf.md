@@ -1,5 +1,5 @@
 ---
-layout: writing_layout
+layout: post
 title: A Civic Tech Bookshelf
 date: 2025-02-15
 year: 2025

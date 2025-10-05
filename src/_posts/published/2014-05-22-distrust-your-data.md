@@ -1,5 +1,5 @@
 ---
-layout: writing_layout
+layout: post
 title: Distrust Your Data
 tagline: Six Ways to Make Mistakes with Data
 image: /images/writing/distrust-data/pornhub.jpg

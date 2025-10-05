@@ -1,5 +1,5 @@
 ---
-layout: project_layout
+layout: page
 title: Various Dumb Jokes I've Made Online
 published: true
 start_year: 2011
@@ -13,11 +13,11 @@ Jakecoin is the ultimate cryptocurrency. Jakecoin is easy to acquire! Jakecoin c
 
 ### Summer Kerning
 
-_**Remember that Memorial Day is when the New York Times switches to a looser, more breathable “summer kerning” for the season.**_ On Labor Day, I then joke about them moving back to regular kerning. I've posted this every summer since 2011. That's it. That's the joke.
+_**Remember that Memorial Day is when the New York Times switches to a looser, more breathable "summer kerning" for the season.**_ On Labor Day, I then joke about them moving back to regular kerning. I've posted this every summer since 2011. That's it. That's the joke.
 
 ### The People's History of Tatooine
 
-Probably one of my favorite things that happened on Twitter is when a quick joke about Star Wars (_**What if Mos Eisley wasn’t really that wretched and it was just Obi Wan being racist again?**_) turned into a multi-hour long riffing on the idea among friends. Really this was the best thing about Twitter back in the day before it got turned into a cesspit. Thankfully, [Kottke captured all the tweets in a single document](https://kottke.org/17/12/the-peoples-history-of-tattooine).
+Probably one of my favorite things that happened on Twitter is when a quick joke about Star Wars (_**What if Mos Eisley wasn't really that wretched and it was just Obi Wan being racist again?**_) turned into a multi-hour long riffing on the idea among friends. Really this was the best thing about Twitter back in the day before it got turned into a cesspit. Thankfully, [Kottke captured all the tweets in a single document](https://kottke.org/17/12/the-peoples-history-of-tattooine).
 
 ### Havre de Grace tweets
 
