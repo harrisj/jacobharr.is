@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Right Kind of Stupid
-date: 20070911
+date: 2007-09-11
 year: 2007
 category: published
 display_description: A technical look at the specific code I used to setup the @nytimes Twitter account. Little did I know it would lead to years of tinkering around. For more details, check out the [@nytimes twitter account]({% link _projects/nytimes-twitter %}) project page.
@@ -24,7 +24,7 @@ But twitter has some magical properties that make it wonderful for hacking aroun
 
 Far from dismissive, "the right kind of stupid" is high praise. Using twitter's APIs, I was able to get headlines from the New York Times feeds to my cell phone with only an idle afternoon and a few lines of Ruby. For instance, here is the basic code for posting a new message to twitter (from the [Twitterize gem](https://nycrb.rubyforge.org/twitterize/))
 
-```ruby
+{% highlight ruby %}
 post_args = {
   'status' => status
 }
@@ -34,13 +34,13 @@ url.user = user
 url.password = password
  
 response = Net::HTTP::post_form url, post_args
-```
+{% endhighlight %}
 
 All you need to add is some code to parse feeds, a database to keep track of posted items, and a crontab to schedule it, and you have the makings of a truly Simple Messaging Service (although not always a reliable one). For newcomers, a complete service like [Twitterfeed](https://www.twitterfeed.com/) makes the process even simpler. I put up the main New York Times feed in early March 2007; today, it has 625 viewers, although we had a surge of 100+ subscriptions in the last few days due to Mallary's article and Twitter featuring us on the front page. In addition, I added [other specific New York Times feeds](https://www.twitter.com/nytimes/friends) a month or so later. The most popular of them has only 40 or so subscribers however, so it's clear that the general mix of stories the front page feed has is the most appealing to readers. More interesting still, the [official New York Times twitter feed](https://www.twitter.com/nytimes) is not the only New York Times account on Twitter. RSS and Blogging Guru [Dave Winer](https://www.scripting.com/) set up his own independent [NYT River of News account](https://www.xcancel.com/nyt) a week or so after my first one that aggregates all of our major public feeds into one place. Far from being displeased, we here at Open are _openly_ thrilled at these sort of third-party projects, especially since we still have only begun to [scratch the surface of the public feeds we have here at the New York Times](https://archive.nytimes.com/open.blogs.nytimes.com/2007/08/15/rss-you/).
 
 Simple is powerful. Feeds and twitter are a natural fit, but with Twitter's simple API and cron you can turn any sort of data API into a twitter event stream (with event listeners, you could even stream irregular events like subversion checkins or server failures into twitter). To give another example, I wrote a simple weatherbot that calls the New York Times weather API and posts the current conditions for New York City to the [nyt_weather](https://www.twitter.com/nyt_weather) twitter account. At the time I wrote it, I was working in a cubicle that only had a view of a dimly lit ventilation shaft, so it was very important to get the weather before I stumbled out to lunch without an umbrella. As an added twist, the program updates the avatar image for the twitter user, so I can see the weather at a glance as well. Doing this is surprisingly easy with the [Mechanize](https://mechanize.rubyforge.org/mechanize/) gem in Ruby; we can script the actions to upload a new photo in Twitter's web forms:
 
-```ruby
+{% highlight ruby %}
 def upload_img(icon, user, password)
   agent = WWW::Mechanize.new
  
@@ -64,5 +64,6 @@ def upload_img(icon, user, password)
   form.file_uploads.name('user[profile_image]').first.file_name = "/data/weather_imgs/#{icon}.gif" 
   agent.submit(form)
 end
-```
+{% endhighlight %}
+
 So, there you have two simple examples of taking a seemingly "stupid" technology to do really interesting things. And there are possibilities far beyond this even (eg, interactive twitter bots, visualizations like [Twittervision](https://www.twittervision.com/) or [Twitter Blocks](https://explore.twitter.com/blocks/), or even just new content streams). But that's the beauty of the right kind of stupid - it can lead to some pretty smart ideas.

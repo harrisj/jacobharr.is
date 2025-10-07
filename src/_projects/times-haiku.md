@@ -25,29 +25,29 @@ Put that all togther and I had a little program I could run on my computer that 
 ## Explainer that Appeared on the [Times Haiku Site](https://timeshaiku.tumblr.com/about)
 _Whimsy is not a quality we usually associate with computer programs. We tend to think of software in terms of the function it fulfills. For example, a spreadsheet helps us do our work. A game of Tetris provides a means of procrastination. Social media reconnects us with our high school nemeses. But what about computer code that serves no inherent purpose in itself?_
 
-```
+<pre>
 There is pleasure to
 be had here, in flares of spice
 that revive and warm.
-```
+</pre>
 
 _This is a Tumblr blog of haikus found within The New York Times. Most of us first encountered haikus in a grade school, when we were taught that they are three-line poems with five syllables on the first line, seven on the second and five on the third. According to the Haiku Society of America, that is not an ironclad rule. A proper haiku should also contain a word that indicates the season, or "kigo," as well as a juxtaposition of verbal imagery, known as "kireji." That's a lot harder to teach an algorithm, though, so we just count syllables like most amateur haiku aficionados do._
 
-```
+<pre>
 As dawn broke we warmed
 strawberry Pop Tarts over
 the dying embers.
-```
+</pre>
 
 _How does our algorithm work? It periodically checks the New York Times home page for newly published articles. Then it scans each sentence looking for potential haikus by using an electronic dictionary containing syllable counts. We started with a basic rhyming lexicon, but over time we've added syllable counts for words like "Rihanna" or "terroir" to keep pace with the broad vocabulary of The Times._
 
 _Not every haiku our computer finds is a good one. The algorithm discards some potential poems if they are awkwardly constructed and it does not scan articles covering sensitive topics. Furthermore, the machine has no aesthetic sense. It can't distinguish between an elegant verse and a plodding one. But, when it does stumble across something beautiful or funny or just a gem of a haiku, human journalists select it and post it on this blog._
 
-```
+<pre>
 Stop the machine and
 scrape down the sides of the bowl
 with a spatula.
-```
+</pre>
 
 _Finding the haikus is only the beginning. Because we want the poems to retain their visual integrity, even when people share them across social networks, we post them as images instead of text. On every image, you'll notice a seemingly random background pattern of colored lines. The different orientations of those lines are computer-generated according to the meter of the first line of the poem._
 
@@ -67,8 +67,8 @@ I left the _New York Times_ in 2015. But the site itself continued operating unt
 ## Later Years
 I still have enjoyed playing with the concept and often when I am trying to learn a new programming language (like Elm or Clojure),I will try writing a haiku finder/validator for it. More recently, I revived the Haiku bot with a [new open-source version written in Python](https://github.com/harrisj/nyt-haiku-python) that posted haiku to the [@nythaikus](https://xcancel.com/nythaikus)) twitter account from September 14, 2020 (_you can guess what global event was making me depressed_ for this one) until November 18, 2022 (_when Elon Musk started charging bots for API access_).
 
-```
+<pre>
 Ah well, that was fun.
 Too bad Elon has to ruin
 all that he touches
-```
+</pre>

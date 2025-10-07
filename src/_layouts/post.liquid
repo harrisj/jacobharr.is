@@ -1,7 +1,37 @@
 ---
 layout: default
 ---
+<article class="flex flex-col">
+  <div class="px-4">
+    <div class="breadcrumbs text-sm md:text-md lg:text-lg">
+      <ul>
+        <li>
+          <a href="/"><i class="fa-sharp fa-solid fa-house"></i></a>
+        </li>
+        <li>{{ data.category }}</li>
+        <li>
+          <a href="{{ data.permalink }}">{{ data.title | markdownify }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sm:bg-base-100 sm:border sm:border-base-200 sm:shadow-base-300 p-4">
+    <div class="text-xs md:text-sm">
+      <ul style="list-none leading-none">
+        <li>
+          <i class="fa-regular fa-calendar"></i> {{ data.date | date: '%B %d, %Y' -}}
+          {%- if data.pub_permalink %}
+            (<small>originally published on</small> <a href="{{ data.pub_permalink }}">{{ data.publisher }}</a>)
+          {%- endif %}
+        </li>
+        <li>
+          <span class="italic prose text-xs md:text-sm">{{ data.description }}</span>
+        </li>
+      </ul>
+    </div>
 
-<h1>{{ data.title }}</h1>
-
-{{ content }}
+    <div class="my-text prose-p:leading-6">
+      {{ content }}
+    </div>
+  </div>
+</article>

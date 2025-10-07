@@ -6,7 +6,7 @@ description: >
   I was doing "ChatOps" before it was cool. This piece looked at how we used Slack webhooks and posting to keep track of the election loading bot via Slack without needing to login to dedicated systems to monitor.
 display_description: >
   I was doing "ChatOps" before it was cool. This piece looked at how we used Slack webhooks and posting to keep track of the election loading bot via Slack without needing to login to dedicated systems to monitor. More details on the entire system and other screenshots are located on the [New York Times election loader]({% link _projects/nytimes-election-loader %}) project page. 
-date: 20150315
+date: 2015-03-15
 year: 2015
 category: published
 permalink: /published/thank-you-electionbot.html
@@ -24,7 +24,7 @@ What makes things complicated is that each newsworthy race we might care about m
 
 At its core, what we called Electionbot consisted of two separate pieces of code. The first of these was a notifier that would be called by the loader after it completed every load and post messages to a [Slack](https://slack.com/) channel where the election team was gathered. This used Slack's [incoming webhooks API](https://api.slack.com/incoming-webhooks) to send alerts when an important race was called or a state's polls had closed. The code for something like this is pretty straightforward but its utility is immense:
 
-```ruby
+{% highlight ruby %}
 class SlackNotifier
   def self.notify(load_id)
     notify_first_votes(load_id)
@@ -64,7 +64,7 @@ class SlackNotifier
       end
     end
   end
-```
+{% endhighlight %}
 
 The election loader already had a decently sophisticated mechanism for generating warnings about newsworthy changes. All that was necessary was to add these hooks to format and post warnings to Slack. In 2012, I built a system to mail me whenever delegate counts changed. Posting to the Slack worked so much better though, since we were all in the channel on election nights already, and any missed notifications would be sent out to me by email anyway.
 
@@ -74,7 +74,7 @@ The next step was to enable communication with the loader from our Slack channel
 
 Another command toggled certain races as _important_, so that the notifier would tell us when they had their first votes or were called. Again, the code was pretty straightforward:
 
-```ruby
+{% highlight ruby %}
 def exec
   check_auth
   check_channel_name
@@ -127,7 +127,7 @@ def important_races(arg_str)
 
   render :text => '', :status => 200 
 end
-```
+{% endhighlight %}
 
 With these two components, we theoretically could've replaced much more of the election loader's admin interface with interactive commands, but I was too nervous to allow users to call races directly from Slack. All requests to and from Slack include a security token you can check to eliminate basic spoofing, but they still are going over the public internet between Slack's servers and ours (even if within HTTPS), and I'd rather not explain man-in-the-middle attacks to an executive editor on an election night. So, we kept its capabilities simple on purpose.
 

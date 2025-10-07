@@ -42,7 +42,7 @@ image: /images/writing/bad-metrics/bad-metrics.001.jpg
 <div class="row">
     <div class="seven columns">
         <a href="/images/writing/bad-metrics/bad-metrics.003.jpg" data-lightbox="bad-metrics" data-title="Slide 3">
-            <img src="/images/writing/bad-metrics/bad-metrics.003.jpg" alt="Measures. We can't directly measure "good," so we find proxies we can measure that reflect good qualities in the system: Unambiguously and easily measurable; Directly related to a change; Directly related to success; Under your control; Understood by everyone">
+            <img src="/images/writing/bad-metrics/bad-metrics.003.jpg" alt="Measures. We can't directly measure 'good,' so we find proxies we can measure that reflect good qualities in the system: Unambiguously and easily measurable; Directly related to a change; Directly related to success; Under your control; Understood by everyone">
         </a>
     </div>
     <div class="five columns">
@@ -95,7 +95,7 @@ image: /images/writing/bad-metrics/bad-metrics.001.jpg
 <div class="row">
     <div class="seven columns">
         <a href="/images/writing/bad-metrics/bad-metrics.006.jpg" data-lightbox="bad-metrics" data-title="Slide 6">
-            <img src="/images/writing/bad-metrics/bad-metrics.006.jpg" alt="Reason. You should never measure things just because you can. Metrics should be in service of a reason: To record quality; To demonstrate continuous improvement; To incentivize desired outcomes; To disincentivize negative outcomes, etc.; Eg, "We capture this metric because it confirms for our product owners that our API is adequately responsive to most user requests"">
+            <img src="/images/writing/bad-metrics/bad-metrics.006.jpg" alt="Reason. You should never measure things just because you can. Metrics should be in service of a reason: To record quality; To demonstrate continuous improvement; To incentivize desired outcomes; To disincentivize negative outcomes, etc.; Eg, We capture this metric because it confirms for our product owners that our API is adequately responsive to most user requests">
         </a>
     </div>
     <div class="five columns">

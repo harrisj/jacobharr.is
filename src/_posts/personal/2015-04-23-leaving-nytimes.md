@@ -3,7 +3,7 @@ layout: post
 title: Leaving the New York Times
 description: A piece I wrote about leaving the New York Times after working there for nine years
 image: /images/writing/leaving-nytimes/smeared-badge.png
-date: 20150423
+date: 2015-04-23
 year: 2015
 category: personal
 permalink: /personal/leaving-nytimes.html

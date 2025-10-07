@@ -3,7 +3,7 @@ layout: post
 title: How the Data Sausage Gets Made
 tagline: Jacob Harris on Turning Freeform Text into Journalism
 description: A lengthy explainer on how I used simple code to scrape USDA and FDA food recalls to extract quantitative data.
-date: 20130328
+date: 2013-03-28
 year: 2013
 category: published
 permalink: /published/data-sausage
@@ -47,16 +47,16 @@ This looks like a good start to a data schema. There is some other fascinating i
 ## Modeling the Recalls                 
 The first step was to create a place to store the data about recalls. I use the [Ruby On Rails](http://rubyonrails.org/) web framework, so I created a new Rails project. The next step was to define the appropriate models. Each recall has an associated reason and a category of food (more on that later). In the `ActiveRecord` framework for Object-Relational Mapping (ORM), a recall is described like this.
 
-```ruby
+{% highlight ruby %}
 class Recall < ActiveRecord::Base
     belongs_to :reason
     belongs_to :food_category
     belongs_to :company
-```
+{% endhighlight %}
 
 There will likely be many recalls associated with a particular reason (eg, "E. Coli") or in a particular food category (eg, "Ground Beef"), and creating separate tables for them is a common data approach. Here is the schema for creating the recalls table.
 
-```ruby
+{% highlight ruby %}
 create_table "recalls", :force => true do |t|
   t.string   "title"
   t.string   "url"
@@ -72,7 +72,7 @@ create_table "recalls", :force => true do |t|
   t.integer  "company_id"
   t.integer  "food_category_id"
 end
-```
+{% endhighlight %}
 
 In addition, I decided to create specific categories for the reasons and the type of food. This way, I could use a [controlled vocabulary](https://en.wikipedia.org/wiki/Controlled_vocabulary) of keywords for those categories, making it easier to find all the recalls of a specific type. For instance, "undeclared allergen" is one of my list of reasons regardless of whether it's sulfites, eggs, nuts, or other unlisted allergens that triggered the recall. This approach requires me to devise the categories and reasons I want to tag with, but it makes searching for matches much easier than freeform text fields. I also decided to create a separate `companies` table in case I wanted to associate multiple recalls with a single company.
         
@@ -119,7 +119,7 @@ A far better approach is to parse the HTML into the Document Object Model (if yo
 
 Unfortunately, the USDA FSIS recall site is not a modern website. The entire page is formatted using nested tables, and the only use of CSS classes is for basic text formatting; when you see a CSS class named `BodyTextBlack`, you know you are screwed. The following excerpt provides a taste of what awaited me
 
-```html
+{% highlight html %}
 <!-- BEGIN PAGE CONTENTS UNDER BANNER IMAGE -->
 <tr>
   <td>
@@ -136,28 +136,28 @@ Unfortunately, the USDA FSIS recall site is not a modern website. The entire pag
               <td class="BodyTextBlack" width="155"><strong>HEALTH RISK: HIGH</strong></td>
             </tr>
           </table>
-```
+{% endhighlight %}
 
 Ooof. I think I'm going to be sick. Sadly, if you are planning to scrape government data, you should expect to be horrified on a regular basis.
 
 ### Going Meta
 When faced with unpleasant HTML, there is often one other escape we can try before we're plunged into the muck of nested tables. Many auto-generated files will often have `meta` tags defined, and it can be helpful to look at them to extract the information we need. Sure enough, in a USDA recall, there are the following meta tags:
 
-```html
+{% highlight html %}
 <meta name="description" content="Main Street Quality Meats, a Salt Lake City, UT, is recalling approximately 2,310 pounds of ground beef products that may be contaminated with E. coli O157:H7.">
 <meta name="keywords" content="food recall, FSIS, beef, 068-2012, ground beef products, E. coli">
-```
+{% endhighlight %}
 
 Here is some code in Nokogiri to pull the summary from the document by using the meta tag:
 
-```ruby
+{% highlight ruby %}
 meta = @html.xpath("//meta[@name = 'description']")
 summary_text = meta.first.attributes["content"].to_s unless meta.nil? || meta.first.nil?
 
 unless summary_text.blank?
       summary_text.squish!
 end
-```
+{% endhighlight %}
 
 This code grabs the meta tag summary and also uses Ruby's `String#squish` method to remove extraneous whitespace in the summary.
 
@@ -183,11 +183,11 @@ Knowing this, I devised some regular expressions to extract the fields I needed 
 ### Company Name
 This is pretty simple to figure out.
 
-```ruby
+{% highlight ruby %}
 if !summary.blank? &amp;&amp; summary =~ /^(([A-Z0-9][0-9[:alpha:]\.]+\s*)+)/
   company_name = $1 
 end
-```
+{% endhighlight %}
 
 The recall summary always begins with the company name. This regular expression looks for one or more capitalized words at the beginning of the summary. It assumes that is the company name.
 
@@ -220,7 +220,7 @@ Generally, we will want to be careful of several things when devising regular ex
 ### Volume
 One particularly fun thing about the USDA data is that many recalls are provided with an estimate of how much meat was affected. This could lead to some stomach-churning statistics, so let's pull it out too:
 
-```ruby
+{% highlight ruby %}
 INDIVIDUAL_UNITS = %w(unit package packet can jar pint box)
 UNITS = %w(pound case lot carton crate) + INDIVIDUAL_UNITS
 unit_regex = /#{UNITS.join('|')}/
@@ -234,7 +234,7 @@ unless self.summary.blank?
     self.volume = $1.gsub(',','').to_i
   end
 end
-```
+{% endhighlight %}
 
 ## Hand-Correcting the Data                 
                     
@@ -265,7 +265,7 @@ Here, our regexp for the company name ran headlong into the apostrophe. Time to 
 ### What Are the Biggest USDA recalls?
 I'm curious, so the first thing I checked is what were the biggest recalls:
 
-```sql
+{% highlight sql %}
 SELECT recall_date, reasons.title, food_categories.name, volume, companies.name
 FROM recalls
 INNER JOIN reasons ON reasons.id = recalls.reason_id
@@ -276,7 +276,7 @@ WHERE parse_state <> 'rejected'
   AND type = 'UsdaRecall'
 ORDER by volume DESC
 LIMIT 15
-```
+{% endhighlight %}
 
 |Date|Reason|Type|Volume|Company|
 |----|------|----|------|------|
@@ -298,7 +298,7 @@ LIMIT 15
 
 There are a few repeat offenders in there. Let's look and see how much Cargill has been recalled:
 
-```sql
+{% highlight sql %}
 SELECT recalls.recall_date, food_categories.name, reasons.title, volume, recalls.title
 FROM recalls
 INNER JOIN reasons ON reasons.id = recalls.reason_id
@@ -308,7 +308,7 @@ WHERE parse_state <> 'rejected'
   AND companies.name LIKE 'cargill%'
   AND type = 'UsdaRecall'
 ORDER BY recalls.recall_date DESC
-```
+{% endhighlight %}
 
 |Date|Category|Reason|Volume|Title|
 |2012-07-22|Ground Beef|Salmonella|29,339|Pennsylvania Firm Recalls Ground Beef Products Due To Possible Salmonella Contamination|
@@ -324,7 +324,7 @@ Drilling down within the data reveals that the Cargill problems have been at dif
 ### How many pounds of beef get recalled each year?
 So, how have efforts to fight E. Coli in the food supply been going? We can look at the data and see.
 
-```sql
+{% highlight sql %}
 SELECT YEAR(recalls.recall_date), count(*), sum(volume) AS pounds
 FROM recalls
 INNER JOIN reasons ON reasons.id = recalls.reason_id
@@ -336,7 +336,7 @@ WHERE parse_state <> 'rejected'
   AND volume_unit = 'pound'
 GROUP BY YEAR(recalls.recall_date)
 ORDER BY YEAR(recalls.recall_date) DESC
-```
+{% endhighlight %}
 
 |Year|Recalls|Volume (lbs)|
 |----|-----|----|

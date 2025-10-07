@@ -21,7 +21,7 @@ My biggest project within the repository has turned out to be an evolving effort
 
 It started simply enough as a single [YAML](https://en.wikipedia.org/wiki/YAML) file, with the following basic structure:
 
-```yaml
+{% highlight yaml %}
 - agency: Centers for Medicare and Medicaid Services
   acronym: CMS
   date_started: 2025-02-05
@@ -37,7 +37,7 @@ It started simply enough as a single [YAML](https://en.wikipedia.org/wiki/YAML) 
   - https://www.msn.com/en-us/money/general/doge-targets-u-s-health-agencies-gains-access-to-payment-systems/ar-AA1yu5OD
   - https://www.cms.gov/newsroom/press-releases/cms-statement-collaboration-doge
   - https://www.wsj.com/politics/elon-musk-doge-medicare-medicaid-fraud-e697b162
-```
+{% endhighlight %}
 
 I just wanted to track who was at each agency and what was happening. I chose YAML because it is a data format that is designed for machine-processing but it is also meant to be somewhat readable for non-technical people if they wanted to also read the data From there, I have kept evolving both the types of data I'm collecting and the systems for keeping track of it all with a variety of iterations:
 
@@ -52,7 +52,7 @@ I just wanted to track who was at each agency and what was happening. I chose YA
 
 At this point, the YAML looked more like this for a single agency
 
-```yaml
+{% highlight yaml %}
 - name: Department of the Interior
   acronym: DOI
   roundups:
@@ -127,7 +127,7 @@ At this point, the YAML looked more like this for a single agency
     case_no: 1:25-cv-00612
     date_filed: 2025-03-03
     link: https://www.courtlistener.com/docket/69698261/center-for-biological-diversity-v-us-department-of-interior/
-```
+{% endhighlight %}
 
 But it was starting to get more unwieldy to edit. And sometimes, when I was dealing with a single event that affected multiple agencies for instance, I would need to duplicate and move content around. It made it harder to ensure everything was consistent. So, the next big step was to define a workflow where I would edit raw data and then a pre-commit hook could be used to regenerate files downstream. Under this model, I defined a few files with basic types that I can then join into more complicated data structures:
 

@@ -6,7 +6,7 @@ description: >
     I remain fascinated by how data types work because they constrain how the software sees the world. Even representing reality with something as simple as a boolean can lead to tradeoffs that shape how we model things.
 display_description: >
     I remain fascinated by how data types work because they constrain how the software sees the world. Even representing reality with something as simple as a boolean can lead to tradeoffs that shape how we model things. This was also referenced in the book [Living in Data](https://us.macmillan.com/books/9780374720513/livingindata/) by Jer Thorp.
-date: 20150218
+date: 2015-02-18
 year: 2015
 category: published
 permalink: /published/consider-boolean.html
@@ -24,7 +24,7 @@ It's far easier to explain what I'm talking about through an example. So, let's 
 
 There are no open-records laws in Ruritania, so all the data on detainees must be pieced together in a database by our own researchers. We need to design the schema for them to enter the relevant data about each prisoner as they discover it. So, we start by figuring out some basic fields for the `prisoners` table. A plausible first cut might look like this:
 
-```sql
+{% highlight sql %}
 prisoner_id varchar(255),
 name varchar(255),
 birth_date date,
@@ -34,7 +34,7 @@ convicted bool,
 released bool,
 notes text
 ...
-```
+{% endhighlight %}
 
 We usually start the modeling process by figuring out the important information we might want to track about our subjects. In many cases, those are simple yes/no questions, meaning we can represent them with `boolean` type fields in our database. It's easy to just define a bunch of Boolean fields like this in our schema, but it's also easy to make mistakes. For instance, we have inadvertently created two columns `held` and `released` that are just two inverted ways of representing the same thing. What does it mean if both are checked? Or neither? Neither scenario makes sense in reality, but the existence of two separate fields combined with [Murphy's Law](https://en.wikipedia.org/wiki/Murphy%27s_law) makes such logically impossible representations inevitable; all it takes is one researcher to accidentally check two columns in the admin. There is no error correction for these fields in our database.
 
@@ -51,14 +51,14 @@ Of course, we do have the option of disallowing NULLs in our database's Boolean 
 
 These categories are mutually exclusive. We assume that any prisoner's status can only be set to one of these categories. So, we decide to implement this as a collection of Boolean values.
 
-```sql
+{% highlight sql %}
 released bool NOT NULL,
 approved_for_release bool NOT NULL,
 charged bool NOT NULL,
 convicted bool NOT NULL,
 died_in_custody bool NOT NULL,
 unknown bool NOT NULL
-```
+{% endhighlight %}
 
 We've eliminated the potential problems with null values by not allowing them at all. And we might feel good that we've sidestepped the "held"-"released" confusion by making "held" the default state if none of these Booleans are checked. Yet by adding more Booleans, we've just made possible errors even more likely. There are still problems where a researcher might accidentally check two checkboxes in an admin. There might also be well-intentioned accidents; imagine a later developer were maintaining this code and didn't realize these fields were supposed to be mutually exclusive - so when an inmate is convicted, they leave charged set to true, because the inmate was obviously charged before they were convicted. Suddenly, the application is crashing and nobody knows why.
 
@@ -73,7 +73,7 @@ For instance, suppose we decide to be less rigorous about defining a prisoner's 
 
 The problem here is like we've confused ser and estar. When we are first defining our schema, we're often not sure if any specific Boolean field means that something is currently true or simply that it was true at some point, which is a pretty important distinction. Admittedly, this is not the fault of the Boolean datatype, but rather of how poorly we describe the data we want to collect (for instance, if instead of `charged`, imagine we named the field `currently_charged` or `was_charged`). Ultimately though, we should not distill important events in a prisoner's life into simple true/false conditionals. A far better approach would be to create an auxiliary table that's joined to the prisoners table:
 
-```sql
+{% highlight sql %}
 CREATE TABLE events (
     id int(11) NOT NULL AUTO_INCREMENT,
     prisoner_id int(11) NOT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE events (
     event_date date NOT NULL,
     metadata text
 )
-```
+{% endhighlight %}
 
 A prisoner would have many events associated with them. Here, the `event_type` is limited to a set of keywords like `held`, `charged` or `released` defined and enforced by our code. Then, we can record the history we have for any inmate as a series of events rather than a muddle of ambiguous Booleans. To find all the prisoners who were ever charged with a crime, we can join against this table on the `charged` event_type. We will have no problem representing the hapless prisoner who was charged, then cleared, then charged again, since we can use 3 event records to represent that. To figure out the current status of any inmate, we might simply just look at the most recent event in their timeline. To store additional metadata about specific events, we could either save arbitrary JSON metadata as a text field (if we do not need to search any of it in the database) or use [single table inheritance](http://www.martinfowler.com/eaaCatalog/singleTableInheritance.html). Using a separate events table would also simplify our main prisoners table by eliminating the need for multiple redundant columns like `release_date`, `charged_date`, `conviction_date`, etc.
 

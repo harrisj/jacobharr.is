@@ -2,7 +2,7 @@
 layout: post
 title: Using Varnish So News Doesn't Break Your Server
 image: /images/writing/varnish/big-board-screenshot.png
-date: 2010095
+date: 2010-09-15
 year: 2010
 description: A technical explanation of the reverse proxy cache tool Varnish and how we used it at the Interactive Newsroom Technologies server to keep high request rates from melting our servers.
 category: published
@@ -32,7 +32,7 @@ The [Varnish Configuration Language](https://varnish-cache.org/wiki/VCL) (VCL) i
 VCL models a web request through the cache with a series of callbacks, of which two are the most important. The first of these is `vcl_recv`, which is invoked to process incoming web requests to Varnish.
 
 Here's an example of how we use it:
-```vcl
+{% highlight vcl %}
 sub vcl_recv {
     # Use HAproxy as back end for all requests
     set req.backend = backend_director;
@@ -68,12 +68,11 @@ sub vcl_recv {
        return (lookup);
     }
 }
-```
+{% endhighlight %}
 
 The other important method is `vcl_fetch`, which is triggered on responses from the back end (in the case of cache misses). This example illustrates using C extensions in a VCL. By default, Varnish just follows the same time-outs specified in the Cache-Control directive for downstream browsers. However, we have many cases where we want to keep something in Varnish for a long time, but still tell the downstream browser to cache for a short period. So, our VCL looks for a special `X-VARNISH-TTL` header in responses from our web applications. If it finds that, it uses that for the TTL; otherwise, it falls back to the Cache-Control header.
 
-```vcl
-
+{% highlight vcl %}
 sub vcl_fetch {
     set beresp.grace = 2m;
  
@@ -108,16 +107,16 @@ sub vcl_fetch {
       return (pass);
     }
 }
-```
+{% endhighlight %}
 
 ## Edge-Side Includes
 Finally, a word about edge-side includes (ESIs). Long a feature of content-delivery networks like Akamai, edge-side includes allow your web apps to specify parts to be stitched in by the cache and delivered downstream to the user. This allows you to break down complex pages into simpler actions. For instance, the [Congress votes overview page](https://politics.nytimes.com/congress/votes) has these ESI directives for the sidebars on the right:
 
-```html
+{% highlight html %}
 <div id="party">esi :include src="//politics.nytimes.com/congress/superlatives/vsparty/111" /></div>
 <div id="missers">esi :include src="//politics.nytimes.com/congress/superlatives/missers/111" /></div>
 <div id="loneno">esi :include src="//politics.nytimes.com/congress/superlatives/loneno/111" /></div>
-```
+{% endhighlight %}
 
 When Varnish receives this page (or serves it from the cache), it'll insert ESI content into the page by finding the content of those URLs in its cache (or by calling the back-end server). The user sees only the final page (unlike with JS callbacks). Not only can this help break down complicated pages into simple modules, but it can also help serve mostly static pages with some private dynamic content. Of course, using ESI does impose some performance costs, so as our VCL above illustrates, we execute ESI only if the response includes an `X-RUN-ESI` header.
 

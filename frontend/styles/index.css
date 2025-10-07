@@ -9,7 +9,6 @@
    themes: corporate --default, business --prefersdark;
  }
 
-
 @config "../../tailwind.config.js";
 
 @layer base {
@@ -29,8 +28,14 @@
     --font-didone: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
   }
 
+  @import './syntax-highlighting.css'
+
   html, body {
     /* overflow-x: none; */
+  }
+
+  .font-mono-code {
+    font-family: var(--font-mono-code);
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -39,10 +44,6 @@
 
   date {
     @apply font-mono text-sm;
-  }
-
-  code * {
-    @apply font-mono;
   }
 
   pre {
@@ -77,6 +78,10 @@
     @apply text-lg;
   }
 
+  .my-text {
+    @apply prose prose-a:font-semibold prose-a:link prose-a:link-hover md:prose-base sm:max-w-none prose-li:m-[0.2em] prose-li:leading-5 dark:prose-invert prose-h2:mt-1 prose-h2:mb-0.5 prose-h3:mt-1 prose-h3:mb-0.5;
+  }
+
   .my-2col-grid {
     @apply sm:grid sm:grid-cols-[100px_auto] gap-x-3;
   }
@@ -87,6 +92,22 @@
 
   .my-2col-r {
     @apply text-left col-start-2;
+  }
+
+  img[alt$=" <"] {
+    @apply float-left mr-4 my-1;
+  }
+
+  img[alt$=" >"] {
+    @apply float-right ml-4 my-1;
+  }
+  
+  img[alt$="><"] {
+    @apply max-w-8/10 float-none;
+  }
+
+  img[alt$="<>"] {
+    @apply float-none;
   }
 }
 
@@ -107,10 +128,10 @@
   @apply rounded-lg shadow-xl;
 }
 
-.prose code.highlighter-rouge,
+/* .prose code.highlighter-rouge,
 .prose table code {
   @apply bg-base-100 rounded border-none px-2;
-}
+} */
 
 .prose h4 {
   @apply text-xl;

@@ -1,18 +1,22 @@
-# frozen_string_literal: true
-
-module Builders
-  # Forcing JIT for Tailwind
-  class TailwindJit < SiteBuilder
+  class Builders::TailwindJit < SiteBuilder
     def build
-      hook :site, :pre_reload do |_, paths|
-        # Don't trigger refresh if it's a frontend-only change
-        next if paths.length == 1 && paths.first.ends_with?('manifest.json')
+      return if ARGV.include?("--skip-tw-jit")
 
-        # Save out a comment file to trigger Tailwind's JIT
-        refresh_file = site.in_root_dir('frontend', 'styles', 'jit-refresh.css')
-        File.write refresh_file, "/* #{Time.now.to_i} */"
-        throw :halt # don't continue the build, wait for watcher rebuild
+      fast_refreshing = false
+
+      hook :site, :fast_refresh do
+        fast_refreshing = true
+      end
+
+      hook :site, :post_write do
+        if fast_refreshing
+          fast_refreshing = false
+          Thread.new do
+            sleep 0.75
+            refresh_file = site.in_root_dir("frontend", "styles", "jit-refresh.css")
+            File.write refresh_file, "/* #{Time.now.to_i} */"
+          end
+        end
       end
     end
   end
-end

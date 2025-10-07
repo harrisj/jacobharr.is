@@ -33,6 +33,8 @@ template_engine: liquid
 # pagination:
 #   enabled: true
 
+fast_refresh: false
+
 collections:
   posts:
     permalink: /:category/:slug.html
