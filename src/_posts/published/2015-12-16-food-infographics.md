@@ -9,7 +9,7 @@ display_description: >
 description: >
     As a commissioned piece for Eater, I reviewed two infographics-themed books about food and drink to discuss what was
     effective and what was eye candy.
-date: 20151216
+date: 2015-12-16
 year: 2015
 category: published
 permalink: /published/food-infographics.html

@@ -5,7 +5,7 @@ tagline: Jacob Harris explains how it was made, tuned and tested
 display_description: A deep dive in to some of the internal workings of the backend system that powered election results at the New York Times from 2008 - 2015.
 display_description: A deep dive in to some of the internal workings of the backend system that powered election results at the New York Times from 2008 - 2015. For more background and stories and screenshots, visit the [Nytimes Election Loader]({% link _projects/nytimes-election-loader %}) project page.
 image: /images/writing/election-loader/ohio-election-loader-interface.jpg
-date: 20121129
+date: 2012-11-29
 year: 2012
 category: published
 permalink: /published/election-loader

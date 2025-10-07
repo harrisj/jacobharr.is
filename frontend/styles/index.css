@@ -83,7 +83,7 @@
   }
 
   .my-2col-grid {
-    @apply sm:grid sm:grid-cols-[100px_auto] gap-x-3;
+    @apply sm:grid sm:grid-cols-[minmax(40px,80px)_auto] gap-x-3;
   }
 
   .my-2col-l {

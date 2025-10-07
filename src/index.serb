@@ -1,0 +1,25 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+layout: default
+---
+<section id="published">
+  <h2 class="h2">Published</h2>
+  {% posts = site.categories["published"].sort_by {|p| p.data.date } %}
+  {% grouped = posts.group_by {|x| x.data.year } %}
+  
+  <dl class="my-2col-grid">
+    {% grouped.keys.sort.each do |year| %}
+    <dt class="hidden sm:block my-2col-l">
+      <date class="text-secondary">{{ year }}</date>
+    </dt>
+
+    <dd class="my-2col-r">
+      <ul class="py-1 leading-5">
+      {% grouped[year].each do |doc| %}
+        <li><a class="link-hover" href="{{ doc.data.permalink }}">{{ doc.data.title | markdownify }}</a></li>
+      {% end %}
+      </ul>
+    </dd>
+    {% end %}
+  </dl>
+</section>

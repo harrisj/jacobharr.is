@@ -3,7 +3,7 @@ layout: post
 title: The Times Regrets the Error
 tagline: Jake Harris opens a serious barrel of monkeys about when and how to issue corrections for data journalism
 description: A piece looking at how using automated data sources in realtime will lead to inevitable errors. When will they require a correction?
-date: 20130919
+date: 2013-09-19
 year: 2013
 category: published
 permalink: /published/times-regrets-error

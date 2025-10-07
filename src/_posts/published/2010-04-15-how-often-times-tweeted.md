@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How Often Is the Times Tweeted?
-date: 20100415
+date: 2010-04-15
 year: 2010
 category: published
 display_description: A post I wrote up summarizing a talk about the twitter account that I gave at Twitter's Chirp conference. For more details on @nytimes, check out the [@nytimes twitter account]({% link _projects/nytimes-twitter %})

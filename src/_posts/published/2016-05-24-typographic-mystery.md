@@ -5,7 +5,7 @@ subtitle: How a strange face in a random 19th-century newspaper ad became a port
 summary: As part of messing around with advertising in the New York Times archives, I inadvertently stumbled across an example of ASCII art from the 1880s. For more details on the project and some examples, please visit the [Old NYT Advertising]({% link _projects/old-nyt-ads %}).
 description: As part of messing around with advertising in the New York Times archives, I inadvertently stumbled across an example of ASCII art from the 1880s.
 image: /images/writing/newspaper_ads/the_treasurer.jpg
-date: 20160524
+date: 2016-05-24
 year: 2016
 category: published
 permalink: /published/typographic-mystery.html

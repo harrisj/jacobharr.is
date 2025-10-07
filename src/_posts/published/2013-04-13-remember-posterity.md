@@ -3,7 +3,7 @@ layout: post
 title: And Remember, this Is for Posterity
 tagline: Jacob Harris on the hows and whys of designing interactives to survive the future
 description: A thinkpiece on how we might consider designing interactives to survive for posterity. Unfortunately, we haven't.
-date: 20130413
+date: 2013-04-13
 year: 2013
 category: published
 permalink: /published/remember-posterity

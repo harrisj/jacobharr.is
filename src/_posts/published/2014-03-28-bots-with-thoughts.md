@@ -3,7 +3,7 @@ layout: post
 title: Bots With Thoughts
 tagline: Jacob Harris on magic, aesthetics, and the newsbot frontier
 description: In this long piece, I attempted to think through some of the issues around using bots for journalism. It predates the rise of Generative AI, so it feels remarkably quaint now, but I'm sharing for completeness.
-date: 20140328
+date: 2014-03-28
 year: 2014
 category: published
 permalink: /published/bots-with-thoguhts
