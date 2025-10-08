@@ -7,4 +7,5 @@ image: /images/projects/old-nyt-ads/1927-spread.jpg
 published: false
 start_year: 2012
 end_year: 2015
+years: 2012-2015
 ---

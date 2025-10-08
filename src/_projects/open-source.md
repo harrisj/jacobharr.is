@@ -6,6 +6,7 @@ description: My involvement with various open source projects over the years
 image: /images/projects/open-source/openNYT-title.png
 start_year: 2007
 end_year: 2025
+years: 2007-2025
 ---
 I have contributed to Open Source software in a variety of places. It's not as substantial as I would like (sadly, some of my most best coding work has been for proprietary codebases), but it's been enough to make me happy. This page documents a few of the more prominent projects and work.
 
@@ -44,4 +45,3 @@ I also have done a few different serious and silly projects over the past few ye
 - [airport_scraper](https://github.com/harrisj/airport_scraper) - some Ruby code to extract airport info from freeform text. I build and used in a personal art project that looked for people posting about their travels on Twitter (2009 - 2010)
 -  [tweetftp](https://github.com/nytimes/tweetftp) - an April Fool's joke where I implemented a system for sending a file via Twitter as a serious of small tweets (2010)
 - [lifeline](https://github.com/nytimes/lifeline) - a cron-based approach for launching and keeping daemons alive we used on some of our servers for Interactive Newsroom Technologies (2010)
- 

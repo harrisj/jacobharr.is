@@ -1,0 +1,64 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+layout: default
+---
+<div class="sm:grid sm:grid-cols-[auto_150px]">
+    <div id="main">
+        <h1 class="text-5xl lg:text-6xl font-mono-code">jacobharr.is</h1>
+
+        <div class="flex flex-col gap-5">
+            <section id="info">
+                <dl class="my-2col-grid">
+                    {% rendercontent 'dt_left' %}Résumé{% endrendercontent %}
+                    {% rendercontent 'dd_right' %}<a href="/resume">https://jacobharr.is/resume</a>{% endrendercontent %}
+
+                    {% rendercontent 'dt_left' %}Email{% endrendercontent %}
+                    {% rendercontent 'dd_right' %}<a href="mailto:mail@jacobharr.is">mail@jacobharr.is</a>{% endrendercontent %}
+
+                    {% rendercontent 'dt_left' %}Location{% endrendercontent %}
+                    {% rendercontent 'dd_right' %}<a href="https://en.wikipedia.org/wiki/Takoma_Park,_Maryland">Takoma Park, MD</a>{% endrendercontent %}
+
+                    {% rendercontent 'dt_left' %}Bluesky{% endrendercontent %}
+                    {% rendercontent 'dd_right' %}<a href="https://bsky.app/profile/jacobharr.is">@jacobharr.is</a>{% endrendercontent %}
+
+                    {% rendercontent 'dt_left' %}Signal{% endrendercontent %}
+                    {% rendercontent 'dd_right' %}jacobharris.28{% endrendercontent %}
+                </dl>
+            </section>
+
+            <section id="projects">
+                <h2 class="text-2xl">Notable Projects</h2>
+                {% assign posts = site.categories['project']  %}
+                {% assign grouped = posts | group_by: "years" | sort: "name" %}
+                {% render 'dl_posts', posts: grouped %}
+            </section>
+
+
+            <section id="personal">
+                <h2 class="text-2xl">Personal</h2>
+
+                {% assign posts = site.categories['personal']  %}
+                {% assign grouped = posts | sort_by: "date" | group_by: "year" | sort: "name" %}
+                {% render 'dl_posts', posts: grouped %}
+            </section>
+
+            <section id="published">
+                <h2 class="text-2xl">Published</h2>
+
+                {% assign posts = site.categories['published'] %}
+                {% assign grouped = posts | sort_by: "date" | group_by: "year" | sort: "name" %}
+                {% render 'dl_posts', posts: grouped %}
+            </section>
+        </div>
+    </div>
+    <div id="sidebar" class="hidden sm:block flow flow-col">
+        <img src="/images/homepage/homepage1.png" width="150"/>
+        <img src="/images/homepage/homepage2.png" width="150"/>
+        <img src="/images/homepage/homepage3.png" width="150"/>
+        <img src="/images/homepage/homepage4.png" width="150"/>
+        <img src="/images/homepage/homepage5.png" width="150"/>
+        <img src="/images/homepage/homepage6.png" width="150"/>
+        <img src="/images/homepage/homepage7.png" width="150"/>
+        <img src="/images/homepage/homepage8.png" width="150"/>
+    </div>
+</div>

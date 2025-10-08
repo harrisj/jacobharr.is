@@ -5,6 +5,7 @@ description: The history and inspiration behind the Times Haiku project which ra
 start_year: 2012
 end_year: 2017
 category: project
+years: 2012-2017
 ---
 This project largely happened because I was depressed and bored.
 

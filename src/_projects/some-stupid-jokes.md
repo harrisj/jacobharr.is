@@ -4,6 +4,7 @@ title: Various Dumb Jokes I've Made Online
 published: true
 start_year: 2011
 end_year: 2025
+years: 2011 - 2025
 ---
 These are some stupid jokes I have told repeatedly online over the years. None of them are particularly good, but they are very much mine. And I figured I'd record them here for posterity...
 

@@ -1,0 +1,13 @@
+<dl class="my-2col-grid">
+    {% for rec in posts %}
+        {% rendercontent 'dt_left' %}<date class="">{{ rec.name }}</date>{% endrendercontent %}
+        {% rendercontent 'dd_right' %}
+            <ul class="leading-5 pb-1 sm:py-1">
+            {% assign docs = rec.items | sort: 'date' %}
+            {% for doc in docs %}
+                <li><a href="{{ doc.data.permalink }}">{{ doc.data.title | markdownify }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endrendercontent %}
+    {% endfor %}
+</dl>

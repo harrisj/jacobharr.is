@@ -6,6 +6,7 @@ description: An overview of my work in data journalism at the _New York Times_ f
 published: true
 start_year: 2007
 end_year: 2015
+years: 2007-2015
 ---
 The story of the Interactive Newsroom Technologies team started with a tragedy.
 
