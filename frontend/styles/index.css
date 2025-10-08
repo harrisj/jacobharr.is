@@ -51,13 +51,17 @@
         font-family: var(--font-mono-code);
     }
 
+    .font-industrial {
+        font-family: var(--font-industrial);
+    }
+
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        font-family: var(--font-geometric-humanist);
+        font-family: var(--font-industrial);
     }
 
     pre {
@@ -73,6 +77,10 @@
 
     a {
         @apply border-b-1 border-slate-600 border-dotted;
+    }
+
+    .breadcrumbs a {
+        @apply link link-hover border-none;
     }
 
     .h1 {
