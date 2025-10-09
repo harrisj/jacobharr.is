@@ -5,17 +5,17 @@
     {% for job in cv.career %}
       {% rendercontent 'dt_left' %}{{ job.start_year }}–{{ job.end_year }}{% endrendercontent %}
       {% rendercontent 'dd_right' %}
-        <h3 class="h3">
+        <header class="h4">
           <span class="font-bold">{{ job.title }}</span>,
           <a class="link-hover" href="{{ job.link }}"><span>{{ job.company }}</span></a>
-        </h3>
+        </header>
 
         <div class="prose prose-sm leading-tight max-w-none">{{ job.description }}</div>
         {% if job.projects.size > 0 %}
           <ul>
             {% for project in job.projects %}
               <li class="pt-4">
-                <div class="h4"><a class="link-hover" href="{{ project.link }}">{{ project.title }}</a></div>
+                <div class="h5"><a class="link-hover" href="{{ project.link }}">{{ project.title }}</a></div>
                 <div class="prose prose-sm leading-tight max-w-none">{{ project.description | markdownify }}</div>
               </li>
             {% endfor %}

@@ -245,7 +245,7 @@ career:
       content from multiple databases. I also built a custom web crawler and a parser to leverage
       the new XML and XSLT standards.
 education:
-  - name: Massachusetts Institute of Technology
+  - name: MIT
     link: https://mit.edu/
     start: 9/1993
     start_year: 1993
@@ -255,7 +255,7 @@ education:
     description: >
       Concentration of studies: operating systems, software engineering, programming languages
       and compilers.
-  - name: Massachusetts Institute of Technology
+  - name: MIT
     link: https://mit.edu/
     start: 9/1997
     start_year: 1997
@@ -272,11 +272,11 @@ skills:
     - FastAPI
     - Node.js
     - Express
-    - Javascript
+    - JavaScript
     - Ruby
     - Ruby on Rails
     - Jekyll
-    - Bridgtown
+    - Bridgetown
     - Hugo
     - Skeleton
     - Bulma
@@ -291,45 +291,45 @@ skills:
     - Scheme
     - Lisp
     - Clojure
-    - MySQL
-    - Postgres
-    - Sqlite
-    - Kafka
+    - SQL
     - GRPC
     - Protobuf
   tools:
-    - Amazon Web Services
+    - AWS
     - Terraform
-    - Monitoring
-    - Telemetry
-    - On-call
     - PagerDuty
     - Docker
     - CloudFoundry
     - Scraping
-    - ETL
     - Airflow
     - Splunk
+    - Kafka
     - Kinesis
-    - ELK
+    - MySQL
+    - Postgres
+    - Sqlite
     - Temporal
     - Lambda Step Functions
     - Redis
     - Elasticsearch
-    - Web Accessibility
+    - Deque Axe
   career:
-    - Data Journalism
-    - Web Frameworks
+    - Data journalism
+    - Web frameworks
     - Accessibility
     - WCAG
     - REST
     - OpenGraph
     - GRPC
+    - Monitoring
+    - Telemetry
+    - ETL
+    - ELK
     - Microservices
     - Remote work
     - Agile
     - Kanban
     - SAFe
-    - Engineering Management
+    - Engineering management
     - Federal procurement
     - Compliance
