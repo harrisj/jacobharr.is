@@ -6,6 +6,7 @@ description: A deep-dive into the internal workings and specialized usage of the
 start_year: 2008
 end_year: 2014
 years: 2008-2014
+permalink: /projects/nytimes-election-loader.html
 ---
 <a href="/images/projects/nyt-elections/20141104-election-candy.jpeg" data-lightbox="elections" data-title="Special branded M&M's that we received for Election Night 2014">
     <img class="thumbnail" src="/images/projects/nyt-elections/20141104-election-candy.jpeg" width="200" alt="Election night candy >"/>

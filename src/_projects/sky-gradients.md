@@ -7,6 +7,7 @@ start_year: 2015
 end_year: 2024
 template_engine: liquid
 years: 2015-2024
+permalink: /projects/sky-gradients.html
 ---
 One of my personal little hobbies has been to take a photo of the clear blue sky and post it to Instagram with no other context or explanation. I find it soothing, but I have fallen out of using it since I no longer use Instagram. So, I decided to instead collect all of the images here! Click on any image to view it in its original size and scale. All images are in the public domain [Creative Commons Zero](https://creativecommons.org/public-domain/cc0/); it's the sky, I don't own it!
 
@@ -22,12 +23,33 @@ I also wrote an article in _The Atlantic_ [explaining the whole thing with some 
   <!--grid-cols-2 md:grid-cols-3 lg:grid-cols-4  -->
   <div class="flex flex-wrap flex-row gap-1 justify-start not-prose">
       {% for grad in gradients %}
-        {% assign alt = grad.season | append: " Gradient " | append: grad.date | append: " " | append: grad.location %}
         <div>
-            <a href="/images/projects/sky-gradients/{{ grad.filename }}" data-lightbox="sky-gradients" data-title="{{ alt }}">
-                <img src="/images/projects/sky-gradients/thumbnails/{{ grad.filename | replace: '.jpg', '-200.jpg' }}" width="200" height="200" alt="{{ alt }}"/>
-            </a>
+            <a onclick="modal_{{ grad.id }}.showModal()"><img src="/images/projects/sky-gradients/thumbnails/{{ grad.filename | replace: '.jpg', '-200.jpg' }}" width="200" height="200" alt="{{ grad.caption }}"/></a>
+            <dialog id="modal_{{ grad.id }}" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                  <figure>
+                      <img class="w-full object-cover p-1" src="/images/projects/sky-gradients/{{ grad.filename }}"/>
+                      <figcaption class="px-5 py-5 text-center text-md font-mono font-semibold">{{ grad.caption }}</figcaption>
+                  </figure>
+              </div>
+              <form method="dialog" class="modal-backdrop">
+                <button>close</button>
+              </form>
+            </dialog>
         </div>
       {% endfor %}
   </div>
 {% endfor %}
+
+
+<!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_2.showModal()">open modal</button>
+<dialog id="my_modal_2" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click outside to close</p>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>

@@ -5,6 +5,7 @@ published: true
 category: project
 start_year: 2025
 years: '2025'
+permalink: /projects/trump-data.html
 ---
 As I write this in late April 2025, we are now several months into the second Trump presidency. It's been hard keeping track of all that is being damaged and lost within the federal government. Emboldened by Musk and the absence of oversight, the so-called "Department of Government Efficiency" (DOGE) has been rampaging through agencies to subvert their security, cancel contracts, fire staff and siphon up confidential data into large data warehouses. It's going to take years to both undo the damage and to hit them with consequences.
 
