@@ -15,7 +15,7 @@ objective: >
   specializing in creating APIs and web applications using Node.js, Python, Ruby on Rails and
   even Java. Proven track record in agile software development and building scalable solutions,
   including high-volume streaming API for Medicare claims and the software that presented
-  election results for the New York Times. Eager to leverage both technical expertise and
+  election results for the _New York Times_. Eager to leverage both technical expertise and
   software delivery skills for an organization with a public-facing mission and a strong
   culture of collaboration.
 career:
@@ -267,34 +267,69 @@ education:
       Internet_
 skills:
   languages:
-    - Python · Flask · FastAPI
-    - Node.js · Express · Javascript
-    - Ruby · Ruby on Rails
-    - Jekyll · Bridgtown · Hugo
-    - Skeleton · Bulma · TailwindCSS
-    - C · C++ · Go · Bash
-    - Java · Scala · Spark
-    - Scheme · Lisp · Clojure
-    - MySQL · Postgres · Sqlite
-    - Kafka · GRPC · Protobuf
+    - Python
+    - Flask
+    - FastAPI
+    - Node.js
+    - Express
+    - Javascript
+    - Ruby
+    - Ruby on Rails
+    - Jekyll
+    - Bridgtown
+    - Hugo
+    - Skeleton
+    - Bulma
+    - TailwindCSS
+    - C
+    - C++
+    - Go
+    - Bash
+    - Java
+    - Scala
+    - Spark
+    - Scheme
+    - Lisp
+    - Clojure
+    - MySQL
+    - Postgres
+    - Sqlite
+    - Kafka
+    - GRPC
+    - Protobuf
   tools:
     - Amazon Web Services
-    - Terraform · IaC
-    - Monitoring · Telemetry
-    - On-call · PagerDuty
-    - Docker · CloudFoundry
-    - Scraping · ETL · Airflow
-    - Splunk · Kinesis · ELK
-    - Temporal · Lambda Step Functions
-    - Redis · Elasticsearch
+    - Terraform
+    - Monitoring
+    - Telemetry
+    - On-call
+    - PagerDuty
+    - Docker
+    - CloudFoundry
+    - Scraping
+    - ETL
+    - Airflow
+    - Splunk
+    - Kinesis
+    - ELK
+    - Temporal
+    - Lambda Step Functions
+    - Redis
+    - Elasticsearch
     - Web Accessibility
   career:
     - Data Journalism
     - Web Frameworks
-    - Accessibility · WCAG
-    - REST · OpenGraph · GRPC
-    - Microservices · Monorepos
-    - Self-directed remote worker
-    - Agile · Kanban · SAFe
-    - Experienced engineering manager
-    - Federal procurement · Compliance
+    - Accessibility
+    - WCAG
+    - REST
+    - OpenGraph
+    - GRPC
+    - Microservices
+    - Remote work
+    - Agile
+    - Kanban
+    - SAFe
+    - Engineering Management
+    - Federal procurement
+    - Compliance

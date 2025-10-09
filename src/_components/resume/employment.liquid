@@ -3,36 +3,25 @@
 
   <dl class="my-2col-grid gap-y-4">
     {% for job in cv.career %}
-      <dt class="hidden sm:block my-2col-l">
-        <date class="text-secondary">{{ job.start_year }}–{{ job.end_year }}</date>
-      </dt>
-      <dd class="my-2col-r pb-6">
+      {% rendercontent 'dt_left' %}{{ job.start_year }}–{{ job.end_year }}{% endrendercontent %}
+      {% rendercontent 'dd_right' %}
         <h3 class="h3">
           <span class="font-bold">{{ job.title }}</span>,
-          <a class="link-hover" href="{{ job.link }}"
-            ><span>{{ job.company }}</span></a
-          >
-          <span class="sm:hidden">
-            (<date class="text-secondary">{{ job.start }}–{{ job.end }}</date>)</span
-          >
+          <a class="link-hover" href="{{ job.link }}"><span>{{ job.company }}</span></a>
         </h3>
 
-        <div class="prose prose-base leading-tight max-w-none">{{ job.description }}</div>
+        <div class="prose prose-sm leading-tight max-w-none">{{ job.description }}</div>
         {% if job.projects.size > 0 %}
           <ul>
             {% for project in job.projects %}
               <li class="pt-4">
-                <div class="h4">
-                  <a class="link-hover" href="{{ project.link }}">{{ project.title }}</a></span
-                >
-                <div class="prose prose-sm leading-tight max-w-none">
-                {{ project.description | markdownify }}
-                </div>
+                <div class="h4"><a class="link-hover" href="{{ project.link }}">{{ project.title }}</a></div>
+                <div class="prose prose-sm leading-tight max-w-none">{{ project.description | markdownify }}</div>
               </li>
             {% endfor %}
           </ul>
         {% endif %}
-      </dd>
+      {% endrendercontent %}
     {% endfor %}
   </dl>
 </section>

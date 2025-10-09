@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<main>
+<div class="flex flex-col gap-4">
   {% render 'resume/header', cv: site.data.cv %}
-
+  {% render 'resume/objective', cv: site.data.cv %}
+  {% render 'resume/skills', cv: site.data.cv %}
   {% render 'resume/employment', cv: site.data.cv %}
-
   {% render 'resume/education', cv: site.data.cv %}
-</main>
+</div>

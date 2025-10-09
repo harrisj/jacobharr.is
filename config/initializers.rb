@@ -1,4 +1,6 @@
-Bridgetown.configure do |config|
+# frozen_string_literal: true
+
+Bridgetown.configure do |_config|
   # You can configure aspects of your Bridgetown site here instead of using
   # `bridgetown.config.yml`. For example:
   #
@@ -63,5 +65,5 @@ Bridgetown.configure do |config|
   init :"bridgetown-sitemap"
   init :"bridgetown-seo-tag"
   init :"bridgetown-quick-search"
-  init :"bridgetown-lit-renderer" 
+  init :"bridgetown-lit-renderer"
 end

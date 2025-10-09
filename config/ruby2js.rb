@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # See docs on Ruby2JS options here: https://www.ruby2js.com/docs/options
 
 preset

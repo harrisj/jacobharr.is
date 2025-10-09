@@ -46,5 +46,5 @@ collections:
     name: Projects
 
 init:
-- "bridgetown-sitemap"
-- "bridgetown-seo-tag"
+  - "bridgetown-sitemap"
+  - "bridgetown-seo-tag"

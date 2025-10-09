@@ -1,33 +1,28 @@
-<section>
-  <div class="row" id="skills">
-    <section class="four columns">
-      <h3>Code</h3>
-
-      <ul class="compact">
-        {% for item in site.data.cv.skills.languages %}
-        <li>{{ item }}</li>
+<section id="skills" class="flex flex-col gap-1">
+    <div>
+        <ul class="flex flex-wrap justify-start gap-x-1">
+        <li class="text-xs font-mono-code font-bold col-1 align-top">Code:</li>
+        {% for item in cv.skills.languages %}
+            <li class="inline-block text-xs text-nowrap align-top">{{ item }}</li>
         {% endfor %}
-      </ul>
-    </section>
+        </ul>
+    </div>
 
-    <section class="four columns">
-      <h3>Tools</h3>
-
-      <ul class="compact">
-        {% for item in site.data.cv.skills.tools %}
-        <li>{{ item }}</li>
+    <div class="col-2 align-top">
+        <ul class="flex flex-wrap justify-start gap-x-1">
+        <li class="text-xs font-mono-code font-bold col-1 align-top">Tools:</li>
+        {% for item in cv.skills.tools %}
+            <li class="inline-block text-xs text-nowrap">{{ item }}</li>
         {% endfor %}
-      </ul>
-    </section>
+        </ul>
+    </div>
 
-    <section class="four columns">
-      <h3>Career</h3>
-
-      <ul class="compact">
-        {% for item in site.data.cv.skills.career %}
-        <li>{{ item }}</li>
+    <div class="col-2 align-top">
+        <ul class="flex flex-wrap justify-start gap-x-1">
+        <li class="text-xs font-mono-code font-bold col-1 align-top">Skills:</li>
+        {% for item in cv.skills.career %}
+            <li class="inline-block text-xs text-nowrap">{{ item }}</li>
         {% endfor %}
-      </ul>
-    </section>
-  </div>
+        </ul>
+    </div>
 </section>

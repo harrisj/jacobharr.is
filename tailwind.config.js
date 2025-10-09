@@ -1,15 +1,16 @@
-const defaultTheme = require("tailwindcss/defaultTheme")
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.{html,md,liquid,erb,serb,rb}',
-    './output/**/*.{html,md,liquid,erb,serb,rb}',
-    './frontend/javascript/**/*.js',
+    "./src/**/*.{html,md,liquid,erb,serb,rb}",
+    "./output/**/*.{html,md,liquid,erb,serb,rb}",
+    "./frontend/javascript/**/*.js",
   ],
-  plugins: [
-    require("@tailwindcss/typography"),
-  ],
-  theme: {
+  plugins: [require("@tailwindcss/typography")],
+  theme: {},
+  screens: {
+    print: { raw: "print" },
+    screen: { raw: "screen" },
   },
-}
+};
