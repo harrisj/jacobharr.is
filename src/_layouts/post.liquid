@@ -8,15 +8,16 @@ layout: default
         <li>
           <a href="/"><i class="fa-sharp fa-solid fa-house"></i></a>
         </li>
-        <li>{{ data.category }}</li>
+        <li>{{ data.category | titleize }}</li>
         <li>
           <a href="{{ data.permalink }}">{{ data.title | markdownify }}</a>
         </li>
       </ul>
     </div>
   </div>
-  <div class="sm:bg-base-100 sm:border sm:border-base-200 sm:shadow-base-300 p-4">
-    <div class="text-xs md:text-sm">
+  <div class="sm:bg-base-100 sm:border sm:border-base-200 sm:shadow-base-300 px-4 pb-4">
+    {% if data.category != 'project' %}
+    <div class="text-xs md:text-sm pt-3">
       <ul style="list-none leading-none">
         <li>
           <i class="fa-regular fa-calendar"></i> {{ data.date | date: '%B %d, %Y' -}}
@@ -29,6 +30,7 @@ layout: default
         </li>
       </ul>
     </div>
+    {% endif %}
 
     <div class="my-text prose-p:leading-6">
       {{ content }}

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Trump Data
 published: true
 category: project

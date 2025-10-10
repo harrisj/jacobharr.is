@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: post
 title: Various Dumb Jokes I've Made Online
-published: true
+published: false
+category: project
 start_year: 2011
 end_year: 2025
 years: 2011 - 2025

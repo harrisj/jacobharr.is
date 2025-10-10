@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Wikileaks War Logs
 description: A technical exploration in the data viewer I helped create for New York Times reporters to work on the Wikileaks War Logs.
 date: 20101024

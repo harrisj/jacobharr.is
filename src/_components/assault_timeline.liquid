@@ -1,0 +1,19 @@
+{% assign last_date = '' %}
+{% if type == 'all' %}
+    {% assign items = tl | sort: 'date' %}
+{% else %}
+    {% assign items = tl | where_exp: 'item', 'item.type == type' | sort: 'date' %}
+{% endif %}
+
+<dl class="not-prose grid grid-cols-1 sm:grid-cols-[100px_auto] timeline gap-x-2 py-2">
+{% for item in items %}
+    {% if item.date != last_date %}
+        <dt class="align-top text-xs pr-2 mr-1 text-mono leading-none text-nowrap text-left sm:text-right sm:col-1 sm:border-r-6 {{ item.type }}"><div class="py-2">{{ item.date }}</div></dt>
+        {% assign last_date = item.date %}
+    {% else %}
+        <dt class="align-top hidden sm:block text-xs text-mono pr-2 mr-1 leading-none text-nowrap text-left sm:text-right sm:col-1 sm:border-r-6 {{ item.type }}">&nbsp;</dt>
+    {% endif %}
+
+    <dd class="align-top sm:col-2 text-sm text-left"><div class="py-1">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</div></dd>
+{% endfor %}
+</dl>

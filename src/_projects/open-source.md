@@ -1,6 +1,6 @@
 ---
 category: project
-layout: page
+layout: post
 title: Open Source Projects
 description: My involvement with various open source projects over the years
 image: /images/projects/open-source/openNYT-title.png
