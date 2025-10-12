@@ -1,11 +1,12 @@
 ---
 title: "@nytimes on Twitter"
-layout: page
+layout: post
 category: project
 description: A history of how I created and mainted the @nytimes account on Twitter.
 start_year: 2007
 end_year: 2014
 years: 2007-2014
+thumbnail: /images/thumbnails/nytimes-twitter.png
 permalink: /projects/nytimes-twitter.html
 ---
 This whole thing started out of spite.

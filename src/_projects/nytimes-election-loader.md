@@ -7,6 +7,7 @@ start_year: 2008
 end_year: 2014
 years: 2008-2014
 template_engine: liquid
+thumbnail: /images/thumbnails/nyt-elections.png
 permalink: /projects/nytimes-election-loader.html
 ---
 {% render 'image', src: '/images/projects/nyt-elections/20141104-election-candy.jpeg', caption: "Special branded M&Ms that we received for Election Night 2014", img_style: 'float-right w-50 m-4', modal_style: 'max-w-xl' %}

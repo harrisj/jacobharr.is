@@ -3,16 +3,18 @@ layout: default
 ---
 {% slot :left_pane do %}
   {% if data.thumbnail %}
-    <div class="">
+    <div class="avatar">
+    <div class="border-2 border-base-200 rounded">
       <img class="object-scale-down" src="{{ data.thumbnail }}"/>
     <div>
+    </div>
   {% end %}
 {% end %}
 
 {% slot :right_pane do %}
   {% if data.thumbnail %}
     <div class="">
-      <label class="input input bg-base-100">
+      <label class="input bg-base-100">
       <i class="fa-regular fa-magnifying-glass"></i>
       {%= liquid_render "bridgetown_quick_search/search", placeholder: 'search', input_class: "input bg-base-100 required" %}
       </label>
@@ -35,7 +37,7 @@ layout: default
     </div>
   </div>
 
-  <div class="md:bg-base-100 md:border md:border-base-200 md:shadow-base-300 px-4 pb-4">
+  <div class="md:bg-base-100 md:rounded-xl md:border md:border-base-200 md:shadow-base-300 px-4 pb-4">
     {% if data.category != 'project' %}
     <div class="text-xs md:text-sm pt-3">
       <ul style="list-none leading-none">

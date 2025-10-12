@@ -8,5 +8,6 @@ published: false
 start_year: 2012
 end_year: 2015
 years: 2012-2015
+thumbnail: /images/thumbnails/old-nyt-ads.png
 permalink: /projects/old-nyt-ads.html
 ---

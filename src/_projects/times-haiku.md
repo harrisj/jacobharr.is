@@ -6,6 +6,7 @@ start_year: 2012
 end_year: 2017
 category: project
 years: 2012-2017
+thumbnail: /images/thumbnails/times-haiku.png
 permalink: /projects/times-haiku.html
 ---
 This project largely happened because I was depressed and bored.

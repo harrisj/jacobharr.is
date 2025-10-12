@@ -59,7 +59,7 @@ Among the dispatches in the Iraq War Logs there were many that were just America
 
 This is completely horrifying to read, but it felt vitally important to document. This violence wasn't directly inflicted by American forces, but it was a direct result of the American invasion and subsequent destabilization of the country. This blood was also on our hands. With the help of graphics editors and a reporter providing local context, I was able to present this data in an interactive graphic:
 
-![A deadly day in Baghdad ><](/images/projects/wikileaks/1024-surge-graphic.jpg)
+{% render 'image', id: 'oly_admin', src: '/images/projects/wikileaks/1024-surge-graphic.jpg', caption: 'A deadly day in Baghdad', img_style: 'img-scaled-center' %}
 
 For more details, check out the following resources:
 - [MGRS Explained](/images/projects/wikileaks/nicar_mgrs.pdf): a presentation I gave at a data journalism conference
