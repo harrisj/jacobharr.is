@@ -1,16 +1,16 @@
 ---
-layout: page
+layout: post
 category: project
 title: The New York Times Election Loader
 description: A deep-dive into the internal workings and specialized usage of the election loader I helped build for the New York Times from 2008 to 2014.
 start_year: 2008
 end_year: 2014
 years: 2008-2014
+template_engine: liquid
 permalink: /projects/nytimes-election-loader.html
 ---
-<a href="/images/projects/nyt-elections/20141104-election-candy.jpeg" data-lightbox="elections" data-title="Special branded M&M's that we received for Election Night 2014">
-    <img class="thumbnail" src="/images/projects/nyt-elections/20141104-election-candy.jpeg" width="200" alt="Election night candy >"/>
-</a>
+{% render 'image', src: '/images/projects/nyt-elections/20141104-election-candy.jpeg', caption: "Special branded M&Ms that we received for Election Night 2014", img_style: 'float-right w-50 m-4', modal_style: 'max-w-xl' %}
+
 Of all the projects that I worked on as part of the [Interactive Newsroom Technologies](/projects/data-journalism.html) team at the _New York Times_, I would count the sustained effort on the Election Results loading system as my most significant work and probably some of the best work I've ever done. It wasn't so much a dazzling technical marvel (although there were some innovations I've especially proud of) as it was a reliable workhorse, doing its job through primaries and general elections, for federal or mayoral results, with no outages and only one serious bug in production (that it happened on election night 2012 wasn't great). This page collects some expanded notes on the election night loader, how election nights were at the _Times_ and various pictures I have posted to social media, etc. in the past, now collected here.
 
 Before we begin, I wrote [a basic overview of how the election loader works in 2012]({% post_url published/2012-11-29-nytimes-election-loader %}) that touches on some of the basics of how elections are modeled. It's worth reading, if you haven't already. I also touch on how it felt on election night 2008 in my essay on [leaving the New York Times]({% post_url personal/2015-04-23-leaving-nytimes %})
@@ -33,9 +33,8 @@ And that was it. Three tables are all you needed to describe the current state o
 
 ## Key Innovations of the Loader
 
-<a href="/images/projects/nyt-elections/election-terminal.jpg" data-lightbox="elections" data-title="A view of terminal output of the loader's command-line execution. I liked to color the production terminal in a special color to distinguish it.">
-    <img class="thumbnail" src="/images/projects/nyt-elections/election-terminal.jpg" alt="Loader terminal output ><"/>
-</a>
+{% render 'image', src: '/images/projects/nyt-elections/election-terminal.jpg', caption: "A view of terminal output of the loader's command-line execution. I liked to color the production terminal in a special color to distinguish it.", img_class: 'img-full-center', modal_size: 'max-w-4xl' %}
+
 We were big users of Ruby on Rails from a very early date at the Interactive Newsroom Technologies desk. On the programming side, many of us had come from more verbose statically-typed languages, and I appreciated the cheeky conciseness and mild anarchy of Ruby compared to other languages - I've also been using Python for years, but it's hard for me not to read exhortations like [The Zen of Python](https://peps.python.org/pep-0020/) in anything but a fusty tone compared to Ruby's "There More That One Way To Do It" ethos and the weirdness of [why's Poignant Guide to Ruby](https://en.wikipedia.org/wiki/Why%27s_(poignant)_Guide_to_Ruby).
 
 One of Rails' key features for us was its Object-Relational Model (ORM), the library that allowed programming structures to be saved and loaded to a database. Rails used the [Active Record pattern](https://en.wikipedia.org/wiki/Active_record_pattern), where it would figure out the structures and fields of programming classes by looking at database tables and their structures. This was in contrast to other models where objects and their types would be described in programming languages first and then applied to the database layer. The latter approach is far better for making sure that website form inputs can be validated before being saved into a database, but at the _Times_, we were almost always being given complete databases and racing to build applications on top of them; the database-driven informality of ActiveRecord was key for making that happen.

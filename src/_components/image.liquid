@@ -1,0 +1,19 @@
+{%# Required params img = url, id = unique string for page, caption, class, size %}
+
+{% assign id = src | split: "/" | last | replace: '-', '_' | replace: '.', "_" | slugify %}
+
+{% assign display_src = src %}
+<dialog id="modal_{{ id }}" class="modal">
+    <div class="modal-box {{ modal_style }}">
+        <figure class="align-center">
+            <img class="object-contain p-1" src="{{ src }}"/>
+            <figcaption class="px-5 py-5 text-center text-md font-mono font-semibold">{{ caption }}</figcaption>
+        </figure>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+</dialog>
+<div class="not-prose {{ img_style }}">
+    <img onclick="modal_{{ id }}.showModal()" src="{{ display_src}}" alt="{{ caption }}"/>
+</div>

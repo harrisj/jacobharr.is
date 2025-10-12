@@ -130,6 +130,18 @@
     img[alt$="<>"] {
         @apply float-none;
     }
+
+    .img-scaled-center {
+        @apply max-w-8/10 float-none mx-auto;
+    }
+
+    .img-full-center {
+        @apply max-w-fit float-none mx-auto;
+    }
+
+    .img-thumbnail-article {
+        @apply max-w-1/2;
+    }
 }
 
 @layer base {

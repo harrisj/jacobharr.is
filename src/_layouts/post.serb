@@ -1,6 +1,25 @@
 ---
 layout: default
 ---
+{% slot :left_pane do %}
+  {% if data.thumbnail %}
+    <div class="">
+      <img class="object-scale-down" src="{{ data.thumbnail }}"/>
+    <div>
+  {% end %}
+{% end %}
+
+{% slot :right_pane do %}
+  {% if data.thumbnail %}
+    <div class="">
+      <label class="input input bg-base-100">
+      <i class="fa-regular fa-magnifying-glass"></i>
+      {%= liquid_render "bridgetown_quick_search/search", placeholder: 'search', input_class: "input bg-base-100 required" %}
+      </label>
+      <div>
+  {% end %}
+{% end %}
+
 <article class="flex flex-col">
   <div class="px-4">
     <div class="breadcrumbs text-sm md:text-md lg:text-lg">
@@ -15,22 +34,23 @@ layout: default
       </ul>
     </div>
   </div>
-  <div class="sm:bg-base-100 sm:border sm:border-base-200 sm:shadow-base-300 px-4 pb-4">
+
+  <div class="md:bg-base-100 md:border md:border-base-200 md:shadow-base-300 px-4 pb-4">
     {% if data.category != 'project' %}
     <div class="text-xs md:text-sm pt-3">
       <ul style="list-none leading-none">
         <li>
-          <i class="fa-regular fa-calendar"></i> {{ data.date | date: '%B %d, %Y' -}}
-          {%- if data.pub_permalink %}
+          <i class="fa-regular fa-calendar"></i> {{ data.date.strftime('%B %d, %Y') }}
+          {% if data.pub_permalink %}
             (<small>originally published on</small> <a href="{{ data.pub_permalink }}">{{ data.publisher }}</a>)
-          {%- endif %}
+          {% end %}
         </li>
         <li>
           <span class="italic prose text-xs md:text-sm">{{ data.description }}</span>
         </li>
       </ul>
     </div>
-    {% endif %}
+    {% end %}
 
     <div class="my-text prose-p:leading-6">
       {{ content }}

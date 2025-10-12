@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ site.locale }}">
+  <head>
+    <%= liquid_render 'head', metadata: site.metadata, title: data.title %>
+  </head>
+  <body>
+        <!-- Page content here -->
+    <div class="grid grid-cols-4 xl:grid-cols-5">
+        <div class="hidden md:block w-auto ml-auto max-w-3xs">
+            <div class="ml-auto px-3 mt-15">
+                <%= slotted :left_pane %>
+            </div>
+            <div class="xl:hidden ml-auto px-3 mt-2">
+                <%= slotted :right_pane %>
+            </div>
+        </div>
+
+        <div class="col-span-5 md:col-span-3 max-w-4xl">
+          <div class="min-h-screen mt-4 mr-6 xl:mr-0">
+            <%= yield %>
+          </div>
+        </div>
+
+        <div class="hidden xl:block mr-auto align-left max-w-3xs">
+            <div class="ml-auto px-3 mt-15">
+                <%= slotted :right_pane %>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
