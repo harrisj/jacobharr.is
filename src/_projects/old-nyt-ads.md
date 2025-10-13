@@ -11,3 +11,4 @@ years: 2012-2015
 thumbnail: /images/thumbnails/old-nyt-ads.png
 permalink: /projects/old-nyt-ads.html
 ---
+Coming soon...

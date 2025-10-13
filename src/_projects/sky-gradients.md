@@ -20,12 +20,12 @@ I also wrote an article in _The Atlantic_ [explaining the whole thing with some 
   {% assign year = group.name %}
   {% assign gradients = group.items %}
 
-  <h2 class="h2">{{ year }}</h2>
+  <h2 class="h2 mb-0 mt-5">{{ year }}</h2>
   <!--grid-cols-2 md:grid-cols-3 lg:grid-cols-4  -->
-  <div class="flex flex-wrap flex-row gap-1 justify-start not-prose">
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-0 not-prose">
       {% for grad in gradients %}
         <div>
-            <a onclick="modal_{{ grad.id }}.showModal()"><img src="/images/projects/sky-gradients/thumbnails/{{ grad.filename | replace: '.jpg', '-200.jpg' }}" width="200" height="200" alt="{{ grad.caption }}"/></a>
+            <a class="object-scale-down" onclick="modal_{{ grad.id }}.showModal()"><img src="/images/projects/sky-gradients/thumbnails/{{ grad.filename | replace: '.jpg', '-400.jpg' }}" alt="{{ grad.caption }}"/></a>
             <dialog id="modal_{{ grad.id }}" class="modal modal-bottom sm:modal-middle">
               <div class="modal-box">
                   <figure>

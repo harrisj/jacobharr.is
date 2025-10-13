@@ -13,8 +13,6 @@ This project largely happened because I was depressed and bored.
 
 It was always a bit rough to end a season of election coverage. After spending almost more than a year testing, tweaking and [loading election results]({% link _projects/nytimes-election-loader.md %}), it's disorienting to suddenly have no more election stuff to do. In 2012, this shock was compounded with frustration from several significant technical bugs that had happened on election night itself. I needed an outlet. And that's when I decided to go hunting for haiku.
 
-![An example of the visual Times Haiku presentation ><](/images/projects/times-haiku/symmetry.gif)
-
 I had been inspired by the [Haiku Leaks](https://www.poetryfoundation.org/poetry-news/59602/leaks-come-in-all-shapes-and-sizes) project in late 2010, that combed the Wikileaks Cablegate corpus to find haiku hidden within the messages. And I had already written a few silly bots that acted on NYT article text. So, why not combine the two?
 
 The initial seed of this project was a hackish selection of a few Ruby scripts and a database to assemble the following building blocks into a haiku-finding machine:
@@ -24,6 +22,8 @@ The initial seed of this project was a hackish selection of a few Ruby scripts a
 - Finally, I created some code to regularly check the homepage and when it found a URL it hadn't seen before, it would fetch the article, scan it for haikus and store any haiku it had seen as well as a record that it had processed the page.
 
 Put that all togther and I had a little program I could run on my computer that would go searching for haiku and sharing them with me. When I showed this to some of my coworkers on the Interactive Newsroom Technologies team, they agreed it could be a fun project to create. To implement this, we tried a novel moderation approach where the Haiku bot would post haiku it found to a private moderation Tumblr blog. When moderators approved, they would the be published to [a public tumblr](https://timeshaiku.tumblr.com/). The design for the site was done by Heena Ko and the distinctive procedurally generated format for each haiku was built by Anjali Bhojani.
+
+{% render 'image', src: '/images/projects/times-haiku/symmetry.gif', caption: "An example of the visual Times Haiku presentation", img_style: 'img-max-center pb-2', modal_style: 'max-w-4xl' %}
 
 ## Explainer that Appeared on the [Times Haiku Site](https://timeshaiku.tumblr.com/about)
 _Whimsy is not a quality we usually associate with computer programs. We tend to think of software in terms of the function it fulfills. For example, a spreadsheet helps us do our work. A game of Tetris provides a means of procrastination. Social media reconnects us with our high school nemeses. But what about computer code that serves no inherent purpose in itself?_
