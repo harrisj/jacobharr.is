@@ -2,7 +2,7 @@
 layout: project
 category: project
 title: Sky Gradients
-description: From 2015-2024, I often would take a photo of a clear sky and post it to Instagram. It helped a lot. This archive collects all the gradients in one place without any trackers or ads. Enjoy!
+description: From 2015-2024, I often would take a photo of a clear sky and post it to Instagram. It helped me in many ways. This archive collects all the gradients in one place without any trackers or ads. Enjoy!
 start_year: 2015
 end_year: 2024
 template_engine: liquid
