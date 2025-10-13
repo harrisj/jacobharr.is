@@ -4,10 +4,10 @@
 
 {% assign display_src = src %}
 <dialog id="modal_{{ id }}" class="modal">
-    <div class="modal-box w-3/4 max-h-3/4 {{ modal_style }} !important">
+    <div class="modal-box w-3/4 max-h-10/12 {{ modal_style }} !important">
         <figure class="align-center">
-            <img class="object-cover p-1" src="{{ src }}"/>
-            <figcaption class="prose prose-sm py-2 text-left leading-5 mx-auto max-w-8/10">{{ caption | markdownify }}</figcaption>
+            <img class="mx-auto object-contain p-1" src="{{ src }}"/>
+            <figcaption class="prose prose-sm py-2 px-2 text-left mx-auto max-w-full">{{ caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
         </figure>
     </div>
     <form method="dialog" class="modal-backdrop">
