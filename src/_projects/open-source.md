@@ -8,6 +8,7 @@ start_year: 2007
 end_year: 2025
 years: 2007-2025
 thumbnail: /images/thumbnails/open-source.png
+image: /images/projects/open-source/openNYT-title.png
 permalink: /projects/open-source.html
 ---
 I have contributed to Open Source software in a variety of places. It's not as substantial as I would like (sadly, some of my most best coding work has been for proprietary codebases), but it's been enough to make me happy. This page documents a few of the more prominent projects and work.

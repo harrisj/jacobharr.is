@@ -7,6 +7,7 @@ date: 2015-04-23
 year: 2015
 category: personal
 permalink: /personal/leaving-nytimes.html
+image: /images/writing/leaving-nytimes/election-night-2014.png
 publisher: Medium
 pub_permalink: https://harrisj.medium.com/leaving-the-new-york-times-bb3e73adc61f
 ---

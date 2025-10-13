@@ -7,6 +7,7 @@ start_year: 2007
 end_year: 2014
 years: 2007-2014
 thumbnail: /images/thumbnails/nytimes-twitter.png
+image: /images/projects/twitter/word-up.png
 permalink: /projects/nytimes-twitter.html
 ---
 This whole thing started out of spite.

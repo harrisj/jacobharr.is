@@ -7,6 +7,7 @@ start_year: 2015
 end_year: 2024
 template_engine: liquid
 years: 2015-2024
+image: /images/thumbnails/sky-gradients.png
 thumbnail: /images/thumbnails/sky-gradients.png
 permalink: /projects/sky-gradients.html
 ---

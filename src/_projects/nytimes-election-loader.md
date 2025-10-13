@@ -8,6 +8,7 @@ end_year: 2014
 years: 2008-2014
 template_engine: liquid
 thumbnail: /images/thumbnails/nyt-elections.png
+image: /images/projects/nyt-elections/2012-president-races-meislomatic.png
 permalink: /projects/nytimes-election-loader.html
 ---
 Of all the projects that I worked on as part of the [Interactive Newsroom Technologies](/projects/data-journalism.html) team at the _New York Times_, I would count the sustained effort on the Election Results loading system as my most significant work and probably some of the best work I've ever done. It wasn't so much a dazzling technical marvel (although there were some innovations I've especially proud of) as it was a reliable workhorse, doing its job through primaries and general elections, for federal or mayoral results, with no outages and only one serious bug in production (that it happened on election night 2012 wasn't great). This page collects some expanded notes on the election night loader, how election nights were at the _Times_ and various pictures I have posted to social media, etc. in the past, now collected here.

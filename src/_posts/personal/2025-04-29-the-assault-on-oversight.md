@@ -7,7 +7,7 @@ category: personal
 permalink: /personal/assault-oversight.html
 published: true
 description: Not too many people outside of government understand how many laws are enforced entirely through oversight. The DOGE/Project 2025 plan has subverted these norms for its own ends.
-image: static/images/writing/misc-previews/assault-oversight.png
+image: /images/writing/misc-previews/assault-oversight.png
 ---
 <style>
 .timeline .opm { border-color: #003f5c; }

@@ -5,6 +5,7 @@ date: 2025-03-10
 year: 2025
 category: personal
 permalink: /personal/visualizing-covid-deaths.html
+image: /images/writing/visualizing-covid-deaths/nyt-100k-online.png
 published: true
 description: A focused look at three examples of visualizing the death toll from COVID as an illustration of how to inject empathy into data visualizations.
 ---

@@ -8,6 +8,7 @@ start_year: 2007
 end_year: 2015
 years: 2007-2015
 thumbnail: /images/thumbnails/data-journalism.png
+image: /images/projects/data-journalism/olympics-schema.jpg
 permalink: /projects/data-journalism.html
 ---
 The story of the Interactive Newsroom Technologies team started with a tragedy.
