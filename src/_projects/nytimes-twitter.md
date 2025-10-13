@@ -1,6 +1,6 @@
 ---
 title: "@nytimes on Twitter"
-layout: post
+layout: project
 category: project
 description: A history of how I created and mainted the @nytimes account on Twitter.
 start_year: 2007

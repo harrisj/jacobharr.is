@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Various Dumb Jokes I've Made Online
 published: false
 category: project

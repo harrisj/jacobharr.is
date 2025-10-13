@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 category: project
 title: Data Journalism
 description: An overview of my work in data journalism at the _New York Times_ from 2007-2015.

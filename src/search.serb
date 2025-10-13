@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<main class="flex flex-col">
+  <div class="flex flex-row justify-between px-4 items-center">
+    <div class="">
+      <div class="breadcrumbs text-sm md:text-md lg:text-lg">
+        <ul>
+          <li>
+            <a href="/"><i class="fa-sharp fa-solid fa-house"></i></a>
+          </li>
+          <li>Search</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-row justify-start">
+      <div>{%= liquid_render 'theme_controller' %}</div>
+    </div>
+ </div>
+
+<div class="md:bg-base-100 md:rounded-lg md:border md:border-neutral-content px-4 pb-4">
+    <label class="input bg-neutral-content">
+      <i class="fa-regular fa-magnifying-glass text-neutral"></i>
+      {%= liquid_render "bridgetown_quick_search/search", placeholder: 'search', input_class: "input bg-neutral-content required" %}
+    </label>
+</div>
+</main>

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 category: project
 title: Sky Gradients
 descriptions: From 2015-2024, I often found myself looking at the sky to capture an image of a sky gradient and post it to Instagram. This archive collects all the gradients for users to browse without needing Instagram.

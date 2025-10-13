@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: DOGE Track
 published: true
 category: project

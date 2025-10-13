@@ -4,42 +4,52 @@ layout: default
 {% slot :left_pane do %}
   {% if data.thumbnail %}
     <div class="avatar">
-    <div class="border-1 border-neutral-content rounded aspect-square">
+    <div class="border-1 border-secondary rounded aspect-square">
       <img class="object-scale-down" src="{{ data.thumbnail }}"/>
     <div>
     </div>
   {% end %}
+
+  <div class="text-xs md:text-sm pt-3">
+      <ul style="list-none leading-none mb-3">
+      <li><i class="fa-regular fa-calendar"></i> {{ data.date.strftime('%B %d, %Y') }}</li>
+        {% if data.pub_permalink %}
+          <li>published in <a href="{{ data.pub_permalink }}">{{ data.publisher }}</a></li>
+        {% end %}
+      <li>
+          <span class="italic prose text-xs md:text-sm">{{ data.description }}</span>
+      </li>
+      </ul>
+  </div>
 {% end %}
 
 {% slot :right_pane do %}
-  {% if data.thumbnail %}
-    <div class="">
-      <label class="input bg-neutral-content">
-      <i class="fa-regular fa-magnifying-glass text-neutral"></i>
-      {%= liquid_render "bridgetown_quick_search/search", placeholder: 'search', input_class: "input bg-neutral-content required" %}
-      </label>
-      <div>
-  {% end %}
+  {%= liquid_render 'search_box' %}
 {% end %}
 
 <article class="flex flex-col">
-  <div class="px-4">
-    <div class="breadcrumbs text-sm md:text-md lg:text-lg">
-      <ul>
-        <li>
-          <a href="/"><i class="fa-sharp fa-solid fa-house"></i></a>
-        </li>
-        <li>{{ data.category | titleize }}</li>
-        <li>
-          <a href="{{ data.permalink }}">{{ data.title | markdownify }}</a>
-        </li>
-      </ul>
+  <div class="flex flex-row justify-between px-4 items-center">
+    <div class="">
+      <div class="breadcrumbs text-sm md:text-md lg:text-lg">
+        <ul>
+          <li>
+            <a href="/"><i class="fa-sharp fa-solid fa-house"></i></a>
+          </li>
+          <li>{{ data.category | titleize }}</li>
+          <li>
+            <a href="{{ data.permalink }}">{{ data.title | markdownify }}</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+    <div class="flex flex-row justify-end">
+      <div class="sm:hidden"><a class="link link-hover border-none" href="/search"><i class="fa-regular fa-magnifying-glass text-base-content"></i></a></div>
+      <div>{%= liquid_render 'theme_controller' %}</div>
+    </div>
+ </div>
 
-  <div class="md:bg-base-100 md:rounded-lg md:border md:border-neutral-content px-4 pb-4">
-    {% if data.category != 'project' %}
-    <div class="text-xs md:text-sm pt-3">
+  <div class="md:bg-base-100 md:rounded-lg md:border md:border-secondary px-4 pb-4">
+    <div class="md:hidden text-xs pt-3">
       <ul style="list-none leading-none">
         <li>
           <i class="fa-regular fa-calendar"></i> {{ data.date.strftime('%B %d, %Y') }}
@@ -52,7 +62,6 @@ layout: default
         </li>
       </ul>
     </div>
-    {% end %}
 
     <div class="my-text prose-p:leading-6">
       {{ content }}
