@@ -14,16 +14,12 @@ One of the fun aspects of [TimesMachine](https://timesmachine.nytimes.com) is ho
 <h3>A Brief History of One Times Square</h3>
 In 1896, Adolph Ochs bought the _Times_ and presided over its expansion. In 1905, he moved the newspaper to a new headquarters located at [One Times Square](https://en.wikipedia.org/wiki/One_Times_Square), where it remained for only eight years before moving operations to another building down the street (but still keeping a presence at this building). You may know this building best as the place where they drop the ball on New Year's Eve, and for that reason it's also thoroughly encased in advertising today. It's always had a prime location at the southern edge of Times Square. This made it ideal for the _Times_ to use for its own promotional events, and elections became one of the biggest parties around.
 
-<div class="gradient-gallery">
-    <div class="gradient-gallery__item"><a href="/images/writing/how-nyt-reported-elections/19041108_election.png" data-lightbox="times-sq-elections" data-title="1904 Election Ad Front Page">
-    <img class="thumbnail" src="/images/writing/how-nyt-reported-elections/19041108_election-400.png" height="400" alt="1904 Election Ad"/>
-  </a></div>
-      <div class="gradient-gallery__item"><a href="/images/writing/how-nyt-reported-elections/19041108_election2.jpg" data-lightbox="times-sq-elections" data-title="1904 Election Lights Diagram">
-    <img class="thumbnail" src="/images/writing/how-nyt-reported-elections/19041108_election2-400.jpg" height="400" alt="1904 Election Lights Diagram"/>
-  </a></div>
-      <div class="gradient-gallery__item"><a href="/images/writing/how-nyt-reported-elections/19041108_election3.png" data-lightbox="times-sq-elections" data-title="1904 Light Explainer">
-    <img class="thumbnail" src="/images/writing/how-nyt-reported-elections/19041108_election3-400.png" height="400" alt="1904 Light Explainer"/>
-  </a></div>
+<div class="grid grid-cols-3 gap-1">
+{% render 'image', src: '/images/writing/how-nyt-reported-elections/19041108_election.png', caption: "1904 Election Ad Front Page", img_style: 'img-full-center', modal_style: 'max-w-3xl' %}
+
+{% render 'image', src: '/images/writing/how-nyt-reported-elections/19041108_election2.jpg', caption: "1904 Election Lights Diagram", img_style: 'img-full-center', modal_style: 'max-w-xl' %}
+
+{% render 'image', src: '/images/writing/how-nyt-reported-elections/19041108_election3.png', caption: "1904 Light Explainer", img_style: 'img-full-center', modal_style: 'max-w-3xl' %}
 </div>
 
 
@@ -41,27 +37,18 @@ It's dwarfed by its neighbors now, but as the middle picture makes clear, the _T
 >
 > With the code before him, the voter who wants to find out how things are going and who doesn't want to stay out all night at a telegraph office, either in the city or out of town can learn the results from an advantageous window in his flat or his house.
 
-Remember, this was the time before television and even radio. The only option for live results was to go hang out at a telegraph office, or see what was posted by a newspaper on signs outside. And it was apparently a hit, because the Times repeated it every election (both presidential and several city elections) for decades with even more elaborate codes. What finally stopped it was the advent of World War 2 and restrictions on lightin
+Remember, this was the time before television and even radio. The only option for live results was to go hang out at a telegraph office, or see what was posted by a newspaper on signs outside. And it was apparently a hit, because the Times repeated it every election (both presidential and several city elections) for decades with even more elaborate codes. What finally stopped it was the advent of World War 2 and restrictions on lighting.
 
-<div class="gradient-gallery">
-    <div class="gradient-gallery__item"><a href="/images/writing/how-nyt-reported-elections/19081103_election.png" data-lightbox="times-sq-elections2" data-title="1908 Presidential Election">
-    <img class="thumbnail" src="/images/writing/how-nyt-reported-elections/19081103_election.png" height="600" alt="1908 Presidential Election"/>
-  </a></div>
-      <div class="gradient-gallery__item"><a href="/images/writing/how-nyt-reported-elections/19091102_nyc_election.jpg" data-lightbox="times-sq-elections2" data-title="1908 Presidential Election">
-    <img class="thumbnail" src="/images/writing/how-nyt-reported-elections/19091102_nyc_election.jpg" height="600" alt="1908 Presidential Election"/>
-  </a></div>
-    <div class="gradient-gallery__item"><a href="/images/writing/how-nyt-reported-elections/19121105_election.png" data-lightbox="times-sq-elections2" data-title="1912 Presidential Election">
-        <img class="thumbnail" src="/images/writing/how-nyt-reported-elections/19121105_election.png" height="400" alt="1912 Presidential Election"/>
-    </a></div>
-    <div class="gradient-gallery__item"><a href="/images/writing/how-nyt-reported-elections/19161107_election.png" data-lightbox="times-sq-elections2" data-title="1916 Presidential Election">
-        <img class="thumbnail" src="/images/writing/how-nyt-reported-elections/19161107_election.png" height="294" alt="1916 Presidential Election"/>
-    </a></div>
-    <div class="gradient-gallery__item"><a href="/images/writing/how-nyt-reported-elections/19201102_election.png" data-lightbox="times-sq-elections2" data-title="1920 Presidential Election">
-        <img class="thumbnail" src="/images/writing/how-nyt-reported-elections/19201102_election.png" height="325" alt="1920 Presidential Election"/>
-    </a></div>
-        <div class="gradient-gallery__item"><a href="/images/writing/how-nyt-reported-elections/19241102_election.png" data-lightbox="times-sq-elections2" data-title="1924 Presidential Election">
-        <img class="thumbnail" src="/images/writing/how-nyt-reported-elections/19241102_election.png" height="302" alt="1924 Presidential Election"/>
-    </a></div>
+{% render 'image', src: '/images/writing/how-nyt-reported-elections/19081103_election.png', caption: "1908 Presidential Election", img_style: 'img-full-center', modal_style: 'max-w-xl' %}
+
+<div class="grid grid-cols-2 gap-1">
+    {% render 'image', src: '/images/writing/how-nyt-reported-elections/19091102_nyc_election.jpg', caption: "1909 Mayoral Election", img_style: 'img-full-center', modal_style: 'max-w-xl' %}
+
+    {% render 'image', src: '/images/writing/how-nyt-reported-elections/19121105_election.png', caption: "1912 Presidential Election", img_style: 'img-full-center', modal_style: 'max-w-xl' %}
+
+    {% render 'image', src: '/images/writing/how-nyt-reported-elections/19201102_election.png', caption: "1920 Presidential Election", img_style: 'img-full-center', modal_style: 'max-w-xl' %}
+
+    {% render 'image', src: '/images/writing/how-nyt-reported-elections/19241102_election.png', caption: "1924 Presidential Election", img_style: 'img-full-center', modal_style: 'max-w-xl' %}
 </div>
 
 In 1928, they added another new feature, a moving news reel made of 14,800 bulbs that moved around the building. We are familiar with these as LED displays, but [this was the earliest form of the technology and a veritable marvel](/images/writing/how-nyt-reported-elections/19281108_election_lights.pdf).
@@ -76,4 +63,3 @@ All these spectacles attracted an ever increasing crowd of people there for the 
 > Then the searchlight high in the Tower, which had been brooming the starless sky to the north all night, to show Eisenhower in the lead, held steady to show that he had won. The crowd cheered again, and slowly came apart to drift toward the subways.
 >
 > A tradition was dead, with only a few thousand pallbearers to see it peacefully interred.
-

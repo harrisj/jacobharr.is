@@ -28,7 +28,7 @@ layout: default
 {% end %}
 
 <article class="flex flex-col">
-  <div class="flex flex-row justify-between px-4 items-center">
+  <div class="pl-1 sm:pl-0 flex flex-row justify-between items-center">
     <div class="">
       <div class="breadcrumbs text-sm md:text-md lg:text-lg">
         <ul>
@@ -48,7 +48,7 @@ layout: default
     </div>
  </div>
 
-  <div class="md:bg-base-100 md:rounded-lg md:border md:border-secondary px-4 pb-4">
+  <div class="md:bg-base-100 md:rounded-lg md:border md:border-secondary px-1 sm:px-4 pb-4">
     <div class="md:hidden text-xs pt-3">
       <ul style="list-none leading-none">
         <li>

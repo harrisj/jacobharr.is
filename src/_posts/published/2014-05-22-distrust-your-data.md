@@ -4,13 +4,13 @@ title: Distrust Your Data
 tagline: Six Ways to Make Mistakes with Data
 image: /images/writing/distrust-data/pornhub.jpg
 description: >
-    A look into several fundamental reporting errors that led to a regrettable story about porn consumption 
-    in red and blue states. From there, I wondered if we should come up with some sort of taxonomy of errors 
+    A look into several fundamental reporting errors that led to a regrettable story about porn consumption
+    in red and blue states. From there, I wondered if we should come up with some sort of taxonomy of errors
     and a general rubric for when an error in the data should result in a printed correction.
 date: 2014-05-22
 year: 2014
 category: published
-permalink: /published/distrust-your-data
+permalink: /published/distrust-your-data.html
 pub_permalink: https://source.opennews.org/articles/distrust-your-data/
 publisher: Source
 ---
@@ -25,8 +25,8 @@ _Critique_ is always annoying when it's expressed in indefinite terms. So, I'm g
 Specifically, [a story about online pornography consumption in "red" vs. "blue" states](http://www.buzzfeed.com/ryanhatesthis/who-watches-more-porn-republicans-or-democrats) that exploded onto social media a few weeks back. I first noticed it because of a story on [Vox](http://www.vox.com/2014/4/21/5636040/whats-the-matter-with-kansas-and-porn) that reaggregated an [Andrew Sullivan post](http://dish.andrewsullivan.com/2014/04/19/the-politics-of-porn/) which in turn reposted [a chart made by Christopher Ingraham](http://wonkviz.tumblr.com/post/82488570278/kansas-is-the-nations-porn-capital-according-to) of the [data provided by Pornhub for their study](http://www.pornhub.com/insights/red-versus-blue-us-states/). That chain of links reflects how news spreads online these days, and yet none of those professional eyes caught some glaring flaws in the data.
 
 Before I continue, here's a brief summary of the findings presented by Pornhub's data scientists. Pornhub (which is apparently the third most-popular pornography site on the Internet) was approached by Buzzfeed (which is probably the most-popular animated GIF distributor on the Internet) to analyze its traffic and determine whether "blue" states that voted for Obama in the last election consumed more pornography than "red" states that voted for Romney. And so, that's what the statisticians at Pornhub did, pulling IP addresses from their website's traffic logs, geocoding their likely locations and deriving a figure of total traffic for each state. They then divided the total hits from each state by that state's population to derive a hits-per-capita number for each state. As a result, they were able to report that per-capita averages for each state and that blue states averaged slightly more hits per capita than red states.
-                
-## How To Confuse Yourself With&nbsp;Statistics                  
+
+## How To Confuse Yourself With&nbsp;Statistics
 Unfortunately, the study and the subsequent reporting derived from the Pornhub data serves as a vivid example of six ways to make mistakes with statistics
 
 - Sloppy proxies

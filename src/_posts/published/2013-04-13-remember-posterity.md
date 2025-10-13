@@ -6,7 +6,7 @@ description: A thinkpiece on how we might consider designing interactives to sur
 date: 2013-04-13
 year: 2013
 category: published
-permalink: /published/remember-posterity
+permalink: /published/remember-posterity.html
 pub_permalink: https://source.opennews.org/articles/and-remember-ones-posterity/
 publisher: Source
 ---
@@ -29,7 +29,8 @@ The New York Times has an advanced and bespoke CMS called Scoop that is used for
 Narrative journalists rarely think about this infrastructure. It's just there for everything they write, because everything they write goes through the CMS and there are strong archival and financial reasons to syndicate, index and archive that content for posterity. But, then there's us data journalists. Remember, we decided to pitch our tents outside the CMS so we can build exciting and new types of interactive website experiences. Which often means that our work is invisible in this greater world. It doesn't show up in site search. It doesn't show up in Google News. It isn't rankable on the homepage. Our projects look like they belong to the website, but they are also fundamentally apart and often invisible when running. When they are mothballed, they can vanish almost completely.
 
 So, what is to be done? You need to make some friends and leave your little fiefdom:
-- Find the developers on the CMS team and talk to them. * If your company has indexers and archivists, talk to them too.
+- Find the developers on the CMS team and talk to them.
+- If your company has indexers and archivists, talk to them too.
 - Target important aspects of the website ecosystem.
 - Figure out where to bury your projects when they're dead.
 

@@ -5,7 +5,7 @@
             <ul class="leading-5 pb-1 sm:py-1">
             {% assign docs = rec.items | sort: 'date' %}
             {% for doc in docs %}
-                <li><a href="{{ doc.data.permalink }}">{{ doc.data.title | markdownify }}</a></li>
+                <li><a href="{{ doc.permalink }}">{{ doc.data.title | markdownify }}</a></li>
             {% endfor %}
             </ul>
         {% endrendercontent %}

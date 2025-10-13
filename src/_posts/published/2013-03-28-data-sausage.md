@@ -6,7 +6,7 @@ description: A lengthy explainer on how I used simple code to scrape USDA and FD
 date: 2013-03-28
 year: 2013
 category: published
-permalink: /published/data-sausage
+permalink: /published/data-sausage.html
 pub_permalink: https://source.opennews.org/articles/how-sausage-gets-made/
 publisher: Source
 ---
@@ -28,8 +28,8 @@ I am a software developer who works within the newsroom of the New York Times. I
 As a computer science major, I'm far more experienced with data than the journalism aspect of my career, but food safety was an area I could get experience gathering the data and working with it in a narrative way. What do I mean by narrative? Narrative is what makes it data journalism. We could just put a large PDF or SQL dump online, but that's not very informative to anyone but experts. The art is finding the stories in the data the way a sculptor finds a statue in the marble. Since we are turning data into a story, we also need to keep the data-and thus the story we make from it-accurate and objective. I wanted more practice working with data. So, I started by scraping food recalls.
 
 In this case study, I'm going to just discuss a single type of data associated with food safety: food recalls. Along the way, I'll illustrate some techniques I use for wresting data out of raw text and the limitations of the results. Finally, I'll throw down the gauntlet and suggest ways in which you could explore making all of this better.
-                
-## Food Recalls                 
+
+## Food Recalls
 There are two agencies that regulate recalls in the USA: the [U.S. Department of Agriculture](http://www.usda.gov/) (USDA), which inspects meat and poultry; and the [Food and Drug Administration](http://www.fda.gov/) (FDA) which oversees seafood, processed food, and everything else - they also inspect medical devices and pharmaceuticals. Neither the FDA or the USDA are allowed to [forcibly mandate a recall](http://www.fsis.usda.gov/Fact_Sheets/FSIS_Food_Recalls/index.asp), but they help to find the sources of problems and issue the press releases from companies once they issue recalls. I have been parsing recalls from both the FDA and the USDA, but for the sake of brevity, I'm just going to talk about the USDA here. The [USDA Food Safety and Inspection Service website](http://www.fsis.usda.gov/fsis_recalls/index.asp) is where the USDA's food recalls are posted. Recalls are posted as freeform text releases. Whatever data I needed, I would have to pull out of the text myself. The FSIS includes current recalls and an archive back to 1994 (although the format changes for recalls before 2003).
 
 All recalls are posted as press releases, but they generally follow the same general format, as is apparent from [looking at a few of them](http://www.fsis.usda.gov/News_&amp;_Events/Recall_080_2012_Release/index.asp). At a glance, the following information seems to be present in all recalls:
@@ -44,7 +44,7 @@ All recalls are posted as press releases, but they generally follow the same gen
 
 This looks like a good start to a data schema. There is some other fascinating information in there too (product labels, UPC codes, retailer lists), but I needed to start somewhere, so I collected the only the data types in the list above.
 
-## Modeling the Recalls                 
+## Modeling the Recalls
 The first step was to create a place to store the data about recalls. I use the [Ruby On Rails](http://rubyonrails.org/) web framework, so I created a new Rails project. The next step was to define the appropriate models. Each recall has an associated reason and a category of food (more on that later). In the `ActiveRecord` framework for Object-Relational Mapping (ORM), a recall is described like this.
 
 {% highlight ruby %}
@@ -75,7 +75,7 @@ end
 {% endhighlight %}
 
 In addition, I decided to create specific categories for the reasons and the type of food. This way, I could use a [controlled vocabulary](https://en.wikipedia.org/wiki/Controlled_vocabulary) of keywords for those categories, making it easier to find all the recalls of a specific type. For instance, "undeclared allergen" is one of my list of reasons regardless of whether it's sulfites, eggs, nuts, or other unlisted allergens that triggered the recall. This approach requires me to devise the categories and reasons I want to tag with, but it makes searching for matches much easier than freeform text fields. I also decided to create a separate `companies` table in case I wanted to associate multiple recalls with a single company.
-        
+
 ## Scraping the Pages
 My first goal in this project was to grab the recalls from the USDA website. This sounds simple enough, but it's actually a process with several steps.
 
@@ -185,7 +185,7 @@ This is pretty simple to figure out.
 
 {% highlight ruby %}
 if !summary.blank? &amp;&amp; summary =~ /^(([A-Z0-9][0-9[:alpha:]\.]+\s*)+)/
-  company_name = $1 
+  company_name = $1
 end
 {% endhighlight %}
 
@@ -236,8 +236,8 @@ unless self.summary.blank?
 end
 {% endhighlight %}
 
-## Hand-Correcting the Data                 
-                    
+## Hand-Correcting the Data
+
 So, I was able to take a collection of text recalls and turn them into a database. Time for a victory coffee while the computer parses all of the recalls (easy to do when I've saved the HTML locally). And voila! Here are the 10 most recent USDA recalls once they've been run through the processor
 
 |Company|Product Type|Reason|Volume|
@@ -258,8 +258,8 @@ This is promising, but you might have noticed some gaps in the data here. And ot
 > Annie's Homegrown Inc., a Berkeley, Calif. establishment, is recalling an undetermined amount of frozen pizzas that may be contaminated with extraneous materials.
 
 Here, our regexp for the company name ran headlong into the apostrophe. Time to fix that bug and run the parsing again. I probably have gone through 20 different tweaks to some regular expressions. Even after that, I found that it was sometimes necessary to just hand-edit the data I extracted from a recall instead of continually tweaking my parsers. To do this, I built an admin to search for recalls and edit them (screenshots attached). This is really easy to do in Rails, which I why I wrote the project in it. It's important though that hand edits are _not_ overwritten later if I rerun all my regexp data extractors again. This is why I defined an additional `parse_state` called verified. Once I manually edit a recall, its state is set to verified, and I make sure to only rerun my regexps against Recalls that are just in the analyzed state.
-        
-## Interviewing the Data                 
+
+## Interviewing the Data
  So, now that I had the data, it was time to ask it questions. In data journalism, we often refer to a process of "interviewing the data." Let's take this data out for a spin. While we often approach a data set looking for specific stories, sometimes there are other stories revealed by drilling down in the data.
 
 ### What Are the Biggest USDA recalls?
@@ -362,14 +362,14 @@ It's very easy to group columns and derive tables like this from data using SQL.
 7. "Worse" is a loaded term. 2012 has much larger recall volume than 2011. Does this mean that 2011 was a safer year than 2012? Or does it just mean that food outbreaks in 2011 were not traced back to sources? It's important to note what the data doesn't include. Recalls are issued for food sold to the general public in stores. Fast food restaurants and public school cafeterias have their own supply networks and they will not issue recalls if they notice problems from a supplier.
 
 That's a pretty big list of caveats there. I'm not trying to discourage you from working with data. We just have to be careful and remember that we are trying to use the data to report the truth. This means we have to be skeptical of the data and never promise more than it can deliver.
-        
-## What We Can't Learn from the Data                    
+
+## What We Can't Learn from the Data
 Unfortunately, food recalls reveal only so much about food safety. It's always important to investigate outside the dataset to find what it lacks. For instance, the Center for Disease Control (CDC) estimates that the [norovirus](http://wwwnc.cdc.gov/eid/article/19/3/11-1866_article.htm) is responsible for 34% of recorded outbreaks</a>, but there is only a single food recall that mentions norovirus. Food recalls can be triggered by food poisoning outbreaks, but they are also often triggered by random inspections unrelated to reported illnesses, by state statutes, or by manufacturing problems - a large number of "undeclared allergen" recalls happen because a single batch of a product is put in the wrong box.
 
 We could look at the CDC's data on food outbreaks, but that has its own limitations we'd also have to check. Ultimately, some aspects of the problem might be unknowable. It's hard enough to get a total view of a subject by collecting datasets; for instance, campaign finance data and TV ad spending give us additional insight into presidential elections, but imagine if they were the only way to report the story? Food safety is especially murky. Unless they result in hospitalizations or deaths, most outbreaks are not reported, because it's often hard to say whether that queasy stomach is from the takeout you got last night or the "stomach flu" that's going around. And only a small amount of food is preemptively inspected by food and health agencies.
 
 This doesn't mean we should give up. Indeed, there are still plenty of interesting things to explore in the food recalls data. But it's an easy trap when working with any dataset to think it's all you need to understand the story when the data itself reflects external limitations and assumptions you aren't necessarily aware of. Always make time to figure out what you can't figure out with the data.
-        
+
 ## Please Solve Me
 So, there you have it. A simple how-to on how I wrested some data on food safety from the raw text of food recalls. It wasn't pretty, but it worked. There are things that could be done better, for this and similar problems where we have to find data in freeform text. That's where you come in. I want to inspire you to get excited about solving these problems journalists have in working with large bodies of data to get important stories out of them. You can start here.
 

@@ -6,6 +6,7 @@ year: 2007
 category: published
 display_description: A technical look at the specific code I used to setup the @nytimes Twitter account. Little did I know it would lead to years of tinkering around. For more details, check out the [@nytimes twitter account]({% link _projects/nytimes-twitter %}) project page.
 description: A technical look at the specific code I used to setup the @nytimes Twitter account.
+permalink: /published/right-kind-of-stupid.html
 pub_permalink: https://archive.nytimes.com/open.blogs.nytimes.com/2007/09/11/the-right-kind-of-stupid/
 publisher: NYT Open
 ---
@@ -28,11 +29,11 @@ Far from dismissive, "the right kind of stupid" is high praise. Using twitter's 
 post_args = {
   'status' => status
 }
- 
+
 url = URI.parse('//twitter.com/statuses/update.xml' )
 url.user = user
 url.password = password
- 
+
 response = Net::HTTP::post_form url, post_args
 {% endhighlight %}
 
@@ -43,25 +44,25 @@ Simple is powerful. Feeds and twitter are a natural fit, but with Twitter's simp
 {% highlight ruby %}
 def upload_img(icon, user, password)
   agent = WWW::Mechanize.new
- 
+
   # Login
   page  = agent.get('//twitter.com/account/create')
- 
+
   # Fill out the login form
   form  = page.forms.action('/login').first
   form.username_or_email = user
   form.password = password
   page  = agent.submit(form)
- 
+
   # Go to the upload page
   page  = agent.click page.links.text('Settings')
   page  = agent.click page.links.text('Picture')
- 
+
   # Fill out the form
   form  = page.forms.action('/account/picture').first
- 
+
   puts form.file_uploads.inspect
-  form.file_uploads.name('user[profile_image]').first.file_name = "/data/weather_imgs/#{icon}.gif" 
+  form.file_uploads.name('user[profile_image]').first.file_name = "/data/weather_imgs/#{icon}.gif"
   agent.submit(form)
 end
 {% endhighlight %}

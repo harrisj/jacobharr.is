@@ -6,6 +6,7 @@ year: 2010
 category: published
 display_description: A post I wrote up summarizing a talk about the twitter account that I gave at Twitter's Chirp conference. For more details on @nytimes, check out the [@nytimes twitter account]({% link _projects/nytimes-twitter %})
 description: A post I wrote up summarizing a talk about the twitter account that I gave at Twitter's Chirp conference.
+permalink: /published/how-often-times-tweeted.html
 pub_permalink: https://archive.nytimes.com/open.blogs.nytimes.com/2010/04/15/how-often-is-the-times-tweeted/
 publisher: NYT Open
 ---

@@ -6,7 +6,6 @@ description: In this long piece, I attempted to think through some of the issues
 date: 2014-03-28
 year: 2014
 category: published
-permalink: /published/bots-with-thoguhts
 pub_permalink: https://source.opennews.org/articles/bots-with-thoughts/
 publisher: Source
 ---

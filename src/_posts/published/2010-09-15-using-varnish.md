@@ -6,6 +6,7 @@ date: 2010-09-15
 year: 2010
 description: A technical explanation of the reverse proxy cache tool Varnish and how we used it at the Interactive Newsroom Technologies server to keep high request rates from melting our servers.
 category: published
+permalink: /published/using-varnish.html
 pub_permalink: https://archive.nytimes.com/open.blogs.nytimes.com/2010/09/15/using-varnish-so-news-doesnt-break-your-server/
 publisher: NYT Open
 ---
@@ -36,7 +37,7 @@ Here's an example of how we use it:
 sub vcl_recv {
     # Use HAproxy as back end for all requests
     set req.backend = backend_director;
- 
+
     # Pass any requests that Varnish does not understand straight to the back end.
     if (req.request != "GET" && req.request != "HEAD" &&
         req.request != "PUT" && req.request != "POST" &&
@@ -44,15 +45,15 @@ sub vcl_recv {
         req.request != "DELETE") {
       return(pipe);
     }     /* Non-RFC2616 or CONNECT which is weird. */
- 
+
     # Pass anything other than GET and HEAD directly.
     if (req.request != "GET" && req.request != "HEAD") {
       return(pass);      /* We deal only with GET and HEAD by default */
     }
- 
+
     # Allow expired objects to be served for 10m
     set req.grace = 10m;
- 
+
     # Stripping certain params
     # x - from clicking on a submit image
     # y - from clicking on a submit image
@@ -62,7 +63,7 @@ sub vcl_recv {
        set req.url = regsub(req.url, "\?&", "?");
        set req.url = regsub(req.url, "\?$", "");
     }
- 
+
     # Override default behavior and allow caching for requests w/ cookies
     if ( req.http.Cookie ) {
        return (lookup);
@@ -75,19 +76,19 @@ The other important method is `vcl_fetch`, which is triggered on responses from 
 {% highlight vcl %}
 sub vcl_fetch {
     set beresp.grace = 2m;
- 
+
     # Process ESIs if X-RUN-ESI is set. This will be stripped before being sent down to client.
     if ( beresp.http.X-RUN-ESI ) {
         esi;
         remove beresp.http.X-RUN-ESI;
     }
- 
+
     # cache 404s and 301s for 1 minute
     if (beresp.status == 404 || beresp.status == 301 || beresp.status == 500) {
        set beresp.ttl = 1m;
        return (deliver);
     }
- 
+
     # If X-VARNISH-TTL is set, use this header's value as the TTL for the varnish cache.
     # Expires, cache-control, etc. will be passed directly through to the client
     # Cribbed from //www.lovelysystems.com/configuring-varnish-to-use-custom-http-headers/
@@ -101,7 +102,7 @@ sub vcl_fetch {
       remove beresp.http.X-VARNISH-TTL;
       return (deliver);
     }
- 
+
     # If response has no Cache-Control/Expires headers, Cache-Control: no-cache, or Cache-Control: private, don't cache
     if ( (!beresp.http.Cache-Control && !beresp.http.Expires) || beresp.http.Cache-Control ~ "no-cache" || beresp.http.Cache-Control ~ "private" ) {
       return (pass);
