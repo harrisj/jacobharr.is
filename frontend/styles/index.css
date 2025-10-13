@@ -101,7 +101,7 @@
     }
 
     .my-text {
-        @apply prose md:prose-base sm:max-w-none prose-li:m-[0.2em] prose-li:leading-5 dark:prose-invert prose-h2:mt-1 prose-h2:mb-0.5 prose-h3:mt-1 prose-h3:mb-0.5;
+        @apply prose md:prose-base prose-p:first:mt-2 sm:max-w-none prose-li:m-[0.2em] prose-li:leading-5 dark:prose-invert prose-h2:mt-1 prose-h2:mb-0.5 prose-h3:mt-1 prose-h3:mb-0.5;
     }
 
     .my-2col-grid {
