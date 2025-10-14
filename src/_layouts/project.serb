@@ -33,7 +33,7 @@ layout: default
     </div>
   </div>
 
-  <div class="md:bg-base-100 md:rounded-lg md:border md:border-secondary px-1 md:px-4 pb-4">
+  <div class="md:bg-base-100 md:rounded-lg md:border md:border-secondary px-3 md:px-4 pb-4">
     <div class="my-text prose-p:leading-6">
       {{ content }}
     </div>
