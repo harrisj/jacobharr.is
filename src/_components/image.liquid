@@ -6,7 +6,7 @@
 <dialog id="modal_{{ id }}" class="modal" aria-label="Image display modal">
     <div class="modal-box w-3/4 max-h-10/12 {{ modal_style }} !important">
         <figure class="align-center">
-            <img class="mx-auto object-contain p-1" src="{{ src }}"/>
+            <img class="mx-auto object-contain p-1" src="{{ src }}" alt="{{ caption }}"/>
             <figcaption class="prose prose-sm py-2 px-2 text-left mx-auto max-w-full">{{ caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
         </figure>
     </div>
