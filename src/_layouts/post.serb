@@ -28,25 +28,7 @@ layout: default
 {% end %}
 
 <article class="flex flex-col">
-  <div class="pl-1 sm:pl-0 flex flex-row justify-between items-center">
-    <div class="">
-      <div class="breadcrumbs text-sm md:text-md lg:text-lg">
-        <ul>
-          <li>
-            <a href="/"><i class="fa-sharp fa-solid fa-house"></i></a>
-          </li>
-          <li>{{ data.category | titleize }}</li>
-          <li>
-            <a href="{{ data.permalink }}">{{ data.title | markdownify }}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="flex flex-row justify-end">
-      <div class="sm:hidden"><a class="link link-hover border-none" href="/search"><i class="fa-regular fa-magnifying-glass text-base-content"></i></a></div>
-      <div>{%= liquid_render 'theme_controller' %}</div>
-    </div>
- </div>
+  {%@ 'post_title' %}
 
   <div class="md:bg-base-100 md:rounded-lg md:border md:border-secondary px-3 sm:px-4 pb-4">
     <div class="md:hidden text-xs pt-3">

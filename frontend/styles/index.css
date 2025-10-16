@@ -7,8 +7,8 @@
 
 @plugin "daisyui" {
     themes:
-        corporate --default,
-        business --prefersdark;
+        light --default,
+        night;
 }
 
 @config "../../tailwind.config.js";

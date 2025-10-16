@@ -4,6 +4,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.metadata.myvariable }}.
 
+locale: en
 title: jacobharr.is
 tagline: The personal website for Jacob Harris
 email: mail@jacobharr.is

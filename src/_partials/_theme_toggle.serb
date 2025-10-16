@@ -1,0 +1,37 @@
+<label class="flex cursor-pointer align-center gap-1">
+  <!-- sun icon -->
+  <i class="fa-regular fa-brightness"></i>
+
+  <input
+    id="theme-checkbox"
+    type="checkbox"
+    value="night"
+    class="toggle checkbox-xs theme-controller"
+  />
+
+  <!-- moon icon -->
+  <i class="fa-regular fa-moon"></i>
+</label>
+
+<script>
+  checkbox = document.querySelector("#theme-checkbox");
+
+  checkbox.addEventListener('load', function() {
+    const THEME_KEY = "jh_theme";
+    const LIGHT_THEME = "light";
+    const DARK_THEME = "night";
+
+    theme = localStorage.getItem(THEME_KEY);
+
+    if (theme == 'night') {
+     checkbox.checked = true;
+
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        localStorage.setItem(THEME_KEY, DARK_THEME);
+      } else {
+        localStorage.setItem(THEME_KEY, LIGHT_THEME);
+      }
+    });
+  });
+</script>

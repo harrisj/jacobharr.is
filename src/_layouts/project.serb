@@ -19,19 +19,7 @@ layout: default
 {% end %}
 
 <article class="flex flex-col">
-  <div class="pl-1 sm:pl-0">
-    <div class="breadcrumbs text-sm md:text-md lg:text-lg">
-      <ul>
-        <li>
-          <a href="/"><i class="fa-sharp fa-solid fa-house"></i></a>
-        </li>
-        <li>{{ data.category | titleize }}</li>
-        <li>
-          <a href="{{ data.permalink }}">{{ data.title | markdownify }}</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  {%@ 'post_title' %}
 
   <div class="md:bg-base-100 md:rounded-lg md:border md:border-secondary px-3 md:px-4 pb-4">
     <div class="my-text prose-p:leading-6">
