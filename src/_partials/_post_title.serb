@@ -12,8 +12,4 @@
         </ul>
       </div>
     </div>
-    <div class="flex flex-row justify-end">
-      <div class="sm:hidden"><a class="link link-hover border-none" href="/search"><i class="fa-regular fa-magnifying-glass text-base-content"></i></a></div>
-      {%@ 'theme_toggle' %}
-    </div>
  </div>

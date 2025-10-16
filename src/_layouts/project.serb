@@ -10,12 +10,7 @@ layout: default
 {% end %}
 
 {% slot :right_pane do %}
-    <div class="">
-      <label class="input">
-      <i class="fa-regular fa-magnifying-glass text-neutral"></i>
-      {%= liquid_render "bridgetown_quick_search/search", placeholder: 'search', input_class: "input required" %}
-      </label>
-      <div>
+  {%= liquid_render 'search_box' %}
 {% end %}
 
 <article class="flex flex-col">

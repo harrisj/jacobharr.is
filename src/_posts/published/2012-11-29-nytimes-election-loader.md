@@ -12,11 +12,11 @@ permalink: /published/election-loader.html
 pub_permalink: https://source.opennews.org/articles/ny-times-results-loader/
 publisher: Source
 ---
-![The race-monitoring and calling interface for Ohio ><](/images/writing/election-loader/ohio-election-loader-interface.jpg)
-
 This is an article about a very specific but important part-the election results loader-of the [New York Times' elections coverage](http://elections.nytimes.com/2012) online. The initial election results loader was written mostly by Ben Koski and me in the run-up to the general election of 2008. It also served up the election results for the midterms of 2010. This past year, I modified it further to support multiple election dates and some of the unique quirks of each state's primaries. In the homestretch, I also got some much-needed help from Brian Hamman, Jacqui Maher, Michael Strickland, and Derek Willis. Of course, there are so many more people who worked on the Times' election site, but their work deserves a better chronicler than I. (Besides, I'm sure all of you will find election loading as intensely riveting as I do.)
 
->Like every other news organization on the planet, we get our election results data from the [Associated Press](http://www.ap.org/media-center/elections/us-election). Google may have had some success providing results from some early caucuses, but nobody matches the depth of AP's operation. There are roughly two tiers of customers for the AP Election Results: the TV networks who pay lavishly for the timeliest results, and the other news organizations like newspapers that get a slightly time-delayed version via FTP.
+{% render 'image', src: '/images/writing/election-loader/ohio-election-loader-interface.jpg', caption: "The race-monitoring and calling interface for Ohio", img_style: 'img-full-center', modal_style: 'max-w-4xl' %}
+
+Like every other news organization on the planet, we get our election results data from the [Associated Press](http://www.ap.org/media-center/elections/us-election). Google may have had some success providing results from some early caucuses, but nobody matches the depth of AP's operation. There are roughly two tiers of customers for the AP Election Results: the TV networks who pay lavishly for the timeliest results, and the other news organizations like newspapers that get a slightly time-delayed version via FTP.
 
 For us, the AP provides an FTP server where they update election files on a regular basis. There are three files that specify the election results in a state:
 - The Races file specifies basic race metadata (_i.e._, this is the Ohio House 7th District Republican Primary) and records how many precincts are reporting at any given point in the night. This file includes both statewide and county-level results (_i.e._, the Presidential results for Ohio and the Presidential results for Cuyahoga County, Ohio).

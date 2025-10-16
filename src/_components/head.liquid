@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="turbo-cache-control" content="no-preview" />
 {% seo %}
 
 <link rel="stylesheet" href="{% asset_path css %}">
@@ -9,16 +10,16 @@
 
 <script>
     // This script runs before the page renders
-    const themeKey = 'data-theme'; // Or whatever key you use in localStorage
-    const savedTheme = localStorage.getItem(themeKey);
-
-    if (savedTheme) {
-        document.documentElement.setAttribute(themeKey, savedTheme);
-    } else {
+    // const themeKey = 'data-theme'; // Or whatever key you use in localStorage
+    // const savedTheme = localStorage.getItem(themeKey);
+    //
+    // if (savedTheme) {
+    //     document.documentElement.setAttribute(themeKey, savedTheme);
+    // } else {
         // Optional: Fallback to system preference if no theme is saved
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.setAttribute(themeKey, prefersDark ? 'dark' : 'light');
-    }
+    //    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    //    document.documentElement.setAttribute(themeKey, prefersDark ? 'dark' : 'light');
+    // }
 </script>
 
 {% live_reload_dev_js %}

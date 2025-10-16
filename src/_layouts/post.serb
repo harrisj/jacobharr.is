@@ -27,10 +27,10 @@ layout: default
   {%= liquid_render 'search_box' %}
 {% end %}
 
-<article class="flex flex-col">
+<main class="flex flex-col">
   {%@ 'post_title' %}
 
-  <div class="md:bg-base-100 md:rounded-lg md:border md:border-secondary px-3 sm:px-4 pb-4">
+  <article class="md:bg-base-100 md:rounded-lg md:border md:border-secondary px-3 sm:px-4 pb-4">
     <div class="md:hidden text-xs pt-3">
       <ul style="list-none leading-none">
         <li>
