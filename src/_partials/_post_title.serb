@@ -3,7 +3,7 @@
       <div class="breadcrumbs text-sm md:text-md lg:text-lg">
         <ul>
           <li>
-            <a href="/"><i class="fa-sharp fa-solid fa-house"></i></a>
+            <a href="/" aria-label="Return to homepage"><i class="fa-sharp fa-solid fa-house"></i></a>
           </li>
           <li>{{ data.category | titleize }}</li>
           <li>

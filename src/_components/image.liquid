@@ -3,7 +3,7 @@
 {% assign id = src | split: "/" | last | replace: '-', '_' | replace: '.', "_" | slugify %}
 
 {% assign display_src = src %}
-<dialog id="modal_{{ id }}" class="modal">
+<dialog id="modal_{{ id }}" class="modal" aria-label="Image display modal">
     <div class="modal-box w-3/4 max-h-10/12 {{ modal_style }} !important">
         <figure class="align-center">
             <img class="mx-auto object-contain p-1" src="{{ src }}"/>
@@ -11,7 +11,7 @@
         </figure>
     </div>
     <form method="dialog" class="modal-backdrop">
-        <button>close</button>
+        <button aria-label="Close">close</button>
     </form>
 </dialog>
 <div class="not-prose {{ img_style }}">
