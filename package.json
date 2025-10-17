@@ -28,7 +28,6 @@
     "bridgetown-quick-search": "3.0.3",
     "esbuild-plugin-lit-css": "^4.0.0",
     "lit": "^3.3.1",
-    "tailwind": "^4.0.0",
     "tailwindcss": "^4.1.8",
     "theme-change": "^2.5.0",
     "turbo-shadow": "^1.2.0"
