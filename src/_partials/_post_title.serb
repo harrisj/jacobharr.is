@@ -1,4 +1,4 @@
-  <div class="pl-1 sm:pl-0 flex flex-row justify-between items-center">
+  <div class="pl-2 sm:pl-0 flex flex-row justify-between items-center">
     <div class="">
       <div class="breadcrumbs text-sm md:text-md lg:text-lg">
         <ul>

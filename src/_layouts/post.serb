@@ -36,7 +36,7 @@ layout: default
         <li>
           <i class="fa-regular fa-calendar"></i> {{ data.date.strftime('%B %d, %Y') }}
           {% if data.pub_permalink %}
-            (<small>originally published on</small> <a href="{{ data.pub_permalink }}">{{ data.publisher }}</a>)
+            (published in <a href="{{ data.pub_permalink }}">{{ data.publisher }}</a>)
           {% end %}
         </li>
         <li>
