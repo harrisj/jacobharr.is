@@ -4,16 +4,14 @@
   <dl class="my-2col-grid gap-y-4">
     {% for school in cv.education %}
       <dt class="hidden sm:block my-2col-l">
-        <date class="text-secondary">{{ school.start_year }}–{{ school.end_year }}</date>
+        <date>{{ school.start_year }}–{{ school.end_year }}</date>
       </dt>
 
       <dd class="my-2col-r">
         <header class="h4">
           <strong>{{ school.degree }}</strong>,
           <a class="link-hover font-normal" href="{{ school.link }}">{{ school.name }}</a>
-          <span class="sm:hidden">
-            (<date class="text-secondary">{{ school.start }}–{{ school.end }}</date>)</span
-          >
+          <div class="sm:hidden float-right"><small>{{ school.end_year }}</small></div>
         </header>
 
         <div class="prose leading-tight max-w-none">{{ school.description | markdownify }}</div>

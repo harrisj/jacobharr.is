@@ -20,6 +20,7 @@ objective: >
   culture of collaboration.
 career:
   - company: Magnum Opus, LLC
+    company_abbrev: MO Studio
     link: https://themostudio.com/
     title: Engineering Lead
     start: 10/2025
@@ -37,6 +38,7 @@ career:
           requirements mandated by HR.1 while minimizing the burdens for case workers and program
           recipients and improving the Medicaid renewal process for all recipients.
   - company: Consumer Financial Protection Bureau
+    company_abbrev: CFPB
     link: https://www.consumerfinance.gov/
     title: Supervisory IT Specialist
     start: 3/2023
@@ -70,8 +72,9 @@ career:
           developers within D&D. Ensured services obtained their necessary Authorizations To Use
           (ATUs) for Deque AXE, Sauce Labs, Netlify and Mapbox.
   - company: Nava PBC
+    company_abbrev: Nava
     link: https://www.navapbc.com/
-    title: Senior Engineering Lead / Engineering Manager
+    title: Senior Engineering Lead
     start: 2/2018
     start_year: 2018
     end: 3/2023
@@ -125,6 +128,7 @@ career:
           also into engineering management. Received accolades in 360-degree reviews for building
           supportive teams and proactively addressing delivery problems.
   - company: General Services Administration
+    company_abbrev: GSA
     link: https://18f.org/
     title: Innovation Specialist, 18F
     start: 5/2015
@@ -165,6 +169,7 @@ career:
           data while protecting user privacy, ensuring secure data collection practices for
           sensitive data.
   - company: The New York Times
+    company_abbrev: NY Times
     link: http://nytimes.com
     title: Senior Software Architect
     office: Interactive News
@@ -233,6 +238,7 @@ career:
           embedded within them. This became a whimsical and official NYT Tumblr blog of curated
           haiku that ran from 2013 to 2017, posting thousands of found haiku.
   - company: Alacra, Inc.
+    company_abbrev: Alacra
     title: Software Developer
     link: http://www.alacra.com/
     start: 7/1998

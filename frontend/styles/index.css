@@ -3,163 +3,165 @@
 @import "jit-refresh.css"; /* triggers frontend rebuilds */
 
 @import "tailwindcss";
-@plugin "daisyui";
 
 @plugin "daisyui" {
-    themes:
-        corporate --default,
-        business --prefers-dark;
+  themes:
+    corporate --default,
+    business --prefersdark;
 }
 
 @config "../../tailwind.config.js";
 
 @layer base {
-    :root {
-        --spacing-xs: clamp(0.5rem, 1%, 1rem);
-        --spacing-sm: clamp(1rem, 3%, 1.5rem);
-        --spacing-md: clamp(1.5rem, 6%, 3rem);
-        --spacing-lg: clamp(3rem, 12%, 6rem);
-        --spacing-xl: clamp(6rem, 24%, 12rem);
+  :root {
+    --spacing-xs: clamp(0.5rem, 1%, 1rem);
+    --spacing-sm: clamp(1rem, 3%, 1.5rem);
+    --spacing-md: clamp(1.5rem, 6%, 3rem);
+    --spacing-lg: clamp(3rem, 12%, 6rem);
+    --spacing-xl: clamp(6rem, 24%, 12rem);
 
-        --font-geometric-humanist:
-            Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
-            sans-serif;
-        --font-humanist:
-            Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
-            source-sans-pro, sans-serif;
-        --font-mono-slab-serif: "Nimbus Mono PS", "Courier New", monospace;
-        --font-mono-code:
-            ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
-            "DejaVu Sans Mono", monospace;
-        --font-rounded-sans:
-            ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa,
-            Manjari, "Arial Rounded MT", "Arial Rounded MT Bold", Calibri,
-            source-sans-pro, sans-serif;
-        --font-industrial:
-            Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
-            "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
-        --font-didone:
-            Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052,
-            Sylfaen, serif;
-    }
+    --font-geometric-humanist:
+      Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+    --font-humanist:
+      Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+      source-sans-pro, sans-serif;
+    --font-mono-slab-serif: "Nimbus Mono PS", "Courier New", monospace;
+    --font-mono-code:
+      ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+      "DejaVu Sans Mono", monospace;
+    --font-rounded-sans:
+      ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari,
+      "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro,
+      sans-serif;
+    --font-industrial:
+      Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
+      "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+    --font-didone:
+      Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen,
+      serif;
+  }
 
-    @import "./syntax-highlighting.css" html, body {
-        /* overflow-x: none; */
-    }
+  @import "./syntax-highlighting.css" html, body {
+    /* overflow-x: none; */
+  }
 
-    .font-mono-code {
-        font-family: var(--font-mono-code);
-    }
+  .font-mono-code {
+    font-family: var(--font-mono-code);
+  }
 
-    .font-industrial {
-        font-family: var(--font-industrial);
-    }
+  .font-industrial {
+    font-family: var(--font-industrial);
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: var(--font-industrial);
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-industrial);
+  }
 
-    pre {
-        @apply max-w-full;
-        @apply overflow-x-auto;
-    }
+  pre {
+    @apply max-w-full;
+    @apply overflow-x-auto;
+  }
 }
 
 @layer components {
-    /* .text-light {
+  /* .text-light {
     @apply text-base-content text-opacity-75;
   } */
 
-    a {
-        text-decoration-style: dotted;
-        @apply link link-hover;
-    }
+  a {
+    text-decoration-style: dotted;
+    @apply link link-hover;
+  }
 
-    .breadcrumbs a {
-        @apply link link-hover border-none;
-    }
+  .breadcrumbs a {
+    @apply link link-hover border-none;
+  }
 
-    .h1 {
-        @apply text-xl sm:text-2xl md:text-3xl;
-    }
+  .h1 {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
 
-    .h2 {
-        @apply text-lg sm:text-xl md:text-2xl;
-    }
+  .h2 {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
 
-    .h3 {
-        @apply text-lg md:text-xl;
-    }
+  .h3 {
+    @apply text-lg md:text-xl;
+  }
 
-    .h4 {
-        @apply text-lg;
-    }
+  .h4 {
+    @apply text-base md:text-lg;
+  }
 
-    .my-text {
-        @apply prose md:prose-base prose-p:first:mt-2 sm:max-w-none prose-li:m-[0.2em] prose-li:leading-5 dark:prose-invert prose-h2:mt-1 prose-h2:mb-0.5 prose-h3:mt-1 prose-h3:mb-0.5;
-    }
+  .h5 {
+    @apply text-sm font-semibold md:text-base;
+  }
 
-    .my-2col-grid {
-        @apply grid grid-cols-1 sm:grid-cols-[100px_auto] gap-x-3;
-    }
+  .my-text {
+    @apply prose md:prose-base prose-p:first:mt-2 prose-li:m-[0.2em] prose-li:leading-5 dark:prose-invert prose-h2:mt-1 prose-h2:mb-0.5 prose-h3:mt-1 prose-h3:mb-0.5 sm:max-w-none;
+  }
 
-    .my-2col-l {
-        @apply text-sm ml-0 pr-3 pt-1.5 leading-none text-nowrap text-left sm:text-right sm:col-1 sm:border-r-1 text-slate-500 sm:border-slate-500 dark:sm:border-slate-100 dark:text-slate-100;
-    }
+  .my-2col-grid {
+    @apply grid grid-cols-1 gap-x-3 sm:grid-cols-[86px_auto];
+  }
 
-    .my-2col-r {
-        @apply text-left sm:col-2;
-    }
+  .my-2col-l {
+    @apply text-secondary sm:border-secondary ml-0 pt-1.5 pr-3 text-left text-sm leading-none text-nowrap sm:col-1 sm:border-r-1 sm:text-right;
+  }
 
-    img[alt$=" <"] {
-        @apply float-left mr-4 my-1;
-    }
+  .my-2col-r {
+    @apply text-left sm:col-2;
+  }
 
-    img[alt$=" >"] {
-        @apply float-right ml-4 my-1;
-    }
+  img[alt$=" <"] {
+    @apply float-left my-1 mr-4;
+  }
 
-    img[alt$="><"] {
-        @apply max-w-8/10 float-none;
-    }
+  img[alt$=" >"] {
+    @apply float-right my-1 ml-4;
+  }
 
-    img[alt$="<>"] {
-        @apply float-none;
-    }
+  img[alt$="><"] {
+    @apply float-none max-w-8/10;
+  }
 
-    .img-scaled-center {
-        @apply max-w-8/10 float-none mx-auto;
-    }
+  img[alt$="<>"] {
+    @apply float-none;
+  }
 
-    .img-full-center {
-        @apply max-w-fit float-none mx-auto;
-    }
+  .img-scaled-center {
+    @apply float-none mx-auto max-w-8/10;
+  }
 
-    .img-thumbnail-article {
-        @apply max-w-1/2;
-    }
+  .img-full-center {
+    @apply float-none mx-auto max-w-fit;
+  }
+
+  .img-thumbnail-article {
+    @apply max-w-1/2;
+  }
 }
 
 @layer base {
-    *,
-    ::before,
-    ::after {
-        @apply border-base-100;
-    }
+  *,
+  ::before,
+  ::after {
+    @apply border-base-100;
+  }
 
-    body {
-        @apply font-sans;
-        @apply text-base-content;
-    }
+  body {
+    @apply font-sans;
+    @apply text-base-content;
+  }
 }
 
 .prose div.highlight {
-    @apply rounded-lg shadow-xl;
+  @apply rounded-lg shadow-xl;
 }
 
 /* .prose code.highlighter-rouge,
@@ -168,36 +170,36 @@
 } */
 
 .prose h4 {
-    @apply text-xl;
+  @apply text-xl;
 }
 
 .prose kbd {
-    @apply bg-white/50 text-neutral border-0;
+  @apply text-neutral border-0 bg-white/50;
 }
 
 * {
-    scrollbar-width: thin;
-    scrollbar-color: theme("colors.base-200") theme("colors.base-300");
+  scrollbar-width: thin;
+  scrollbar-color: theme("colors.base-200") theme("colors.base-300");
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 0.66rem;
-    background: theme("colors.base-300");
+  width: 0.66rem;
+  background: theme("colors.base-300");
 }
 
 *::-webkit-scrollbar-track {
-    background: theme("colors.base-200");
-    border-radius: 0px;
+  background: theme("colors.base-200");
+  border-radius: 0px;
 }
 
 *::-webkit-scrollbar-thumb {
-    @apply rounded bg-base-100 border;
+  @apply bg-base-100 rounded border;
 }
 
 @theme {
-    --font-sans: var(--font-rounded-sans);
-    --font-mono: var(--font-mono-slab-serif);
+  --font-sans: var(--font-rounded-sans);
+  --font-mono: var(--font-mono-slab-serif);
 }
 
 /* Set up Tailwind imports */

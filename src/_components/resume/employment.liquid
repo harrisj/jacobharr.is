@@ -3,18 +3,20 @@
 
   <dl class="my-2col-grid gap-y-4">
     {% for job in cv.career %}
-      {% rendercontent 'dt_left' %}{{ job.start_year }}–{{ job.end_year }}{% endrendercontent %}
+      {% rendercontent 'dt_left', hide_mobile: true %}<date>{{ job.start_year }}–{{ job.end_year }}</date>{% endrendercontent %}
       {% rendercontent 'dd_right' %}
         <header class="h4">
           <span class="font-bold">{{ job.title }}</span>,
-          <a class="link-hover" href="{{ job.link }}"><span>{{ job.company }}</span></a>
+          <a class="link-hover" href="{{ job.link }}"><span class="hidden sm:inline">{{ job.company }}</span><span class="sm:hidden">{{ job.company_abbrev }}</span></a>
+
+          <div class="sm:hidden float-right text-sm">{{ job.start_year }}–{{ job.end_year }}</div>
         </header>
 
         <div class="prose prose-sm leading-tight max-w-none">{{ job.description }}</div>
         {% if job.projects.size > 0 %}
-          <ul>
+          <ul class="">
             {% for project in job.projects %}
-              <li class="pt-4">
+              <li class="pt-4 pl-2 sm:pl-0">
                 <div class="h5"><a class="link-hover" href="{{ project.link }}">{{ project.title }}</a></div>
                 <div class="prose prose-sm leading-tight max-w-none">{{ project.description | markdownify }}</div>
               </li>
