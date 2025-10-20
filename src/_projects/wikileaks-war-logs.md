@@ -60,7 +60,8 @@ Among the dispatches in the Iraq War Logs there were many that were just America
 
 This is completely horrifying to read, but it felt vitally important to document. This violence wasn't directly inflicted by American forces, but it was a direct result of the American invasion and subsequent destabilization of the country. This blood was also on our hands. With the help of graphics editors and a reporter providing local context, I was able to present this data in an interactive graphic:
 
-{% render 'image', id: 'oly_admin', src: '/images/projects/wikileaks/1024-surge-graphic.jpg', caption: 'A deadly day in Baghdad', img_style: 'img-scaled-center' %}
+{% render 'image', id: 'oly_admin', src: '/images/projects/wikileaks/1024-surge-graphic.jpg', caption: 'A deadly day in Baghdad',
+alt: 'A diagram titled A Deadly Day in Baghdad. The top of it has a map in the center of Baghdad with circles of various sizes indicating deaths on a single day in that location. The date is December 20, 2006 when there were 114 incidents with 160 people killed. On the right of the map is information about several neighborhoods in Baghdad with particularly heavy violence. At the bottom of the diagram is a series of maps showing violence in Baghdad from 2004-2009 and it surging and then ebbing, with a large number of dots on the map for 2006 and 2007.', img_style: 'img-scaled-center' %}
 
 For more details, check out the following resources:
 - [MGRS Explained](/images/projects/wikileaks/nicar_mgrs.pdf): a presentation I gave at a data journalism conference

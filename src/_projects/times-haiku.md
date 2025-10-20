@@ -24,7 +24,8 @@ The initial seed of this project was a hackish selection of a few Ruby scripts a
 
 Put that all togther and I had a little program I could run on my computer that would go searching for haiku and sharing them with me. When I showed this to some of my coworkers on the Interactive Newsroom Technologies team, they agreed it could be a fun project to create. To implement this, we tried a novel moderation approach where the Haiku bot would post haiku it found to a private moderation Tumblr blog. When moderators approved, they would the be published to [a public tumblr](https://timeshaiku.tumblr.com/). The design for the site was done by Heena Ko and the distinctive procedurally generated format for each haiku was built by Anjali Bhojani.
 
-{% render 'image', src: '/images/projects/times-haiku/symmetry.gif', caption: "An example of the visual Times Haiku presentation", img_style: 'img-max-center pb-2', modal_style: 'max-w-4xl' %}
+{% render 'image', src: '/images/projects/times-haiku/symmetry.gif', caption: "An example of the visual Times Haiku presentation",
+alt: 'A gray rectangle with a haiku in the front and a few abstract lines on the back. The haiku reads \'The idea of / maintaining symmetry seems / almost romantic.\' At the bottom is a footer that says Times Haiku and in the top right is a title Higgs Matters and the date of November 30, 2012', img_style: 'img-max-center pb-2', modal_style: 'max-w-4xl' %}
 
 ## Explainer that Appeared on the [Times Haiku Site](https://timeshaiku.tumblr.com/about)
 _Whimsy is not a quality we usually associate with computer programs. We tend to think of software in terms of the function it fulfills. For example, a spreadsheet helps us do our work. A game of Tetris provides a means of procrastination. Social media reconnects us with our high school nemeses. But what about computer code that serves no inherent purpose in itself?_

@@ -1,12 +1,15 @@
 {%# Required params img = url, id = unique string for page, caption, class, size %}
 
 {% assign id = src | split: "/" | last | replace: '-', '_' | replace: '.', "_" | slugify %}
+{% if alt.blank? %}
+    {% assign alt = caption %}
+{% endif %}
 
 {% assign display_src = src %}
 <dialog id="modal_{{ id }}" class="modal" aria-label="Image display modal">
-    <div class="modal-box w-3/4 max-h-10/12 {{ modal_style }} !important">
+    <div class="modal-box w-10/12 max-w-8xl max-h-10/12 {{ modal_style }}">
         <figure class="align-center">
-            <img class="mx-auto object-contain p-1" src="{{ src }}" alt="{{ caption }}"/>
+            <img class="mx-auto object-contain p-1" src="{{ src }}" alt="{{ alt }}"/>
             <figcaption class="prose prose-sm py-2 px-2 text-left mx-auto max-w-full">{{ caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
         </figure>
     </div>
@@ -15,5 +18,5 @@
     </form>
 </dialog>
 <div class="not-prose {{ img_style }}">
-    <img onclick="modal_{{ id }}.showModal()" src="{{ display_src}}" alt="{{ caption }}"/>
+    <img onclick="modal_{{ id }}.showModal()" src="{{ display_src}}" alt="{{ alt }}"/>
 </div>

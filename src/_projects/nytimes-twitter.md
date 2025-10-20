@@ -26,7 +26,7 @@ The @nytimes bot officially launched on March 6, 2007
 ## Word Up!
 After a few weeks, I decided it would be fun to supplement the regular homepage feed by adding specialized accounts like @nyt_science, @nyt_books, etc. that used the RSS feeds from specific sections. This required some architectural revision to my original code to handle multiple accounts with different posting backlogs. I also marked the occasion with a famously silly tweet:
 
-{% render 'image', src: '/images/projects/twitter/word-up.png', caption: "Word up! It is I, the Gray Lady", img_style: 'img-scaled-center', modal_style: 'max-w-2xl' %}
+{% render 'image', src: '/images/projects/twitter/word-up.png', caption: "Word up! It is I, the Gray Lady", alt: 'A tweet from March 21, 2007 which reads: \'Word up!\' It is I, the Gray Lady, with a \'shoutout\' to all my hip young friends. Just wanted you to know I\'ve added new specialized feeds.', 'img_style: 'img-full-center' %}
 
 As I described this in an [10-year anniversary interview](https://www.niemanlab.org/2017/03/word-up-this-is-the-story-behind-the-new-york-times-most-famous-tweet-which-is-10-years-old-today/), the fun was "imagining what _The New York Times_ would say if it were trying to be cool."
 
