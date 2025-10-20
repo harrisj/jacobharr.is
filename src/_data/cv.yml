@@ -33,10 +33,11 @@ career:
     projects:
       - title: Pennsylvania HR1 Verification
         description: >-
-          Member of a small team focused on discovery work with the Pennsylvania department of
-          Health and Human Services and other teams on how the state can meet its work verification
-          requirements mandated by HR.1 while minimizing the burdens for case workers and program
-          recipients and improving the Medicaid renewal process for all recipients.
+          Working with a small team doing essential technical discovery work on how
+          Pennsylvania will be able to enhance the functionality of its current Medicaid system
+          to comply with the new work requirements in H.R. 1. Our goal is to improve the automated renewal process
+          to minimize churn, reduce burdens and ensure that all eligible beneficiaries will keep their
+          Medicaid coverage.
   - company: Consumer Financial Protection Bureau
     company_abbrev: CFPB
     link: https://www.consumerfinance.gov/
