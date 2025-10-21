@@ -1,5 +1,5 @@
 <section id="objective">
   <h2 class="h2">Objective</h2>
 
-  <div class="prose prose-base leading-tight max-w-none">{{ cv.objective | markdownify }}</div>
+  <div class="prose prose-base leading-tight print:text-xs max-w-none">{{ cv.objective | markdownify | remove: '<p>' | remove: '</p>' }}</div>
 </section>

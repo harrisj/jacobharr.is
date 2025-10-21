@@ -107,15 +107,15 @@
   }
 
   .my-2col-grid {
-    @apply grid grid-cols-1 gap-x-3 sm:grid-cols-[86px_auto];
+    @apply gap-x-3 grid-cols-1 sm:grid-cols-[86px_auto] grid;
   }
 
   .my-2col-l {
-    @apply text-secondary sm:border-secondary ml-0 pt-1.5 pr-3 text-left text-sm leading-none text-nowrap sm:col-1 sm:border-r-1 sm:text-right;
+    @apply text-secondary sm:border-secondary ml-0 pt-1.5 pr-3 text-left text-sm leading-none text-nowrap sm:border-r-1 sm:text-right;
   }
 
   .my-2col-r {
-    @apply text-left sm:col-2;
+    @apply text-left;
   }
 
   img[alt$=" <"] {

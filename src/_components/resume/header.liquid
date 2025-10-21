@@ -1,14 +1,14 @@
 <section id="header" class="flex justify-between flex-row gap-10">
   <div id="contact-list">
     <h1 class="h1">{{ cv.personal.name }}</h1>
-    <ul>
+    <ul class="print:flex print:flex-row print:gap-4">
       <li><a href="mailto:{{ cv.personal.email }}">{{ cv.personal.email }}</a></li>
       <li><a href="{{ cv.personal.site }}">{{ cv.personal.site }}</a></li>
       <li>{{ cv.personal.phone }}</li>
     </ul>
   </div>
 
-  <div id="avatar print:hidden">
+  <div id="avatar" class="print:hidden">
     <img src="/images/avatar.jpg" alt="An avatar of Jacob Harris, it's a black and white photograph of his face" height=120 width=120></img>
   </div>
 </section>

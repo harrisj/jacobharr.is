@@ -1,15 +1,15 @@
 <section id="employment">
   <h2 class="h2">Employment</h2>
 
-  <dl class="my-2col-grid gap-y-4">
+  <dl class="my-2col-grid gap-y-4 print:grid-cols-1">
     {% for job in cv.career %}
-      {% rendercontent 'dt_left', hide_mobile: true %}<date>{{ job.start_year }}–{{ job.end_year }}</date>{% endrendercontent %}
+      {% rendercontent 'dt_left', add_style: 'hidden sm:block print:hidden' %}<date>{{ job.start_year }}–{{ job.end_year }}</date>{% endrendercontent %}
       {% rendercontent 'dd_right' %}
         <header class="h4">
           <span class="font-bold">{{ job.title }}</span>,
           <a class="link-hover" href="{{ job.link }}"><span class="hidden sm:inline">{{ job.company }}</span><span class="sm:hidden">{{ job.company_abbrev }}</span></a>
 
-          <div class="sm:hidden float-right text-sm">{{ job.start_year }}–{{ job.end_year }}</div>
+          <div class="screen:sm:hidden float-right text-sm">{{ job.start_year }}–{{ job.end_year }}</div>
         </header>
 
         <div class="prose prose-sm leading-tight max-w-none">{{ job.description }}</div>
