@@ -1,7 +1,7 @@
 <section id="employment">
   <h2 class="h2">Employment</h2>
 
-  <dl class="my-2col-grid gap-y-4 print:grid-cols-1">
+  <dl class="my-2col-grid gap-y-4 print:gap-y-2 print:grid-cols-1">
     {% for job in cv.career %}
       {% rendercontent 'dt_left', add_style: 'hidden sm:block print:hidden' %}<date>{{ job.start_year }}–{{ job.end_year }}</date>{% endrendercontent %}
       {% rendercontent 'dd_right' %}
@@ -16,9 +16,10 @@
         {% if job.projects.size > 0 %}
           <ul class="">
             {% for project in job.projects %}
-              <li class="pt-4 pl-2 sm:pl-0">
-                <div class="h5"><a class="link-hover" href="{{ project.link }}">{{ project.title }}</a></div>
-                <div class="prose prose-sm leading-tight max-w-none">{{ project.description | markdownify }}</div>
+              <li class="pt-2 print:pt-0.5 pl-2 sm:pl-0">
+                <div class="h5 print:hidden"><a class="link-hover" href="{{ project.link }}">{{ project.title }}</a></div>
+                <div class="prose prose-sm max-w-none leading-tight print:hidden">{{ project.description | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+                <div class="prose hidden print:block leading-tight prose-sm max-w-none"><span class="hidden print:inline font-semibold">{{ project.title }}:</span> {{ project.short_desc | markdownify | remove: '<p>' | remove: '</p>' }}</div>
               </li>
             {% endfor %}
           </ul>

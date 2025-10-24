@@ -1,20 +1,20 @@
 <section id="education">
   <h2 class="h2">Education</h2>
 
-  <dl class="my-2col-grid gap-y-4 print:grid-cols-1">
+  <dl class="my-2col-grid gap-y-4 print:grid-cols-1 print:gap-y-2">
     {% for school in cv.education %}
       <dt class="hidden sm:block print:hidden my-2col-l">
         <date>{{ school.start_year }}–{{ school.end_year }}</date>
       </dt>
 
       <dd class="my-2col-r">
-        <header class="h4">
+        <header class="text-base md:text-lg">
           <strong>{{ school.degree }}</strong>,
           <a class="link-hover font-normal" href="{{ school.link }}">{{ school.name }}</a>
           <div class="screen:sm:hidden float-right"><small>{{ school.end_year }}</small></div>
         </header>
 
-        <div class="prose leading-tight max-w-none">{{ school.description | markdownify }}</div>
+        <div class="prose prose-sm leading-tight max-w-none">{{ school.description | markdownify | remove: '<p>' | remove: '</p>' }}</div>
       </dd>
     {% endfor %}
   </dl>

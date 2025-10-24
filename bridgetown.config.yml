@@ -33,7 +33,7 @@ template_engine: liquid
 # pagination:
 #   enabled: true
 
-fast_refresh: false
+fast_refresh: true
 
 permalink: "simple"
 

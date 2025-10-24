@@ -28,10 +28,13 @@ career:
     end: now
     end_year: now
     description: >-
-      Magnum Opus is a small consulting company that applies human-centered design and agile delivery practices to improve
-      the way the government provides services to the American public.
+      Magnum Opus is a small consulting company that applies human-centered design and agile delivery to improve
+      government services.
     projects:
       - title: Pennsylvania HR1 Verification
+        short_desc: >-
+          Tech lead on discovery work on how Pennsylvania can comply with new Medicaid work requirement while
+          preserving benefits and reducing churn and administrative burdens.
         description: >-
           Working with a small team doing essential technical discovery work on how
           Pennsylvania will be able to enhance the functionality of its current Medicaid system
@@ -47,19 +50,21 @@ career:
     end: 10/2025
     end_year: 2025
     description: >-
-      The Consumer Financial Protection Bureau (CFPB) is a small federal agency founded in 2010
-      and dedicated to financial education, regulation and enforcement. The Design & Development
-      (D&D) team within CFPB handles a variety of print and digital design, as well as software
-      development responsibilities. Supervised 12 software engineers distributed across 5
-      different engineering teams, following a matrix model of management.
+      CFPB is a small federal agency founded in 2010 and dedicated to financial education, regulation and enforcement.
     projects:
       - title: Application Development Lead
+        short_desc: >-
+          Manager in the Design & Development team. Oversaw
+          technical standards and steered product work.
         description: >-
           Member of D&D's leadership team. Oversaw technical standards for engineering practices
           and helped teams to anticipate and handle bureaucratic roadblocks, resulting in fewer
           surprises and improved team productivity. Supported teams building web applications in
           Django with Javascript or React frontends, the Wagtail CMS and SQL backends.
       - title: Supervisory IT Specialist
+        short_desc: >-
+          Managed up to 12 engineers across 5 scrum teams working on the website and internal products. Held regular
+          checkins with all my direct reports and managed performance reviews.
         description: >-
           Supervised 12 software engineers distributed across 5 different engineering teams. This
           included teams working on the CFPB website, consumer-facing tools, internal products for
@@ -67,6 +72,8 @@ career:
           Conducted regular 1-1s with all my direct report as well as performance reviews.
           Re-established dormant engineering practices like syncs and training.
       - title: Contracting Officer Representative (Level 1)
+        short_desc: >-
+          Managed procurements for multiple SaaS products used by developers at the CFPB.
         description: >-
           Certified as a COR Level 1 in the federal government. Managed the the procurement,
           payment and even the wind-down of several Software-as-a-Service (SaaS) products used by
@@ -82,11 +89,14 @@ career:
     end_year: 2023
     description: >
       Nava is a public benefit corporation that contracts with both federal and state government
-      agencies to build custom software and thoughtfully apply technology to serve the American
-      public.
+      agencies to build custom software.
     projects:
       - title: Quality Payments Program (QPP) Submissions API
         link: https://qpp.cms.gov/developers
+        short_desc: >-
+          Started as senior developer on a team building an API in Node for Medicare doctors.
+          Transitioned into tech lead role managing up to 9 engineers on project. Built
+          prototype for scoring engine later written in Spark.
         description: >-
           Joined the team as a senior engineer building an API for accepting millions of data
           submissions. Learned Express on Node.js on the job. Created a more flexible library for
@@ -99,6 +109,9 @@ career:
           work using Scrum, coordinating with 14 other scrum teams on the project in the Scaled
           Agile Framework.
       - title: CMS Cloud IT Operations (CLOUD ITOPS)
+        short_desc: >-
+          Engineering manager for devops team improving cloud operations for Medicare and Medicaid. Wrote multiple tools
+          in Go to address gaps in functionality for Cloud Foundry.
         description: >-
           Identified needs for and implemented custom tooling for infrastructure security and
           compliance requirements. Built tools in Go to address gaps in CloudFoundry's
@@ -106,6 +119,9 @@ career:
           manager for 6 engineers.
       - title: Medicare Replicated Data Access (RDA) API
         link: https://www.usds.gov/projects/medicare-payment-program
+        short_desc:
+          Led a small team of 3 engineers building an API in Java to stream millions of medical claims each day
+          over GRPC. We also created a loading process in AWS Lambda Step Functions to load data reliably and cheaply.
         description: >-
           Led the Replicated Data Access (RDA) API of 3 engineers, building a GRPC-based API in
           Java to store and stream millions of Medicare claims to other parts of the organization.
@@ -116,6 +132,8 @@ career:
           Consulted on several other contract modifications and built a pilot prototype allowing
           Medicare to receive patient survey information via the FHIR format.
       - title: Business Development Work
+        short_desc: >-
+          Member of multiple bid teams that crafted winning proposals and executed on technical challenges.
         description: >-
           Participated in multiple bid teams to craft proposals and implement technical challenges
           to win new contracts. Worked closely with business development to research the technical
@@ -123,6 +141,9 @@ career:
           diagrams, staffing and cost estimates, QASPs or other measures of success as well as our
           proposed timelines and milestones.
       - title: Engineering Management
+        short_desc: >-
+          Regularly managed anywhere from 6-12 engineers with weekly checkins and through multiple performance
+          management seasons. Developed a tracker for engineers to plot out their advancement against career ladders.
         description: >-
           Regularly managed 6-12 engineers, coaching their career development through weekly 1:1s
           and regular performance check-ins. Guided multiple junior engineers to senior roles and
@@ -138,11 +159,12 @@ career:
     end_year: 2018
     description: >
       18F was a “government startup” within the General Services Administration the consulted on
-      custom software for other federal agencies. We followed modern practices and built
-      open-source software informed by user research and agile planning.
+      custom software for other federal agencies.
     projects:
       - title: MyUSA
         link: https://github.com/18F/myusa
+        short_desc: >-
+          Joined as a senior engineer building an authentication service for federal sites in Ruby on Rails.
         description: >-
           A precursor to [login.gov](https://login.gov), MyUSA provided single-sign-on (SSO) for
           multiple government sites and allowed users to control what information they shared.
@@ -150,6 +172,9 @@ career:
           JQuery and vanilla Javascript.
       - title: Micro-purchase
         link: https://micropurchase.18f.gov
+        short_desc: >-
+          Launched an experimental site in Rails that used micro-purchases to pay for small scale software development
+          via reverse auctions.
         description: >-
           Launched an experiment that allowed government agencies to pay for custom software
           development with the easier micro-purchase approach for procurement. Built a robust web
@@ -157,6 +182,9 @@ career:
           coding projects from government agencies.
       - title: FBI Crime Data Explorer
         link: https://github.com/18F/crime-data-api
+        short_desc: >-
+          Worked closely with 18F team and FBI stakeholders to develop a modern site for publishing crime data statistics.
+          Learned Python as part of the work and built loading processes and crosstabs for Postgresql.
         description: >-
           Worked with other engineers and stakeholders to modernize how the FBI published crime
           data online. Learned Python to work with another senior developer on the project. Built a
@@ -165,6 +193,8 @@ career:
           formats. Created tools to generate open data downloads.
       - title: Confidential Survey
         link: https://github.com/18f/confidential-survey
+        short_desc: >-
+          Designed a prototype app in Ruby on Rails to conduct surveys with risk of leaking identities.
         description: >-
           Designed a prototype in Ruby on Rails for conducting surveys that aggregate demographic
           data while protecting user privacy, ensuring secure data collection practices for
@@ -179,12 +209,15 @@ career:
     end: 5/2015
     end_year: 2015
     description: >-
-      In 2007, I was a co-founder of the Interactive Newsroom Technologies Team, a startup-like
-      group embedded within the newsroom that creates news-driven web applications on agile
-      timeframes. Here are some of our more notable projects.
+      In 2007, I was a co-founder of the Interactive Newsroom Technologies Team, a hybrid team of configs:
+      journalists and engineers within the newsroom to create news-driven applications on deadline.
     projects:
       - title: Elections (2008-2014)
         link: /projects/nytimes-election-loader.html
+        short_desc: >-
+          Paired with another developer to build an election loading backend in Rails. Enhanced
+          its functionality and managed its operation over primaries and general elections in the years after.
+          Built admin for news editors to track results and call races.
         description: >-
           Paired with another developer to build the initial version of a new and better election
           results loader in time for the 2008 general election. Enhanced it over the years to
@@ -196,6 +229,9 @@ career:
           handle tremendous amounts of web traffic with minimal resources.
       - title: Olympics Results (2010/2012)
         link: http://2010games.nytimes.com/events/curling/mens/results.html
+        short_desc: >-
+          Helped architect and develop a backend service in Ruby on Rails to parse results data from the 2010
+          and 2012 Olympics to render static pages and widgets for the newspaper's coverage.
         description: >
           Helped to architect and build a backend service and admin in Ruby on Rails to process a
           firehose of XML data provided by the International Olympic Committee into a SQL DB with a
@@ -204,6 +240,8 @@ career:
           London Olympics.
       - title: Wikileaks War Logs
         link: /projects/wikileaks-war-logs.html
+        short_desc: >-
+          Built an internal admin in Ruby of Rails for reporters to analyze the Wikileaks War Logs for Iraq and Afghanistan.
         description: >
           When Wikileaks provided the _Times_ with leaked military dispatches from Iraq and
           Afghanistan, built an internal web admin in Ruby on Rails used by reporters to search and
@@ -212,6 +250,9 @@ career:
           about a surge of sectarian violence in Baghdad after the US invasion.
       - title: PUFFY
         link: https://lens.blogs.nytimes.com/2010/05/02/readers-13/
+        short_desc: >-
+          Built a tool in Ruby on Rails for editors to moderate reader-submitted photos in 30+
+          different projects at the _Times_.
         description: >-
           In 2009, we created a site for readers to upload and share their photos from the
           inauguration of President Obama. Built on this prototype to create a tool in Ruby on
@@ -220,12 +261,19 @@ career:
           than 10,000 readers submitted geotagged photos taken at the same time across the Earth.
       - title: Open Source
         link: /projects/open-source.html
+        short_desc: >-
+          Co-created the Open blog for open-source outreach and represented NYT digital engineering
+          at conferences.
         description: >-
           Spearheaded new open-source initiatives at the NYT and improved outreach for people to
           use public APIs from the New York Times. Helped to create and wrote early content for
           [NYT Open](https://open.nytimes.com/), which still runs to this date.
       - title: "@nytimes Twitter Account"
         link: /projects/nytimes-twitter.html
+        short_desc: >-
+          Registered the @nytimes twitter account and created the software to automatically push
+          new articles out as tweets to it and 80+ other specialized accounts. Iterated admin to support
+          social media team.
         description: >
           One afternoon in 2007, created the @nytimes twitter account and built a custom posting
           bot as a simple Ruby script. Expanded it into an admin interface in Ruby on Rails that
@@ -234,6 +282,10 @@ career:
           team at the NYT.
       - title: Times Haiku
         link: /projects/times-haiku.html
+        short_desc: >-
+          Built a whimsical bot to scan new articles for phrases that met the haiku syllable pattern.
+          Developed a moderation interface and adapated a visual presentation to launch as a dedicated Tumblr blog.
+          This was a fun one.
         description: >
           After the 2012 election, built a bot in Ruby that scanned _Times_ articles to find haiku
           embedded within them. This became a whimsical and official NYT Tumblr blog of curated
@@ -247,10 +299,18 @@ career:
     end: 7/2006
     end_year: 2006
     description: >
-      Alacra resells financial content from over 80 different databases to financial and legal
-      firms. My role there was R&D and rapid development, particularly in projects that combined
-      content from multiple databases. I also built a custom web crawler and a parser to leverage
-      the new XML and XSLT standards.
+      Alacra resells financial data from over 80 databases to financial and legal firms.
+    projects:
+      - title: XML/XSLT
+        short_desc: >-
+          Developed a framwork in XML and XSLT to dynamically share data and build docs.
+        description: >-
+          Developed a framwork in XML and XSLT to dynamically share data and build docs. Created XML DOM implementation.
+      - title: PortalB
+        short_desc: >-
+          Built a web crawler to create search engine for for business sites.
+        description: >-
+          Built a web crawler in C++ to create search engine for for business sites.
 education:
   - name: MIT
     link: https://mit.edu/
