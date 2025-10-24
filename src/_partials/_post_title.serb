@@ -1,11 +1,12 @@
-  <div class="pl-3 md:pl-0 flex flex-row justify-between items-center">
+<div class="hidden print:block font-industrial text-xl pl-4">{{ page.absolute_url }}</div>
+<div class="pl-3 md:pl-0 print:pl-4 flex flex-row justify-between items-center">
     <div class="">
       <div class="breadcrumbs text-sm md:text-md lg:text-lg">
         <ul>
-          <li>
+          <li class="print:hidden">
             <a href="/" aria-label="Return to homepage"><i class="fa-sharp fa-solid fa-house"></i></a>
           </li>
-          <li>{{ data.category | titleize }}</li>
+          <li class="print:hidden">{{ data.category | titleize }}</li>
           <li>
             <a href="{{ data.permalink }}">{{ data.title | markdownify }}</a>
           </li>

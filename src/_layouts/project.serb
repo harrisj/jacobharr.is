@@ -16,9 +16,11 @@ layout: default
 <article class="flex flex-col">
   {%@ 'post_title' %}
 
-  <div class="md:bg-base-100 md:rounded-lg md:border md:border-secondary px-4 pb-4">
+  <div class="md:bg-base-100 md:rounded-lg md:border md:border-secondary print:border-none px-4 pb-4">
     <div class="my-text prose-p:leading-6">
       {{ content }}
     </div>
   </div>
 </article>
+
+{%@ 'post_footer' %}

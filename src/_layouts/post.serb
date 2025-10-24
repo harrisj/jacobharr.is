@@ -30,8 +30,8 @@ layout: default
 <main class="flex flex-col">
   {%@ 'post_title' %}
 
-  <article class="md:rounded-lg md:border md:border-secondary pb-4 px-4">
-    <div class="md:hidden text-xs pt-3">
+  <article class="md:rounded-lg md:border md:border-secondary print:border-none pb-4 px-4">
+    <div class="md:hidden print:block text-xs pt-3">
       <ul style="list-none leading-none">
         <li>
           <i class="fa-regular fa-calendar"></i> {{ data.date.strftime('%B %d, %Y') }}
@@ -48,5 +48,7 @@ layout: default
     <div class="my-text prose-p:leading-6">
       {{ content }}
     </div>
-  </div>
-</article>
+  </article>
+</main>
+
+{%@ 'post_footer' %}
