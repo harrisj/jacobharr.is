@@ -34,13 +34,15 @@ career:
       - title: Pennsylvania HR1 Verification
         short_desc: >-
           Tech lead on discovery work on how Pennsylvania can comply with new Medicaid work requirement while
-          preserving benefits and reducing churn and administrative burdens.
+          preserving benefits and reducing churn and administrative burdens. Built a quick prototype of an
+          external verification engine in FastAPI and PostgreSQL.
         description: >-
-          Working with a small team doing essential technical discovery work on how
-          Pennsylvania will be able to enhance the functionality of its current Medicaid system
-          to comply with the new work requirements in H.R. 1. Our goal is to improve the automated renewal process
-          to minimize churn, reduce burdens and ensure that all eligible beneficiaries will keep their
-          Medicaid coverage.
+          Member of a small discovery-focused effort for the Pennsylvania Department of
+          Health and Human Services on how the state can meet its work verification
+          requirements mandated by HR.1 while minimizing the burdens for case workers and program
+          recipients and improving the Medicaid renewal process for all recipients. As part of this work,
+          we identified and priortized several key interventions for the state to take. As part of this work, I investigated potential data sources
+          and built a prototype system to certify compliance and keep a permanent audit trail using open-source components in Python and PostgreSQL.
   - company: Consumer Financial Protection Bureau
     company_abbrev: CFPB
     link: https://www.consumerfinance.gov/
@@ -54,17 +56,21 @@ career:
     projects:
       - title: Application Development Lead
         short_desc: >-
-          Manager in the Design & Development team. Oversaw
-          technical standards and steered product work.
+          Manager in the Design & Development team. Oversaw technical standards and steered product work for multiple
+          development teams working on public-facing and internal products. Worked with systems built in Django with
+          Javascript/React frontends and SQL backends. Anticipated blockers and fended off bureaucratic
+          obstacles that impeded progress. Supported accessibility and design standards.
         description: >-
           Member of D&D's leadership team. Oversaw technical standards for engineering practices
           and helped teams to anticipate and handle bureaucratic roadblocks, resulting in fewer
           surprises and improved team productivity. Supported teams building web applications in
-          Django with Javascript or React frontends, the Wagtail CMS and SQL backends.
+          Django with Javascript or React frontends, as well as the Wagtail CMS and SQL backends.
       - title: Supervisory IT Specialist
         short_desc: >-
-          Managed up to 12 engineers across 5 scrum teams working on the website and internal products. Held regular
-          checkins with all my direct reports and managed performance reviews.
+          Managed up to 12 engineers across 5 scrum teams. Held regular
+          checkins with all my direct reports and conducted performance reviews twice yearly. Followed
+          a high-contact approach that supported my engineers as people rather than "resources," with
+          an emphasis on career growth and personal development.
         description: >-
           Supervised 12 software engineers distributed across 5 different engineering teams. This
           included teams working on the CFPB website, consumer-facing tools, internal products for
