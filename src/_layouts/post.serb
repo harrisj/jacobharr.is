@@ -4,9 +4,9 @@ layout: default
 {% slot :left_pane do %}
   {% if data.thumbnail %}
     <div class="avatar">
-    <div class="border-1 border-secondary rounded aspect-square">
-      <img class="object-scale-down" src="{{ data.thumbnail }}"/>
-    <div>
+      <div class="border-1 border-secondary rounded aspect-square">
+        <img class="object-scale-down" src="{{ data.thumbnail }}"/>
+      </div>
     </div>
   {% end %}
 
