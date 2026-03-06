@@ -131,8 +131,9 @@ growing ship masts.
 
 This approach created the bureaucracy and the paper form, which has evolved into
 the web form and database. As programmers, we need to reduce the messy data of
-the world in order to act on it. We expect [our dates to be exact](https://gist.github.com/timvisee/fcda9bbdff88d45cc9061606b4b923ca). We expect
-[names to be relatively
+the world in order to act on it. We expect [our dates to be
+exact](https://gist.github.com/timvisee/fcda9bbdff88d45cc9061606b4b923ca). We
+expect [names to be relatively
 simple](https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/).
 We expect data to be complete at time of entry and consistent over time. Every
 programmer and every system design is a series of
@@ -154,12 +155,13 @@ behind those insights (_it's likely just a result of [changes in how we define
 autism and increased
 screening](https://publichealth.jhu.edu/2025/is-there-an-autism-epidemic)_).
 It's important to step back and look at the bigger picture of how any model was
-made and what type of knowledge it doesn't capture. As a data journalist, I
-learned how to interview data and how to be highly rigorous about all the ways
-in which the answers I found could be misleading. Paranoia is the data
-journalist's best friend, if you want to avoid [an embarrassing
-correction.](/published/times-regrets-error.html). You need to be able to think
-about not just what the data says, but all the stuff it doesn't include.
+made and what type of knowledge it doesn't capture. Every abstraction is also an
+occlusion. As a data journalist, I learned how to interview data and how to be
+highly rigorous about all the ways in which the answers I found could be
+misleading. Paranoia is the data journalist's best friend, if you want to avoid
+[an embarrassing correction.](/published/times-regrets-error.html). You need to
+be able to think about not just what the data says, but all the stuff it doesn't
+include.
 
 Unfortunately, this metacognition is something an LLM can't ever do. The model
 is their reality. As Robin Sloan succinctly notes in his compelling essay ["Are
