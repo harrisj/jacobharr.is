@@ -24,25 +24,25 @@ personally. This page is a "brief" accounting of various reasons why.
 
 ## I'm a Cheapskate
 
-I'm not a purist. I've tried using LLMs that are integrated into an
-IDE. They have been useful for some tasks that are simple enough to be easily
-describable but annoying enough to not just do them myself. For instance,
-resizing [a grid of square images to be smaller](/projects/sky-gradients). I
-_could_ go look at the command-line arguments for ImageMagick, but that was a
-perfect thing to ask the AI to do. And I also tried using one of the AI tools to
-analyze my code in a project and a few other tasks before it all came to an
-awkward halt. I had run out of credits and I would need to provide a credit card
-to purchase more tokens I wanted to keep going.
+I'm not a purist. I've tried using LLMs that are integrated into an IDE. They
+have been useful for some tasks that are simple enough to be easily describable
+but annoying enough to not just do them myself. For instance, resizing [a grid
+of square images to be smaller](/projects/sky-gradients). I _could_ go look at
+the command-line arguments for ImageMagick, but that was a perfect thing to ask
+the AI to do. I then tried using one of the AI tools to analyze my code in a
+project and a few other small tasks before it all came to an awkward halt. The
+system informed me that I had just run out of credits and I would need to
+provide a credit card to purchase more tokens I wanted to keep going.
 
 Now, you must understand that I come from a long line of cheapskates from both
 sides of my family tree. We've been pinching pennies and hunting bargains for
 centuries both here and on the other side of the Atlantic. As an example, one of
 my distant ancestors died during the [King Philip's
 War](https://en.wikipedia.org/wiki/King_Philip's_War) because he left the
-safety of a fort to retrieve some cheese he had left behind when evacuating his
-house. So, you must believe me that the idea of paying a service in perpetuity
+safety of the fort to retrieve some cheese he had left behind when evacuating his
+house. So you must believe me that the idea of paying a service in perpetuity
 so I could _think_ just seemed so laughably absurd and horrific that I didn't
-even bother to try it out. I closed the laptop. I uninstalled the IDE and went
+even bother giving them my card. I closed the laptop. I uninstalled the IDE and went
 back to using [Emacs](https://en.wikipedia.org/wiki/Emacs) even. And I realized
 that I just didn't even notice the lack anymore.
 
