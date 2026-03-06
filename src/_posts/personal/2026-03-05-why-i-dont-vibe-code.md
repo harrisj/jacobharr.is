@@ -6,8 +6,8 @@ year: 2026
 category: personal
 permalink: /personal/i-dont-vibe-code.html
 published: true
-description: A "brief" accounting of various reasons why vibe coding has just never clicked for me personally.
-image: /images/thumbnails/vibe-code.png
+description: A "brief" accounting of various reasons why vibe coding has just never clicked for me personally as a developer.
+image: /images/writing/misc-previews/vibe-code.png
 thumbnail: /images/thumbnails/vibe-code.png
 ---
 There has been a lot of discussion online lately about vibe coding and and how
