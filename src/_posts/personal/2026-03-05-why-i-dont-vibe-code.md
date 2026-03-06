@@ -1,0 +1,391 @@
+---
+layout: post
+title: Why I Don't Vibe Code 
+date: 2026-03-05
+year: 2026
+category: personal
+permalink: /personal/i-dont-vibe-code.html
+published: true
+description: A "brief" accounting of various reasons why vibe coding has just never clicked for me personally.
+image: /images/thumbnails/vibe-code.png
+thumbnail: /images/thumbnails/vibe-code.png
+---
+There has been a lot of discussion online lately about vibe coding and and how
+Large Language Models (LLMs) will revolutionize the field of software
+development. Every new model will launch us into realms of pure productivity,
+shipping software at the speed of thought and removing all the friction and
+overhead of product development. Or something like that.
+
+Maybe. I'll have to take your word for it. I don't vibe code.
+
+If it's working for you, great! I'm not really here to argue the merits or flaws
+of LLMs at depth here in this piece, but it's just never clicked for me
+personally. This page is a "brief" accounting of various reasons why.
+
+## I'm a Cheapskate
+
+This is not a purist stance. I've tried using LLMs that are integrated into an
+IDE. They have been useful for some tasks that are simple enough to be easily
+describable but annoying enough to not just do them myself. For instance,
+resizing [a grid of square images to be smaller](/projects/sky-gradients). I
+_could_ go look at the command-line arguments for ImageMagick, but that was a
+perfect thing to ask the AI to do. And I also tried using one of the AI tools to
+analyze my code in a project and a few other tasks before it all came to an
+awkward halt. I had run out of credits and I would need to provide a credit card
+to purchase more tokens I wanted to keep going.
+
+Now, you must understand that I come from a long line of cheapskates from both
+sides of my family tree. We've been pinching pennies and hunting bargains for
+centuries both here and on the other side of the Atlantic. As an example, one of
+my distant ancestors died during the [King Philip's
+Wari](https://en.wikipedia.org/wiki/King_Philip's_War) because he left the
+safety of a fort to retrieve some cheese he had left behind when evacuating his
+house. So, you must believe me that the idea of paying a service in perpetuity
+so I could _think_ just seemed so laughably absurd and horrific that I didn't
+even bother to try it out. I closed the laptop. I uninstalled the IDE and went
+back to using [Emacs](https://en.wikipedia.org/wiki/Emacs) even. And I realized
+that I just didn't even notice the lack anymore.
+
+## I'm Old
+
+It does help that I'm old. I've been writing code for a long time, especially in
+an industry that calls a developer with 5 years of experience a "senior
+engineer." Experience is a welcome antidote to anxiety sometimes (__as long as
+it's not anxiety about ageism in an industry that calls a developer senior with
+only 5 years of experience_) and the AI hype seems somewhat similar to earlier
+breakthroughs in low and no-code tooling. Now, I don't doubt that AI can be a
+useful tool for developers. I know there are tasks it can help with as better
+tooling. But it gets me thinking about the accidental and essential complexity again.
+
+[Fred Brooks](https://en.wikipedia.org/wiki/Fred_Brooks) was old even when I was
+a young coder myself. As the project manager for IBM's System 360 line of
+mainframes (and accompanying operating system) he had a front row seat to when
+all the now common ways software projects go wrong were novel and new. He
+collected these observations in a book _[The Mythical
+Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)_ which should
+still be required reading for software engineering courses today. My edition was
+a newer reprint that included a later essay titled "[No Silver
+Bullet](https://en.wikipedia.org/wiki/No_Silver_Bullet)" where Brooks looked at
+the effect that new tools can have on developer productivity. To think like a
+programmer, you must understand that the real world is complex. Programming can
+be best thought of as imposing simplified representations -- we call them
+__abstractions_ -- on top of our messy reality to make it understandable by
+reducing complexity. This lets us generalize specific situations into layers
+that can be built on top of each other. For instance the specific action of
+putting peanut butter onto a piece of bread could be generalized into a
+`spread(substance)` method that could take peanut butter or cream cheese as an
+argument. And we could use these `spread` methods to create higher-level
+functions like `create_pbj()` and so on. Coding in a modern high-level
+programming language is like standing on top of a ziggurat of abstractions,
+where a single line of code could trigger millions of operations on multiple
+systems. It's very exciting!
+
+Now, what if we could keep going and start abstracting away the act of
+programming itself? This is the dream of agentic AI. Sounds great! But this is
+addressing what Brooks calls _accidental complexity_, the things that are
+complicated about writing code itself. In the time since the essay was written,
+software development has made great strides against this type of complexity.
+Instead of writing in low-level machine code, we can use modern dynamically
+interpreted languages which are compiled to assembly. Instead of remembering how
+to write a [quick sort](https://www.youtube.com/watch?v=ywWBy6J5gz8) from
+scratch, I just need to call a `sort` method in a standard library. Instead of
+having to build a whole web application from scratch, I can use an existing
+framework. If I want to rename or restructure some code, my editor can help do
+that for me. AI seems like the latest iteration and some editors have already
+replaced their predictable old tooling for renaming and refactoring code with AI
+agents. Sure, it might seem like you're rolling the dice, but how common is a
+[critical failure](https://rpgmuseum.fandom.com/wiki/Critical_failure) anyway?
+
+However, even as the better tooling has diminished accidental complexity,
+_essential complexity_ still remains. There still is the complicated work of
+designing our abstractions and systems the right way, one that is elegant, clear
+and maintainable. And that complexity isn't going anywhere. This type of work
+takes skill and experience and wisdom hard-won from system failures past. And,
+I'm not sure if LLM's fancy autocomplete approach works so well with this type
+of complexity, which often isn't so straightforward to solve. Maybe with
+prompting, it could be guided toward a preferred approach, but at that point the
+person doing the guiding might as well design the approach alone, since the LLM
+wouldn't be able to articulate why it chose a certain path. Essential complexity
+is often weird and rare and messy. Maybe I'm wrong and the models are getting
+better at these kind of messy situations as well, but I've found that it often
+requires a specific kind of mindset and approach. Luckily for me, I love the
+messy stuff.
+
+## I Love Mess
+
+I've been talking so far about how software can abstract processes, but we also
+use abstraction's reductive properties as a tool to understand the world. In the
+classic book _[Seeing Like a
+State](https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/)_,
+James Scott describes how the motivating project of the post-enlightenment was
+to make their populations and possessions _legible_ through abstraction and
+categorization. To measure is to modify. For instance, a country might begin to
+look at its forests not as complex ecosystems but just assessed by their
+percentages of timber that can be used for ship-building. This view then allows
+a country to act on this information in ways like replacing those forests with
+monocultures of just a single tree. A forest is abstracted into a system for
+growing ship masts.
+
+This approach created the bureaucracy and the paper form, which has evolved into
+the web form and database. As programmers, we need to reduce the messy data of
+the world in order to act on it. We expect [our dates to be exact](https://gist.github.com/timvisee/fcda9bbdff88d45cc9061606b4b923ca). We expect
+[names to be relatively
+simple](https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/).
+We expect data to be complete at time of entry and consistent over time. Every
+programmer and every system design is a series of
+[Procrustean](https://en.wikipedia.org/wiki/Procrustes) choices about what
+aspects of reality we want to reflect in our systems and what we can discard.
+I'm not saying this to criticize; this approach is the only way to build systems
+that aren't bogged down in an endless thicket of special situations (what we
+call "edge cases" because they're supposed to be rare paths on the periphery).
+But, this process is so innate that we sometimes forget that it is also
+artificial, especially when it's describing people. [Forcing a gender field to
+only accept "male" or
+"female"](https://travel.state.gov/content/travel/en/passports/passport-help/sex-marker.html)
+doesn't force gender itself to be binary. Our definitions of [race are social
+constructions that shift all the
+time](https://www.nytimes.com/interactive/2023/10/16/us/census-race-ethnicity.html?unlocked_article_code=1.QlA.hsUD.Zln08WoXHt_3&smid=url-share).
+Our simplified model might provide us with insights (_autism diagnoses have
+increased 300% over the last 20 years!_) but not capture the underlying factors
+behind those insights (_it's likely just a result of [changes in how we define
+autism and increased
+screening](https://publichealth.jhu.edu/2025/is-there-an-autism-epidemic)_).
+It's important to step back and look at the bigger picture of how any model was
+made and what type of knowledge it doesn't capture. As a data journalist, I
+learned how to interview data and how to be highly rigorous about all the ways
+in which the answers I found could be misleading. Paranoia is the data
+journalist's best friend, if you want to avoid [an embarrassing
+correction.](/published/times-regrets-error.html). You need to be able to think
+about not just what the data says, but all the stuff it doesn't include.
+
+Unfortunately, this is something an LLM can't do. The model is their reality. As
+Robin Sloan succinctly notes in his compelling essay ["Are Language Models in
+Hell?"](https://www.robinsloan.com/lab/language-models-hell/), AI models are
+built from and view the world in a stripped-down way. Where you and I might look
+at text and see its context (things like the text formatting and titles, the
+author's bio, the site where this was linked from), the LLM operates purely on a
+world of letters and nothing more (technically, they're receiving subword tokens, which
+is [why early models couldn't count the letter 'r' in
+strawberry](https://www.secwest.net/strawberry)). Asking a LLM to recognize the
+limitations of its view on reality is like [asking a goldfish how the water
+is](https://fs.blog/david-foster-wallace-this-is-water/).
+
+When I was writing this section, I have been thinking about [DOGE's inept
+attempts to find fraud at Social Security
+Adminstration](https://www.nytimes.com/2025/06/16/us/politics/doge-social-security.html?unlocked_article_code=1.Q1A.XJp3.4fxPQ8FD7iNl&smid=url-share).
+In one example, DOGE looked at the SSA databases and discovered there were over
+9 million records in there with birth dates over 120 year ago but no death dates
+recorded. Elon Musk declared the only possible explanation was that millions of
+people were fraudulently receiving benefits. He was wrong about [both the cause
+of the problem and the severity of its
+impact](https://crr.bc.edu/150-year-olds-arent-getting-social-security-heres-a-better-task-for-doge/).
+DOGE could've questioned the data quality. They could've examined payments being
+made. They could've asked any of the experts at SSA to explain it to them. But
+instead they took the data as it is and leaped to wrong conclusions, a pattern
+they repeated over and over (as in this example of a different fraud claim about
+payments):
+
+> In the extensive analysis that followed, agency experts carefully documented
+> fallacies in DOGE’s work, according to documents reviewed by The Times and
+> those people.
+>
+> “These payments are valid,” Sean Brune, an acting deputy commissioner, wrote
+> in a memo examining one of the issues. (A Treasury spokeswoman declined to
+> comment.)
+>
+> But Mr. Russo, who did not respond to a request for comment, said that DOGE
+> would not trust career civil servants, according to people familiar with his
+> statements. Instead, he insisted that Akash Bobba — a 21-year-old who had
+> interned at Palantir and become one of DOGE’s lead coders — conduct his own
+> analysis.
+
+In their own wild ways, the DOGE crew were replicating the same operating
+conditions for themselves that cause LLMs to go astray. They refused to consider
+alternative explanations that were outside of what the data told them. They
+talked to nobody outside of their own circle. They latched onto a simplified
+explanation that was appealing to them because it completely validated their
+worldview of incompetent government staff and rampant fraud everywhere.
+
+This is not a rare situation. I myself am mortified by the possibility of
+looking like a dumbass, so I don't ever want to outsource my data analysis to an
+LLM. But, of course many people do. I fear this problem will only get worse.
+
+## Friction is a Gift
+
+The appeal of LLM-driven development is that it's supposed to eliminate
+friction. Boosters spin tales of development teams shipping dozens of features
+in a single day, using multiple teams of agents working autonomously at their
+command in [increasingly strange
+topologies](https://steve-yegge.medium.com/welcome-to-gas-town-4f25ee16dd04).
+And I get it, software development can be tedious and frustrating. It must feel
+super exciting to be able to churn out code at relatively ludicrous speeds and
+play with polished products instead of prototypes.
+
+I need the friction though.
+
+When I am first learning a new language or framework, I struggle with friction
+to do even the most basic tasks. It sucks! And when am working with a new and
+unfamiliar code repository or data source, I need to set aside hours to
+scrutinize it. I often find myself doing a [close
+reading](https://en.wikipedia.org/wiki/Close_reading), pulling up specific files
+to look over line by line until I understand their context and the choices their
+developers made. I know I could just ask an LLM to summarize the project for me
+and save myself the time, but I've found I need this process to really marinate
+in the code. I need it to not just understand the choices the developers made,
+but _why_ they made them and how they reflect the constraint or idioms of the
+language they are using. I learn by failing, and if the LLM takes that work away
+from me, I won't really understand what I'm doing.
+
+Even when working in familiar languages and my own code, I still rely heavily on
+friction as a clue. When writing the code becomes hard, that tells me that I'm
+going down a wrong path with the current architecture, and that I should
+seriously consider redesigning things to make future enhancements easier. When
+that happens, I usually go out for a long walk (or sign off for the day) to give
+my brain space to step back and consider things from a new angle. It really
+works. I find these pauses so effective that I will even force it upon myself
+when the way seems clear. When working on large software projects, I will wait
+to start coding a new feature until I've written an [Architectural Decision
+Record](https://adr.github.io/) first that describes what I want to do. These
+documents force me to capture what I'm thinking at this point in time, my
+assumptions about the problem and the ramifications of my approach. Sometimes,
+it even makes me realize I was too enamored with my initial hunch to see how it
+would go astray, and it always serves a good way to capture "what were they
+thinking?" for any future inheritors of my work.
+
+The LLM-driven approach to friction is to just code your way through it without
+rethinking anything. And the LLM will oblige. It'll probably make code that will
+work. The performance metrics will be fine, the tests will pass (especially if
+they also were written by the LLM). But it won't know why it chose that path. It
+doesn't feel friction and can't explain if one architectural approach felt
+cleaner than another. If the engineers crafting the prompts lack the insight to
+know what is a good approach or a bad one, they get stuck in a dynamic of asking
+the AI to code its way through friction over and over again. This can result in
+a thicket of weird abstractions, and the only design documentation for future
+teams is a single Markdown file that contained the instructions for an AI model
+used a few years back. Good luck reconstructing the architectural decisions from
+that! It is telling that most of the vibe coding success stories I've seen have
+been by developers who are already experts in what they are asking the LLM to
+build (and who are thus able to guide its work). For the everybody else, we just
+try to [draw the rest of the fucking
+owl](https://www.reddit.com/r/funny/comments/eccj2/how_to_draw_an_owl/).
+
+I'd be remiss if I didn't mention one other thing that bothers me when LLM
+promoters invoke friction as a problem. Most of the LLM marketing in
+advertisements, live demos and LinkedIn posts that I've seen portrays a solitary
+engineer (or perhaps a single team) heroically using LLM-driven coding to blast
+out some sort of app or website and launch it quickly (_our velocity and KPI is
+through the roof!_). Not usually pictured in this scenario are their team-mates
+in product or project management or testing or compliance or design. Because
+those roles are seen as friction too. Who needs user research when we can craft
+AI personas? Who needs design when we have AI tools to spit out web layouts? Who
+needs project managers when _we_ are the managers of our army of agents? **What
+if we didn't have to spend any of our work time talking to other people and just
+could live in the realm of pure coding?** But, software development is a
+collaborative process, and each member of the team helps make a good product
+what it is. Removing those roles or replacing them with LLM-inflected ghosts
+will certainly allow teams to move faster, but it doesn't mean the products that
+they deliver will be better. And the process will certainly be a lot lonelier.
+
+## I Care A Lot
+
+Perhaps my simplest reason for not using LLMs is that I just love programming so
+much that I don't want to hand it off to a machine. In much the same way I
+wouldn't resort to AI if I were an artist or a musician, programming is one way
+for me to express my creativity, and I will not cede that joy. Although [it can
+be extremely frustrating at times](https://bukk.it/drawing-vs-drawing.jpg),
+there is a profound delight in shaping something from a nebulous idea into a
+real system, especially if it involves an elegant implementation or interesting
+problems. Some evenings, I close the work laptop and open the personal laptop to
+dive into some new fun thing I want to build. And when I am building software
+professionally as part of a team, that is even better! I love the collaboration
+and the process of shaping software together, especially the ways in which
+people will step up and take ownership of problems. I don't think the dynamic is
+the same when the team is just taking ownership of prompts and the LLM assistant
+is doing the work. Or the LLM assistant is replacing parts of the team.
+
+Ownership is important. Over the past few decades, I've worked in roles where
+I've developed a strong sense of personal responsibility. As a data journalist,
+an error in code could lead to an embarrassing correction or a devastating
+lawsuit. In civic technology, errors can mean catastrophic failures in providing
+services and benefits, whether it's to an entire vulnerable population or to a
+single person. I'm not going to say that I've never made mistakes, but I care a
+lot about getting it right because I care about the mission of the work. I have
+been privileged to work on teams with many other people who also care and want
+to do the best they can for people. An LLM can't care. Sure, it [can do a
+convincing job of pretending](https://www.youtube.com/watch?v=thsuwFAqc7U), but
+it's still just a facsimile of a mind stringing together words that are more
+likely to be associated with other. It's not bothered by its mistakes or trying
+to do better, because it has no inner consciousness. It can never be held
+accountable, and I can never hand off my moral responsibilities to it for that
+reason.
+
+Coding has also been my comfort when times are hard. There is research that
+[playing Tetris is an effective way to avoid
+PTSD](https://www.ox.ac.uk/news/2017-03-28-tetris-used-prevent-post-traumatic-stress-symptoms).
+The theory is that the therapy works because engaging the parts of the brain
+that handle arranging and rotating shapes hinders the formation of traumatic
+memories. Now, I am fortunate enough to not suffer from PTSD (and I am not
+making light of people who do), but I do also relate to this concept.
+Programming feels like a complicated puzzle and has sometimes been my solace in
+dark times. As the example above hints at, I know a lot about DOGE, because for
+the past year [I've been building and maintaining a system to track their
+rampage](https://dogetrack.info). Unlike a work project, this has been an
+exercise in assembling datasets to provide clarity into an organization that
+wants to stay obscured. It's been a rewarding exercise and a way for me to
+channel my despair into something I hope will be useful. This isn't the only
+time I've used code [as a way to work through my
+sadness](/projects/times-haiku.html), and it works because it _is_ work and the
+process would be diminished if I only focused on the product.
+
+## A Few Other Silly Reasons
+
+This has already proven to be a much longer piece than I expected, especially
+since it was originally just a few short posts on Bluesky. Before I close it
+out, a few more quick reasons!
+
+First, I absolutely hate the [unctuous tone that AI chatbots default take by
+default](https://www.youtube.com/watch?v=VecinjfP8Bk). As someone who grew up in
+a city on the East Coast, I get really suspicious when someone is weirdly super
+nice to me without me knowing them, because it usually means they're either
+about to launch into a scam or proselytize to me. Reading LLM chat transcripts
+makes my skin crawl. Yes, I am aware I could make the LLM adopt a whole
+different tone, but somehow that makes the idea feel even worse.
+
+Like many developers, I have a whole folder of draft hobby projects that have
+never been finished. For instance, there's the one where I was going to write a
+clone of Spelling Bee, but it was going to be in Clojurescript so I could use
+the [Blabrecs](https://mkremins.github.io/blabrecs/) code to generate non-words
+and make it super frustrating. Okay, I guess that would've just been funny to
+me. You had to be there. From the LLM perspective, these are folders of failures
+and I could indeed use LLM to make an app a day or whatever challenge I want.
+However, the process was far more important than the product (again!). Not every
+whimsy needs to become a reality. Often, I get more from the fun of
+brainstorming and the process of learning enough to know that I don't need to
+continue and finish the job. It's easy to forget this sometimes.
+
+This wasn't going to be an essay about the morality of using LLMs for my work.
+Not because I don't care, but because many others have written far more
+effectively than me about the fraught implications of this technology. And at
+this moment where LLMs are bombing schools with children or generating child
+porn on demand, I really don't feel comfortable using them. And I don't feel
+comfortable not mentioning this aspect at all. It may be true that there is no
+ethical consumption under capitalism, but I'll be damned if I'm not going to at
+least try. We can't build a better world with tools that immiserate so many.
+
+Weirdly, nobody seems more miserable than LLM boosters. I might be more swayed
+if developers were using their newfound productivity gains to finally live that
+[4-hour workweek](https://en.wikipedia.org/wiki/The_4-Hour_Workweek) that nerds
+were pretending to idolize 10 years ago. But perversely, it seems like many in
+Silicon Valley are outsourcing work to the AI agents and then using [their
+newfound spare time to do even more
+work](https://www.youtube.com/watch?v=l-Z0iyBNxpk). Instead of using their time
+for relaxation or art or joy, they're embracing
+[9-9-6](https://www.forbes.com/sites/bryanrobinson/2025/08/04/the-9-9-6-work-schedule-could-be-coming-to-your-workplace-soon/)
+work schedule and a hyper-quantified workplace that would make even [Frederick
+Taylor](https://en.wikipedia.org/wiki/Scientific_management) blanch in horror.
+It's possible that the LLM revolution will finally come for me and my job, but
+I'd rather not work myself into the grave first.
+
+## Now What?
+
+I don't pretend to know the future. Maybe the technology will advance to such a point I will regret my lack of experience and familiarity. Or, maybe it'll stagnate and the whole financial house of cards will come tumbling down. If that happens, I hope we can rebuild software development into the humane practice of building a better world, one line of code at a time.
