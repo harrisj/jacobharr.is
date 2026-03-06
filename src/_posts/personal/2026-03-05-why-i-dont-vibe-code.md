@@ -24,7 +24,7 @@ personally. This page is a "brief" accounting of various reasons why.
 
 ## I'm a Cheapskate
 
-This is not a purist stance. I've tried using LLMs that are integrated into an
+I'm not a purist. I've tried using LLMs that are integrated into an
 IDE. They have been useful for some tasks that are simple enough to be easily
 describable but annoying enough to not just do them myself. For instance,
 resizing [a grid of square images to be smaller](/projects/sky-gradients). I
