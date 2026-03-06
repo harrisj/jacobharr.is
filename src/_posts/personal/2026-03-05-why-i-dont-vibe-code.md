@@ -38,7 +38,7 @@ Now, you must understand that I come from a long line of cheapskates from both
 sides of my family tree. We've been pinching pennies and hunting bargains for
 centuries both here and on the other side of the Atlantic. As an example, one of
 my distant ancestors died during the [King Philip's
-Wari](https://en.wikipedia.org/wiki/King_Philip's_War) because he left the
+War](https://en.wikipedia.org/wiki/King_Philip's_War) because he left the
 safety of a fort to retrieve some cheese he had left behind when evacuating his
 house. So, you must believe me that the idea of paying a service in perpetuity
 so I could _think_ just seemed so laughably absurd and horrific that I didn't
@@ -50,12 +50,13 @@ that I just didn't even notice the lack anymore.
 
 It does help that I'm old. I've been writing code for a long time, especially in
 an industry that calls a developer with 5 years of experience a "senior
-engineer." Experience is a welcome antidote to anxiety sometimes (__as long as
+engineer." Experience is a welcome antidote to anxiety sometimes (_as long as
 it's not anxiety about ageism in an industry that calls a developer senior with
-only 5 years of experience_) and the AI hype seems somewhat similar to earlier
-breakthroughs in low and no-code tooling. Now, I don't doubt that AI can be a
-useful tool for developers. I know there are tasks it can help with as better
-tooling. But it gets me thinking about the accidental and essential complexity again.
+only 5 years of experience_) , and the AI hype doee remind me of earlier
+breakthroughs in low and no-code tooling. I don't doubt that AI can be a useful
+tool for developers. I know there are tasks it can help with as better tooling.
+But these arguments always leave me thinking about the accidental and essential
+complexity again.
 
 [Fred Brooks](https://en.wikipedia.org/wiki/Fred_Brooks) was old even when I was
 a young coder myself. As the project manager for IBM's System 360 line of
@@ -73,28 +74,30 @@ __abstractions_ -- on top of our messy reality to make it understandable by
 reducing complexity. This lets us generalize specific situations into layers
 that can be built on top of each other. For instance the specific action of
 putting peanut butter onto a piece of bread could be generalized into a
-`spread(substance)` method that could take peanut butter or cream cheese as an
-argument. And we could use these `spread` methods to create higher-level
-functions like `create_pbj()` and so on. Coding in a modern high-level
+spread(substance) method that could take peanut butter or cream cheese as an
+argument. And we could use these spread methods to create higher-level
+functions like create_pbj() and so on. Coding in a modern high-level
 programming language is like standing on top of a ziggurat of abstractions,
 where a single line of code could trigger millions of operations on multiple
 systems. It's very exciting!
 
-Now, what if we could keep going and start abstracting away the act of
-programming itself? This is the dream of agentic AI. Sounds great! But this is
+Now, what if we could keep going and abstract away the act of programming
+itself? This is the dream of agentic AI, where swarms of agents can be given
+tasks to implement on their own without supervision. Sounds great! But this is
 addressing what Brooks calls _accidental complexity_, the things that are
 complicated about writing code itself. In the time since the essay was written,
 software development has made great strides against this type of complexity.
 Instead of writing in low-level machine code, we can use modern dynamically
 interpreted languages which are compiled to assembly. Instead of remembering how
-to write a [quick sort](https://www.youtube.com/watch?v=ywWBy6J5gz8) from
-scratch, I just need to call a `sort` method in a standard library. Instead of
-having to build a whole web application from scratch, I can use an existing
-framework. If I want to rename or restructure some code, my editor can help do
-that for me. AI seems like the latest iteration and some editors have already
-replaced their predictable old tooling for renaming and refactoring code with AI
-agents. Sure, it might seem like you're rolling the dice, but how common is a
-[critical failure](https://rpgmuseum.fandom.com/wiki/Critical_failure) anyway?
+to write a [quick sort](https://www.youtube.com/watch?v=ywWBy6J5gz8) (_trust me,
+you're going to want to click that link_) from scratch, I just need to call a
+sort method in a standard library. Instead of having to build a whole web
+application from scratch, I can use an existing framework. If I want to rename
+or restructure some code, my editor can help do that for me. AI seems like the
+latest iteration and some editors have already replaced their predictable old
+tooling for renaming and refactoring code with unpredictable AI agents. Sure, it
+might seem like rolling the dice, but how common is a [critical
+failure](https://rpgmuseum.fandom.com/wiki/Critical_failure) anyway?
 
 However, even as the better tooling has diminished accidental complexity,
 _essential complexity_ still remains. There still is the complicated work of
@@ -158,14 +161,15 @@ journalist's best friend, if you want to avoid [an embarrassing
 correction.](/published/times-regrets-error.html). You need to be able to think
 about not just what the data says, but all the stuff it doesn't include.
 
-Unfortunately, this is something an LLM can't do. The model is their reality. As
-Robin Sloan succinctly notes in his compelling essay ["Are Language Models in
+Unfortunately, this metacognition is something an LLM can't ever do. The model
+is their reality. As Robin Sloan succinctly notes in his compelling essay ["Are
+Language Models in
 Hell?"](https://www.robinsloan.com/lab/language-models-hell/), AI models are
 built from and view the world in a stripped-down way. Where you and I might look
 at text and see its context (things like the text formatting and titles, the
 author's bio, the site where this was linked from), the LLM operates purely on a
-world of letters and nothing more (technically, they're receiving subword tokens, which
-is [why early models couldn't count the letter 'r' in
+world of letters and nothing more (technically, they're receiving subword
+tokens, which is [why early models couldn't count the letter 'r' in
 strawberry](https://www.secwest.net/strawberry)). Asking a LLM to recognize the
 limitations of its view on reality is like [asking a goldfish how the water
 is](https://fs.blog/david-foster-wallace-this-is-water/).
