@@ -350,9 +350,13 @@ outcomes](https://alexeyondata.substack.com/p/how-i-dropped-our-production-datab
 by saying the users should've done better in writing their prompts. I'm not
 really sure what to make of this, but it bothers me that technology is
 standardizing a capitalism where more risks are being borne by consumers because
-companies and government have abdicated their responsibility. [We banned lawn
-darts after they killed a single child](https://en.wikipedia.org/wiki/Lawn_darts), but
-death and destruction is accepted as the price of innovation in AI.
+companies and government have both abdicated their responsibilities. [We banned
+lawn darts after they killed a single
+child](https://en.wikipedia.org/wiki/Lawn_darts), but chatbots driving users to
+death and psychosis are accepted as the price of innovation in AI. Will things
+change when vibe coding itself leads to someone dying from system failures
+rather than [dying of
+embarassment](https://futurism.com/artificial-intelligence/claude-wife-photos)?
 
 Coding has also been my comfort when times are hard. There is research that
 [playing Tetris is an effective way to avoid
