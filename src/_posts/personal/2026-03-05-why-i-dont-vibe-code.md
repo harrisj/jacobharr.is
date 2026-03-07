@@ -340,7 +340,7 @@ computers](https://www.ibm.com/history/time-sharing) in the 1950s. Except here,
 instead of walking up to hand in a sheaf of punch cards, the solitary programmer
 is instead bringing legal documents to be turned into programs.
 
-Of course, there is no legal liability at play. It's probably not surprising
+I jest; there is no legal liability at play here. It's probably not surprising
 given the similar demographics involved, but LLM suppliers are repeating the
 same dynamic as Tesla. [New features are being rolled out to user without safety
 testing](https://www.fastcompany.com/91500914/elon-musks-self-driving-delusions-get-a-reality-check)
@@ -352,7 +352,7 @@ really sure what to make of this, but it bothers me that technology is
 standardizing a capitalism where more risks are being borne by consumers because
 companies and government have abdicated their responsibility. [We banned lawn
 darts after they killed a single child](https://en.wikipedia.org/wiki/Lawn_darts), but
-death and destruction is accepted as the price of innovation.
+death and destruction is accepted as the price of innovation in AI.
 
 Coding has also been my comfort when times are hard. There is research that
 [playing Tetris is an effective way to avoid
