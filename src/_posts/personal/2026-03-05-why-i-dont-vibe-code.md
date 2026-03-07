@@ -321,27 +321,28 @@ to do the best they can for people. An LLM can't care. Sure, it [can do a
 convincing job of pretending](https://www.youtube.com/watch?v=thsuwFAqc7U), but
 it's still just a facsimile of a mind stringing together words that are more
 likely to be associated with other. It's not bothered by its mistakes or trying
-to do better, because it has no inner consciousness. It can never be held
-accountable, and I can never hand off my moral responsibilities to it for that
-reason.
+to do better, because [it has no inner
+consciousness](https://www.noemamag.com/the-mythology-of-conscious-ai/), let alone a conscience. It can
+never be held accountable, and I can never hand off my moral responsibilities to
+it for that reason.
 
-Ownership is not there in the LLM model. When the LLM does well, it's the system
-working. When the LLM deletes all of your infrastructure, it's your fault. You
-just needed to structure your prompts and workflows exactly the right way so it
-will jostle the LLM into giving the correct output. Oops, try again. And again.
-Make sure you give all the necessary instructions and amendments and codicils up
-front or the system will do things wrong. This mindset is a significant
-departure from agile programming, which emphasizes frequent course corrections
-and feedback and trusting in your team to do the right thing. Instead, we seem
-to be retreating to a new usage model similar to the [time-sharing models of
-early computers](https://www.ibm.com/history/time-sharing) in the 1950s. Except
-here, instead of walking up to hand in a sheaf of punch cards, the solitary
-programmer is instead bringing legal documents to be turned into programs.
+When the LLM does well, it's a genius that will replace all coders. When the LLM
+deletes all of your infrastructure or "lies" about tests, it's your fault. After
+all, you just needed to structure your prompts and workflows exactly the right
+way so it will jostle the LLM into giving the correct output. Oops, try again.
+And again. Much of the LLM advice I've read emphasizes that you must give all
+the necessary instructions and amendments and codicils up front or the system
+will do things wrong. This mindset is a significant departure from agile
+programming, which emphasizes frequent course corrections and feedback and
+trusting in your team to do the right thing. Instead, we seem to be retreating
+to a new usage model similar to the [time-sharing models of early
+computers](https://www.ibm.com/history/time-sharing) in the 1950s. Except here,
+instead of walking up to hand in a sheaf of punch cards, the solitary programmer
+is instead bringing legal documents to be turned into programs.
 
-And, there is no legal liability or responsibility there either. It's probably
-not surprising given the demographics involved, but LLM suppliers are repeating
-the same dynamic as Tesla. [New features are being rolled out to user without
-safety
+Of course, there is no legal liability at play. It's probably not surprising
+given the similar demographics involved, but LLM suppliers are repeating the
+same dynamic as Tesla. [New features are being rolled out to user without safety
 testing](https://www.fastcompany.com/91500914/elon-musks-self-driving-delusions-get-a-reality-check)
 and, just as strangely, LLM boosters, like Tesla superfans, [often blame
 themselves and others for catastrophic
@@ -350,7 +351,7 @@ by saying the users should've done better in writing their prompts. I'm not
 really sure what to make of this, but it bothers me that technology is
 standardizing a capitalism where more risks are being borne by consumers because
 companies and government have abdicated their responsibility. [We banned lawn
-darts after they killed a kid](https://en.wikipedia.org/wiki/Lawn_darts), but
+darts after they killed a single child](https://en.wikipedia.org/wiki/Lawn_darts), but
 death and destruction is accepted as the price of innovation.
 
 Coding has also been my comfort when times are hard. There is research that
