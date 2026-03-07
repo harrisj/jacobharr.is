@@ -12,7 +12,7 @@ layout: default
 
   <div class="text-xs md:text-sm pt-3">
       <ul style="list-none leading-none mb-3">
-      <li><i class="fa-regular fa-calendar"></i> {{ data.date.strftime('%B %d, %Y') }}</li>
+      <li><i class="fa-duotone fa-solid fa-calendar"></i> {{ data.date.strftime('%B %d, %Y') }}</li>
         {% if data.pub_permalink %}
           <li>published in <a href="{{ data.pub_permalink }}">{{ data.publisher }}</a></li>
         {% end %}
@@ -34,7 +34,7 @@ layout: default
     <div class="md:hidden print:block text-xs pt-3">
       <ul style="list-none leading-none">
         <li>
-          <i class="fa-regular fa-calendar"></i> {{ data.date.strftime('%B %d, %Y') }}
+          <i class="fa-duotone fa-solid fa-calendar"></i> {{ data.date.strftime('%B %d, %Y') }}
           {% if data.pub_permalink %}
             (published in <a href="{{ data.pub_permalink }}">{{ data.publisher }}</a>)
           {% end %}

@@ -1,10 +1,11 @@
 <div class="hidden print:block font-industrial text-xl pl-4">{{ page.absolute_url }}</div>
-<div class="pl-3 md:pl-0 print:pl-4 flex flex-row justify-between items-center">
-    <div class="">
-      <div class="breadcrumbs text-sm md:text-md lg:text-lg">
+<div class="pl-3 md:pl-0 print:pl-4">
+    <div class="sm:hidden prose prose-p:my-3"><a href="/" aria-label="Return to homepage"><i class="fa-duotone fa-solid fa-angles-left"></i><i class="fa-duotone fa-solid fa-home"></i></a> <h1 class="h1">{{ data.title | markdownify }}</h1></div>
+    <div class="hidden sm:block">
+      <div class="breadcrumbs text-md md:text-lg lg:text-2xl">
         <ul>
           <li class="print:hidden">
-            <a href="/" aria-label="Return to homepage"><i class="fa-sharp fa-solid fa-house"></i></a>
+            <a href="/" aria-label="Return to homepage"><i class="fa-duotone fa-solid fa-house"></i></a>
           </li>
           <li class="print:hidden">{{ data.category | titleize }}</li>
           <li>
