@@ -271,7 +271,7 @@ teams is a single Markdown file that contained the instructions for an AI model
 used a few years back. Good luck reconstructing the architectural decisions from
 that! It is telling that most of the vibe coding success stories I've seen have
 been by developers who are already experts in what they are asking the LLM to
-build (and who are thus able to guide its work). For the everybody else, we just
+build (and who are thus able to guide its work). For the rest of us normies, we just
 try to [draw the rest of the fucking
 owl](https://www.reddit.com/r/funny/comments/eccj2/how_to_draw_an_owl/).
 
@@ -324,6 +324,34 @@ likely to be associated with other. It's not bothered by its mistakes or trying
 to do better, because it has no inner consciousness. It can never be held
 accountable, and I can never hand off my moral responsibilities to it for that
 reason.
+
+Ownership is not there in the LLM model. When the LLM does well, it's the system
+working. When the LLM deletes all of your infrastructure, it's your fault. You
+just needed to structure your prompts and workflows exactly the right way so it
+will jostle the LLM into giving the correct output. Oops, try again. And again.
+Make sure you give all the necessary instructions and amendments and codicils up
+front or the system will do things wrong. This mindset is a significant
+departure from agile programming, which emphasizes frequent course corrections
+and feedback and trusting in your team to do the right thing. Instead, we seem
+to be retreating to a new usage model similar to the [time-sharing models of
+early computers](https://www.ibm.com/history/time-sharing) in the 1950s. Except
+here, instead of walking up to hand in a sheaf of punch cards, the solitary
+programmer is instead bringing legal documents to be turned into programs.
+
+And, there is no legal liability or responsibility there either. It's probably
+not surprising given the demographics involved, but LLM suppliers are repeating
+the same dynamic as Tesla. [New features are being rolled out to user without
+safety
+testing](https://www.fastcompany.com/91500914/elon-musks-self-driving-delusions-get-a-reality-check)
+and, just as strangely, LLM boosters, like Tesla superfans, [often blame
+themselves and others for catastrophic
+outcomes](https://alexeyondata.substack.com/p/how-i-dropped-our-production-database)
+by saying the users should've done better in writing their prompts. I'm not
+really sure what to make of this, but it bothers me that technology is
+standardizing a capitalism where more risks are being borne by consumers because
+companies and government have abdicated their responsibility. [We banned lawn
+darts after they killed a kid](https://en.wikipedia.org/wiki/Lawn_darts), but
+death and destruction is accepted as the price of innovation.
 
 Coding has also been my comfort when times are hard. There is research that
 [playing Tetris is an effective way to avoid
