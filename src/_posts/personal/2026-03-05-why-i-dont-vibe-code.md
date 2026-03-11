@@ -271,26 +271,34 @@ teams is a single Markdown file that contained the instructions for an AI model
 used a few years back. Good luck reconstructing the architectural decisions from
 that! It is telling that most of the vibe coding success stories I've seen have
 been by developers who are already experts in what they are asking the LLM to
-build (and who are thus able to guide its work). For the rest of us normies, we just
-try to [draw the rest of the fucking
-owl](https://www.reddit.com/r/funny/comments/eccj2/how_to_draw_an_owl/).
+build (and who are thus able to guide its work), or for situations where the
+stakes of failure are low. For the everything else, we just have to figure out
+how to know [if the rest of the fucking
+owl](https://www.reddit.com/r/funny/comments/eccj2/how_to_draw_an_owl/) is any
+good and safe to use.
 
 I'd be remiss if I didn't mention one other thing that bothers me when LLM
 promoters invoke friction as a problem. Most of the LLM marketing in
 advertisements, live demos and LinkedIn posts that I've seen portrays a solitary
 engineer (or perhaps a single team) heroically using LLM-driven coding to blast
 out some sort of app or website and launch it quickly (_our velocity and KPI is
-through the roof!_). Not usually pictured in this scenario are their team-mates
-in product or project management or testing or compliance or design. Because
-those roles are seen as friction too. Who needs user research when we can craft
-AI personas? Who needs design when we have AI tools to spit out web layouts? Who
-needs project managers when _we_ are the managers of our army of agents? **What
-if we didn't have to spend any of our work time talking to other people and just
-could live in the realm of pure coding?** But, software development is a
-collaborative process, and each member of the team helps make a good product
-what it is. Removing those roles or replacing them with LLM-inflected ghosts
-will certainly allow teams to move faster, but it doesn't mean the products that
-they deliver will be better. And the process will certainly be a lot lonelier.
+through the roof!_). But industry really wants developers to use LLMs for work,
+where the friction is usually established processes and practices to keep
+defects or even poorly-conceptualized features from making it to production.
+Inevitably, the need to prioritize LLM-driven velocity is turned against people
+themselves -- other engineers or team-mates in product or project management or
+testing or compliance or design. Because those roles are seen as friction too.
+Who needs user research when we can craft AI personas? Who needs design when we
+have AI tools to spit out web layouts? Who needs project managers when _we_ are
+the managers of our army of agents? What if we didn't need to wait for another
+developer to review our pull request and just automatically merge code that
+passes tests and scans? **What if we didn't have to spend any of our work time
+talking to other people and just could live in the realm of pure coding?** But,
+software development is a collaborative process, and each member of the team
+helps make a good product what it is. Removing those roles or replacing them
+with LLM-inflected ghosts will certainly allow teams to move faster, but it
+doesn't mean the products that they deliver will be better. And the process will
+certainly be a lot lonelier.
 
 ## I Care A Lot
 
