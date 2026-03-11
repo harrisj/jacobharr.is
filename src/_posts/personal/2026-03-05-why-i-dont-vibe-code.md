@@ -177,8 +177,8 @@ limitations of its view on reality is like [asking a goldfish how the water
 is](https://fs.blog/david-foster-wallace-this-is-water/).
 
 When I was writing this section, I have been thinking about [DOGE's inept
-attempts to find fraud at Social Security
-Adminstration](https://www.nytimes.com/2025/06/16/us/politics/doge-social-security.html?unlocked_article_code=1.Q1A.XJp3.4fxPQ8FD7iNl&smid=url-share).
+attempts to find fraud at the Social Security
+Administration](https://www.nytimes.com/2025/06/16/us/politics/doge-social-security.html?unlocked_article_code=1.Q1A.XJp3.4fxPQ8FD7iNl&smid=url-share).
 In one example, DOGE looked at the SSA databases and discovered there were over
 9 million records in there with birth dates over 120 year ago but no death dates
 recorded. Elon Musk declared the only possible explanation was that millions of
