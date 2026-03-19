@@ -1,16 +1,17 @@
 ---
 layout: post
-title: More Thoughts on Vibe Coding date: 2026-03-12
+title: More Thoughts on Vibe Coding
+date: 2026-03-19
 year: 2026
 category: personal
 permalink: /personal/more-thoughts-on-vibe-coding
-published: false 
-description:
+published: false
+description: Foobar
 image: /images/writing/misc-previews/vibe-code.png
 thumbnail: /images/thumbnails/vibe-code.png
 ---
 
-In the wake of [my last essay on why I don't vibe code](), I heard from various
+In the wake of [my last essay on why I don't vibe code](/personal/why-i-dont-vibe-code), I heard from various
 people on the Internet who read it (or the Bluesky skeets that inspired it).
 Some had adopted similar stances on their own, often for overlapping reasons.
 Others were dedicated vibe coders who wanted to share what practices they used
@@ -45,7 +46,7 @@ Amelia Bedelia/Memento joke
 
 - safety is being offloaded to the user
 - reminds me of early days of automobile
-  - all the development is on the gas, not on the brakes
+- all the development is on the gas, not on the brakes
 
 ## Velocity Metrics Are Bunk
 
@@ -59,7 +60,7 @@ Amelia Bedelia/Memento joke
 - direction checks
 - coherence checks
 
-# Too Old for Surprises
+## Too Old for Surprises
 
 - variability in how tools replies
 - people are variable too, but...
