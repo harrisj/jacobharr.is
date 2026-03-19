@@ -144,7 +144,7 @@ It was time to make the "IT Modernization" dataset its own project. Following th
 
 The main thing to understand about me is that I am [really cheap](/personal/why-i-dont-vibe-code.html) and I didn't want to spend a lot of money every month just to keep a website up and running. Static site generation seemed like the best option to use here because this is content that doesn't change that frequently (at most, several times a day) and that does not need to serve personalized information to different users. I love static sites because it's a simple approach that scales tremendously for peanuts, especially since there are several providers who offer free accounts for static site hosting.
 
-In fact, the only money I have spent on DOGE Track was to buy a license for [Font Awesome](https://fontawesome.com/)
+In fact, the only money I have spent on DOGE Track was to buy a license for [Font Awesome](https://fontawesome.com/) and the domain [dogetrack.info](https://dogetrack.info/). The [DOGE Track website](https://dogetrack.info/) currently runs in a free tier on [Render](https://render.com/)
 
 To make this happen, I picked the same [Bridgetown](https://bridgetownrb.com/) library that I have used for this site as well. I had originally considered using a similar static generator in Python, but what I like about Bridgetown (as well as its predecessor, Jekyll) is that it's very easy to integrate data into page generation by adding YAML files to the `_data/` directory. These can then be referenced in templates which use either Liquid or embedded Ruby to let you iterate over things. Eventually, I redesigned the site to just call a database directly for data, but it was a helpful way to build the site initially.
 
