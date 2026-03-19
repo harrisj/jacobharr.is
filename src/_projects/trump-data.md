@@ -9,9 +9,11 @@ thumbnail: /images/thumbnails/doge-track.png
 image: /images/thumbnails/doge-track.png
 permalink: /projects/trump-data.html
 ---
-As I write this in late April 2025, we are now several months into the second Trump presidency. It's been hard keeping track of all that is being damaged and lost within the federal government. Emboldened by Musk and the absence of oversight, the so-called "Department of Government Efficiency" (DOGE) has been rampaging through agencies to subvert their security, cancel contracts, fire staff and siphon up confidential data into large data warehouses. It's going to take years to both undo the damage and to hit them with consequences.
+This is another project that was born out of anger.
 
-As someone who has spent the past decade of my live in [Civic Tech]({% link _projects/civic-tech.md %}), this has been extremely demoralize to watch. Not only are they destroying vital government services, they're undermining the idea that technology can serve the public good. I feel compelled to bear witness to this moment. But, I'm not particularly good at writing commentary. I'm no longer adjacent enough to journalism that I can report on what is happening. However, I do enjoy working with data and seeing what patterns will emerge over time from data collection and analysis.
+As I write this in late October 2025, we are now 9 months into the second Trump presidency. It's been hard keeping track of all that has been damaged and destroyed within the federal government. Emboldened by Musk and the absence of oversight, the so-called "Department of Government Efficiency" (DOGE) went rampaging through agencies to subvert their security, cancel contracts, fire staff and siphon up confidential data into large data warehouses. Some of this was motivated by Silicon Valley's empty libertarian platitudes about disruption and efficiency. Much of this was to be the point of the spear for Russell Vought's plan to subvert the Constitution.
+
+As someone who has spent the past decade of my live in [Civic Tech]({% link _projects/civic-tech.md %}), this has been extremely demoralize to watch. Not only are they destroying vital government services, they're undermining the idea that technology can serve the public good. I feel compelled to bear witness to this moment, but 'm not particularly good at writing commentary. I'm no longer adjacent enough to journalism that I can report on what is happening. However, I do enjoy working with data and seeing what patterns will emerge over time from data collection and analysis.
 
 And so, I created a new GitHub repo named [**trump_data**](https://github.com/harrisj/trump_data) on February 8th, 2025. And then, I started collecting data. The first datasets were relatively modest in scope:
 
@@ -134,26 +136,34 @@ At this point, the YAML looked more like this for a single agency
     link: https://www.courtlistener.com/docket/69698261/center-for-biological-diversity-v-us-department-of-interior/
 {% endhighlight %}
 
-But it was starting to get more unwieldy to edit. And sometimes, when I was dealing with a single event that affected multiple agencies for instance, I would need to duplicate and move content around. It made it harder to ensure everything was consistent. So, the next big step was to define a workflow where I would edit raw data and then a pre-commit hook could be used to regenerate files downstream. Under this model, I defined a few files with basic types that I can then join into more complicated data structures:
+But it was starting to get more unwieldy to edit. And sometimes, when I was dealing with a single event that affected multiple agencies for instance, I would need to duplicate and move content around. That made it harder to ensure everything was consistent. So, the next big step was to define a workflow where I would edit raw data and then a pre-commit hook could be used to regenerate files downstream. Under this model, I defined a few files with basic types that I can then join into more complicated data structures, I could then use the raw data to create files that are derived from processing the source files and combining information. Using this approach, I could edit a few source files and then generate other files from the data. This is the key change that powered the next iteration of the IT Modernization dataset.
 
-- [agencies](https://github.com/harrisj/trump_data/blob/main/it_modernization/raw_data/agencies.yaml): a list of agencies by ID and name
-- [events](https://github.com/harrisj/trump_data/blob/main/it_modernization/raw_data/events.yaml): an array of individual events
-- [systems](https://github.com/harrisj/trump_data/blob/main/it_modernization/raw_data/systems.yaml): information on systems that is mapped to agencies
-- [cases](https://github.com/harrisj/trump_data/blob/main/it_modernization/raw_data/cases.yaml): information on legal cases that apply to DOGE activities
-- [roundups](https://github.com/harrisj/trump_data/blob/main/it_modernization/raw_data/roundups.yaml): information on media roundups
+## DOGE Track
 
-From this information, I can then use the [raw data](https://github.com/harrisj/trump_data/tree/main/it_modernization/raw_data) to create files that are derived from processing the source files and combining information. My process starts by making sure the events table is sorted and I can then output an events table with some other information joined in. Using this, I can also generate other files like `postings.yaml` which records the durations and locations of various DOGE staff or `people.yaml` which groups events by each person.
+It was time to make the "IT Modernization" dataset its own project. Following these lines, I created a new repository named [doge_track](https://github.com/harrisj/doge_track) on May 7, 2025 and copied over the existing data from Trump Data to there. From there, the immediate next step was to build a website.
 
-Since then, I have expanded the approach to collect even more data:
+The main thing to understand about me is that I am [really cheap](/personal/why-i-dont-vibe-code.html) and I didn't want to spend a lot of money every month just to keep a website up and running. Static site generation seemed like the best option to use here because this is content that doesn't change that frequently (at most, several times a day) and that does not need to serve personalized information to different users. I love static sites because it's a simple approach that scales tremendously for peanuts, especially since there are several providers who offer free accounts for static site hosting.
 
-- Details are where I record any information I could gather on federal details where staff from one agency goes to work for another. This is one of DOGE's favorite tactics for obfuscation.
-- Aliases. In some cases like court filings or early reporting, specific people aren't named, but it is possible to identify them by other factors and information. I modified it so I could specify `named_aliases` for events and if I were confident enough to say "SSA-2 is Scott Coulter", then the processed version of the Events data would put his real info in.
-- Charts. I even decided to use the built-in Gantt charting that's in [Mermaid](https://mermaid.js.org/) so I could visually display when DOGE is at specific agencies or what specific staff have been doing over time. It's still very imprecise, because I only have definitive onboarding and offboarding dates for a few DOGE staffers at agencies when it's provided in [legal declarations for court cases](https://storage.courtlistener.com/recap/gov.uscourts.dcd.277150/gov.uscourts.dcd.277150.73.2.pdf), but it does give me a rough idea of who is where.
+In fact, the only money I have spent on DOGE Track was to buy a license for [Font Awesome](https://fontawesome.com/)
 
-My daily routine now is to run a few searches on Google News when I have some spare time on queries like "DOGE when:1d" to give me results from the last 24 hours. When I find new articles, I scan them to see if there are relevant details on specific people, systems or agencies and add it to the `events.yaml` or other files. I have an automated process that then runs on my laptop and generates changes to other files based on the new information. Occasionally, I also look at cases to see if there are new filings or I will look at some of my files to see if there are agencies or people for whom I have limited information (_e.g._, I still have very little visibility into what has been happening at SBA and I only recently found information on Frank Schuler). More information invariably just leads to more questions, but at least they are better ones.
+To make this happen, I picked the same [Bridgetown](https://bridgetownrb.com/) library that I have used for this site as well. I had originally considered using a similar static generator in Python, but what I like about Bridgetown (as well as its predecessor, Jekyll) is that it's very easy to integrate data into page generation by adding YAML files to the `_data/` directory. These can then be referenced in templates which use either Liquid or embedded Ruby to let you iterate over things. Eventually, I redesigned the site to just call a database directly for data, but it was a helpful way to build the site initially.
 
-## What Next?
+For the front end, I used [Tailwind CSS](https://tailwindcss.com/) and [DaisyUI](https://daisyui.com/), because it seemed like interesting tech I wanted to learn and a coworker recommended it. I have enjoyed the highly granular control over formatting I get with Tailwind, but if I were doing it today, I would probably take the time to learn proper web components
 
-Clearly, there are things that could be done to improve how the data is presented. I might potentially create more simplified representations of important details like what systems DOGE has accessed and who was given access or how OPM and GSA were used as bases for DOGE staff to be detailed into multiple agencies. I could probably consider generating better graphics using [Observable](https://observablehq.com/) or even write dispatches on new things that have been uncovered (for instance, I have figured out who most of the unidentified staff at Social Security are or reminding people that DOGE already had infiltrated the email systems at CISA well before [a whistleblower at the NLRB had emailed them about DOGE's IT modernization activities there](https://www.npr.org/2025/04/15/nx-s1-5355896/doge-nlrb-elon-musk-spacex-security)). But I also am not a journalist. I am making my best efforts to be correct, but mistakes are possible. So, I will probably just keep to perfecting the data, in the hopes that it's useful to others.
+But I didn't have the time. New events were happening every day. It was
+important to keep up. And so since then, it has continued to be an obsessive
+project of mine. [Over the past year](https://dogetrack.info/about/changes/), I
+have added lots of data, but I have made a lot of changes to how the data is
+stored and how it is presented, both on big screens and mobile phones.
 
-There is no license or attribution requirement for using this data beyond that you must accept any risks. But, if you make anything interesting with this data - or, if there is information I am missing or an error in my data - please [let me know!](https://github.com/harrisj/trump_data/issues)
+I don't know when I will stop working on this project. Even now, I am
+considering new ways to present what is happening each month, filling in
+information about prior affiliations (like Tesla) or post-DOGE jobs and
+providing more context on what DOGE has been doing to further its projects
+across the government. I don't know when DOGE will truly end, but I do know this
+work continues to keep me engaged. It has given people insight into what is
+happening. And it provides me with a way to channel my anger so I can bear
+witness in the hopes that one day these people will be held accountable.
+
+
+
