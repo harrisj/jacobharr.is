@@ -4,7 +4,7 @@ title: More Thoughts on Vibe Coding
 date: 2026-03-19
 year: 2026
 category: personal
-permalink: /personal/more-thoughts-on-vibe-coding
+permalink: /personal/more-thoughts-on-vibe-coding.html
 published: false
 description: Foobar
 image: /images/writing/misc-previews/vibe-code.png
