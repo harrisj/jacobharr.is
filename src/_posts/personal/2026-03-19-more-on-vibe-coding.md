@@ -70,3 +70,20 @@ Amelia Bedelia/Memento joke
 
 
 
+Links
+- [What Do Coders Do After AI?](https://www.anildash.com/2026/03/13/coders-after-ai/?_bhlid=8a4aba1013e68d464f46d8787ea2f2980e1f3a75)
+- [LLMs Reduce Development Friction](https://blog.ollien.com/posts/llm-friction/)
+- [Sand in the gears for humans-in-the-loop](https://kiesow.net/sand-in-the-gears-for-humans-in-the-loop/)
+- [Google AI productive](https://www.businessinsider.com/ai-google-engineers-coding-productive-sundar-pichai-alphabet-2025-6)
+- [Why Deterministic Output is Nearly Impossible](https://unstract.com/blog/understanding-why-deterministic-output-from-llms-is-nearly-impossible/)
+- [DORA Metrics](https://dora.dev/guides/dora-metrics/)
+- [Defeating Nondeterminsm](Defeating Nondeterminism in LLM Inference)
+- [Coding After Coders](https://www.nytimes.com/2026/03/12/magazine/ai-coding-programming-jobs-claude-chatgpt.html)
+- [Dunning-Kruger in Reverse](https://neurosciencenews.com/ai-dunning-kruger-trap-29869/)
+- [LLM Plausible Code](https://blog.katanaquant.com/p/your-llm-doesnt-write-correct-code)
+- [Why I Don't Vibe Code Anymore](https://thecurioustechnologist.substack.com/p/why-i-dont-vibe-code-any-more)
+- [Nonsense as Insight](https://mailchi.mp/rawsignal/nonsense-masquerading-as-insight?e=45fcb56602)
+- [Popular Science Automotive Safety](https://books.google.com/books?id=Qi0DAAAAMBAJ&pg=PA82#v=onepage&q&f=false)
+- [Django and Tokens](https://www.better-simple.com/django/2026/03/16/give-django-your-time-and-money/)
+- [Coding Agents for Data Analysis](https://simonw.github.io/nicar-2026-coding-agents/)
+- [Willison and Agentic Coding](https://simonwillison.net/guides/agentic-engineering-patterns/what-is-agentic-engineering/)
