@@ -685,14 +685,15 @@ accepting that for AI-generated code?
 
 I wrote this essay because I wanted to work through some thoughts about how LLMs
 might be incorporated into teams working on software, in the hope that such a
-future is possible to achieve and a thing worth having. Things continue to [look
-bleak for the world that Silicon Valley is building
-now](https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html),
-but a better future is still possible. For instance, I'm particularly intrigued
-by the idea that a smaller and slightly-less-accurate Medium Language Model
-(MLM) that can run on a server or even your laptop might just be good enough for
-many teams, and it's certainly a lot cheaper! Maybe we will enter an era of
-[open-source and more ethical choices for AI
-tools](https://www.anildash.com/2026/04/28/one-good-ai-is-here/). It's hard to
-feel hopeful in the face of companies working to dehumanize more of what we do,
-but there is a chance. I hope we can take it.
+future is possible to achieve and a thing worth having. I hoped to see something
+in this that would make me feel more comfortable about AI usage in the craft of
+software development, as an alternative to the [grim future that Silicon Valley
+is intent on building
+now](https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html).
+Perhaps, a better AI future is possible. For instance, I'm particularly
+intrigued by the idea that a smaller and slightly-less-accurate-but-still-good-enough Medium Language
+Model (MLM) that can run on a server or even your laptop might just be good
+enough for many teams, and it's certainly a lot cheaper! Maybe we will enter an
+era of [open-source and more ethical choices for AI
+tools](https://www.anildash.com/2026/04/28/one-good-ai-is-here/). I'm not
+convinced, but I sincerely hope I'm wrong on this. For all of our sakes.
