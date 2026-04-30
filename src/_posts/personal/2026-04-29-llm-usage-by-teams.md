@@ -541,7 +541,7 @@ explaining the importance of measuring developer productivity without providing
 any direction on how. Eventually, an astute reader tipped me of to a [DX article
 about measuring LLM
 impact](https://getdx.com/research/measuring-ai-code-assistants-and-agents/)
-that clarified they were indeed measuring improvemtn in developer-hours to make
+that clarified they were indeed measuring an increase in developer-hours to make
 this declaration. Great! Now, how do we measure developer hours then?
 
 And this is where I ran into a wall. DX is a commercial product for measuring
