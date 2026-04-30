@@ -144,7 +144,7 @@ the possibility of consequences -- being fired, litigation or even criminal
 prosecution -- including the fear of never being able to work in the industry
 again. I don't claim that junior engineers are perfect or infallible, but I do
 believe that it's also unfair to compare the worst of junior engineers to the
-best of Generative AI models. And the most junior engineers are simply
+best of Generative AI models. And most junior engineers are simply
 phenomenal.
 
 Best of all, junior engineers will mature with time into highly competent senior
@@ -153,8 +153,6 @@ will simply be replaced with new black boxes. Your investment of time and money
 in them will earn dividends as they become more capable members of your staff.
 
 ## 'Magic' and 'More Magic'
-
-Junior Engineers will also rarely embarrass you. 
 
 In a recent profile of vibe coders, [the New York Times included a tip from one
 developer to tell his agent to not do things that would be
@@ -168,7 +166,7 @@ leading the author to wonder how that would even work:
 This could of course be [another fine example of pranking the
 _Times_](https://en.wikipedia.org/wiki/Grunge_speak), but I've seen enough
 similar guidance from other developers to believe this advice is genuine. That
-doesn't make it real however. Despite many claims about their effectiveness,
+doesn't make it real however. Despite claims about their effectiveness,
 these prompting instructions are often little more than ["prompting
 folklore"](https://arxiv.org/abs/2504.01205) that seem to work, but we lack an
 explanation of why they would work or if any particular prompts are more
@@ -179,7 +177,7 @@ odds of the AI agreeing with you, but actually damage its
 accuracy](https://arxiv.org/abs/2603.18507). My point here is that it is going
 to be a while before we understand what prompts and usage patterns are effective
 and even longer before we understand _why_ they work. How much should we
-continue to share this superstition as useful?
+continue to share these superstitions as useful?
 
 I am reminded of an anecdote in the [Jargon File](http://www.catb.org/jargon/html/index.html) about [a
 "magic" switch at the MIT AI
@@ -239,20 +237,20 @@ confetti. But, even when the temperature is set to 0, [LLMs remain innately
 nondetermistic](https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/)
 because of how floating point operations work. And, of course, companies can
 also tweak the operating parameters for their models at any time, which could
-have its own unexpected effects on model behavior for your applications (hey,
-have you heard about the goblins?).
+have its own unexpected effects on model behavior for your applications (_hey,
+have you heard about the goblins?_).
 
 As a programmer, this nondeterminism makes me queasy. Suppose that I give an LLM
 a prompt, notice an obvious error, rephrase my prompt and get a second correct
 response in turn. In a purely deterministic model, I can be certain that my
 modification to the prompt was the thing that fixed the model's response because
-it was the only thing that changed. Software is generally deterministic because
-it allows us to understand things as cause and effect. Flipping the switch away
-from "more magic" always causes a crash. It also lets us repeat the
+it was the only thing that changed. Software is generally deterministic, because
+it allows us to live in a world of cause and effect, where flipping the switch
+away from "more magic" always causes a crash. It also lets us repeat the
 circumstances that cause bugs to occur (and know that our fixes work). For
 instance, a certain LLM model might [always miscount the letter 'r' in
-strawberry](https://www.secwest.net/strawberry) because it uses a deterministic
-model for tokenization.
+strawberry](https://www.secwest.net/strawberry) and we can figure out why
+because it uses a deterministic model for tokenization.
 
 Under the nondeterministic model, I can no longer be sure. Maybe my change to
 the system's input did fix its output. But it's also possible that what simply
@@ -332,7 +330,8 @@ very specific context (e.g., "should we use this LLM model to generate synthetic
 data for our testing environment?"). Many AI users and companies are actively
 learning how these tools can go wrong and what to do about it, but this is a
 case where risk assessments should skew pessimistically while they figure it
-out. Maybe we should make a regular practice of asking "what is the worst that
+out. Perhaps a risk checklist to work through might make sense here.
+And maybe we should make a regular practice of asking "what is the worst that
 can happen?" and identifying scenarios where "it gets worse than that" if we
 don't feel confident we're pessimistic enough.
 
@@ -696,4 +695,4 @@ Model (MLM) that can run on a server or even your laptop might just be good
 enough for many teams, and it's certainly a lot cheaper! Maybe we will enter an
 era of [open-source and more ethical choices for AI
 tools](https://www.anildash.com/2026/04/28/one-good-ai-is-here/). I'm not
-convinced, but I sincerely hope I'm wrong on this. For all of our sakes.
+convinced, but I sincerely hope I'm wrong on this. For all of our futures.
