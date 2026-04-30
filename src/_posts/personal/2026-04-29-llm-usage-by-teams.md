@@ -214,14 +214,14 @@ Obviously, this switch wasn't actually controlling _magic_ inside the computer,
 but it was doing something, even if there were no satisfying actual explanations
 of what that might be.
 
-Not everything in the world needs an explanation, and many of us have certain
+Not everything in the world needs an explanation, and many of us have our own quaint
 superstitions that let us pretend that we have some control over the arbitrary
-randomness of the universe. A superstition like the gambler blowing on his dice
-before shooting craps is harmless enough until the gambler starts to really
+randomness of the universe. Indeed, a superstition like the gambler blowing on his dice
+before shooting craps is harmless enough. Or it is until the gambler starts to really
 believe that his superstitions are real and that failing to follow them will
 result in disastrous consequences. This phenomenon is called [the illusion of
 control](https://en.wikipedia.org/wiki/Illusion_of_control), and it is common
-for people to feel this when faced with completely random processes.
+for people to feel this when facing random processes.
 
 Large Language Models (LLMs) are not as simple as a game of craps, but they are
 random at their core. Instead of a game of craps, we could consider an LLM as an
@@ -330,10 +330,18 @@ very specific context (e.g., "should we use this LLM model to generate synthetic
 data for our testing environment?"). Many AI users and companies are actively
 learning how these tools can go wrong and what to do about it, but this is a
 case where risk assessments should skew pessimistically while they figure it
-out. Perhaps a risk checklist to work through might make sense here.
-And maybe we should make a regular practice of asking "what is the worst that
-can happen?" and identifying scenarios where "it gets worse than that" if we
-don't feel confident we're pessimistic enough.
+out. Perhaps a risk checklist to work through might make sense here. And maybe
+we should make a regular practice of asking "what is the worst that can happen?"
+and identifying scenarios where "it gets worse than that" if we don't feel
+confident we're pessimistic enough.
+
+And you should always be more pessimistic. Recently, a writeup of an incident
+where [Codex deleted a company's database and all of its backups in 9
+seconds](https://x.com/lifeof_jer/status/2048103471019434248?s=61), despite
+guardrails that were supposed to prevent such activities. The problem was that
+the guardrails were just implemented as basic system prompts, which the LLM
+agent admitted it just ignored. Essentially, this is like finding out a bank's
+high-security vault is just a door with a sign that says "Don't" on it. This isn't the first time that promises about LLM safety have been shown to be little more than suggestions, and [you should never rely solely on an AI system for system safety](https://garymarcus.substack.com/p/dario-amodei-hype-ai-safety-and-the) unless you feel like rolling the dice. Maybe try blowing on them first?
 
 ## Human in the Loop
 
