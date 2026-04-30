@@ -4,7 +4,7 @@ title: DOGE Track
 published: true
 category: project
 start_year: 2025
-years: '2025'
+years: '2025-202X'
 thumbnail: /images/thumbnails/doge-track.png
 image: /images/thumbnails/doge-track.png
 permalink: /projects/trump-data.html
