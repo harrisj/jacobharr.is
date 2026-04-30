@@ -438,11 +438,11 @@ capital expenditures by building out new data centers. At some point, investors
 are going to want to see returns, and some changes to AI pricing have already
 started to show:
 
-> “Everyone I spoke to had some version of this problem — their token usage has
+> Everyone I spoke to had some version of this problem — their token usage has
 > gone up, so their usage-based billing cost has gone up, or the tier they were
 > on no longer has the same cap, and now they’re having to go to a more
 > expensive tier to try to keep the same amount of usage per month as part of
-> their flat rate,”
+> their flat rate.
 
 Many personal AI users have been using tiered products that come with usage
 quotas which obscure the true cost of their activities (unless you hit your
