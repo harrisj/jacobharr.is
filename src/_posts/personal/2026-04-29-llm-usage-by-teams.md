@@ -11,7 +11,7 @@ description: A collection of different thoughts about how LLMs might be thoughtf
 image: 
 ---
 In the wake of [my last essay on why I don't vibe
-code](/personal/why-i-dont-vibe-code.html), I heard from various people on the
+code](/personal/i-dont-vibe-code.html), I heard from various people on the
 Internet who read it (or the Bluesky skeets that inspired it). Some had adopted
 similar stances on their own, often for overlapping reasons. Others were
 dedicated vibe coders who wanted to share what practices they used that made
@@ -426,7 +426,7 @@ a person should always be checking their work.
 ## The LLM Budget Bomb
 
 I've already mentioned [that I'm a
-cheapskate](/personal/why-i-dont-vibe-code.html), so admittedly I'm overly
+cheapskate](/personal/i-dont-vibe-code.html), so admittedly I'm overly
 sensitive to this, but it's shocking to me how little discussion there is about
 the [inevitable substantial rate hikes that will hit LLM usage as soon as this
 year](https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue).
