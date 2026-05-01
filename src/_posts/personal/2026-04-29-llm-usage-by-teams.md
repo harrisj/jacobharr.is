@@ -96,7 +96,7 @@ of distortion and loss there. Others will regularly just start over with new
 agents that can stumble into the same mistakes and suggestions as their
 predecessors without active intervention.
 
-All of which is to say, if an LLM were a person (_to be clear, he is not._), he
+All of which is to say, if an LLM were a person (_to be clear, he is not_), he
 would be an absolute nightmare to work with. Every LLM agent is essentially a
 combination of [Amelia Bedelia](https://en.wikipedia.org/wiki/Amelia_Bedelia)
 and [Leonard Shelby from
@@ -119,6 +119,16 @@ you've already caught. He can make recommendations and write code, but he has no
 idea where it came from and how easy it is to support. He acts like a friend,
 but at his core, he has no loyalty or empathy. He has no shared experiences with
 you or fun weekend plans. He's a perfectly impenetrable black box.
+
+As an aside here, I really don't know how teams would be able to effectively
+function if every engineer were also using AI coding agents. If these were
+people (_again, they're not_), this would be organizationally like doubling the
+size of the engineering team, but each engineer has a deputy that reports only
+to them (and who only listens to them). I don't really see a model where this
+works without quickly and expensively sliding into complete chaos. Having a
+single LLM wrangler for the team at a given time (or keeping LLM usage scoped to
+specific types of tasks that engineers pick up) might just be the only way to
+keep things manageable.
 
 Junior engineers do learn, however. And unlike the hypothetical LLM-as-a-person,
 they arrive at your company laden with context on how to work with your team.
