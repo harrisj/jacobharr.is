@@ -327,7 +327,7 @@ technical stack with a critical eye. It is also is informed by decades of
 failures and fixes in how software is built and deployed to infrastructure.
 
 I don't know how to properly consider risks for GenAI usage. I think the
-industry is still figuring out the failure patterns and mitigations for them. I
+industry is still figuring out the failure patterns and mitigation for them. I
 have observed that developers (and other team members) vary wildly in how they
 assess the impact and severity of AI-related risks (boosters are excited and
 skeptics are cautious), and I believe that this makes it harder for teams to
@@ -345,13 +345,19 @@ we should make a regular practice of asking "what is the worst that can happen?"
 and identifying scenarios where "it gets worse than that" if we don't feel
 confident we're pessimistic enough.
 
-And you should always be more pessimistic. Recently, a writeup of an incident
-where [Codex deleted a company's database and all of its backups in 9
+And you should always be more pessimistic. Recently, a company posted a
+comprehensive write-up of an incident where [Codex deleted a company's database
+and all of its backups in 9
 seconds](https://x.com/lifeof_jer/status/2048103471019434248?s=61), despite
 guardrails that were supposed to prevent such activities. The problem was that
 the guardrails were just implemented as basic system prompts, which the LLM
 agent admitted it just ignored. Essentially, this is like finding out a bank's
-high-security vault is just a door with a sign that says "Don't" on it. This isn't the first time that promises about LLM safety have been shown to be little more than suggestions, and [you should never rely solely on an AI system for system safety](https://garymarcus.substack.com/p/dario-amodei-hype-ai-safety-and-the) unless you feel like rolling the dice. Maybe try blowing on them first?
+high-security vault is just a door with a sign that says "Don't" on it. This
+isn't the first time that promises about LLM safety have been shown to be little
+more than suggestions, and [you should never rely solely on an AI system for
+system
+safety](https://garymarcus.substack.com/p/dario-amodei-hype-ai-safety-and-the)
+unless you feel like rolling the dice. Maybe try blowing on them first?
 
 ## Human in the Loop
 
