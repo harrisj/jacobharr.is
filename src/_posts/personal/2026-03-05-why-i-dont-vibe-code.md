@@ -74,9 +74,9 @@ __abstractions_ -- on top of our messy reality to make it understandable by
 reducing complexity. This lets us generalize specific situations into layers
 that can be built on top of each other. For instance the specific action of
 putting peanut butter onto a piece of bread could be generalized into a
-spread(substance) method that could take peanut butter or cream cheese as an
+`spread(substance)` method that could take peanut butter or cream cheese as an
 argument. And we could use these spread methods to create higher-level
-functions like create_pbj() and so on. Coding in a modern high-level
+functions like `create_pbj()`` and so on. Coding in a modern high-level
 programming language is like standing on top of a ziggurat of abstractions,
 where a single line of code could trigger millions of operations on multiple
 systems. It's very exciting!
